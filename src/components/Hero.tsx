@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -23,20 +24,24 @@ export default function Hero() {
             Specializing in Salaried Employee Loans. Get your funds within 24hrs of submitting your documents. Licensed by UMRA and serving Uganda since 2012.
           </p>
           <div className="flex flex-wrap gap-4">
-            <motion.button 
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="bg-secondary text-slate-950 font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-white transition-all flex items-center gap-3 shadow-lg"
-            >
-              Apply for a Loan <ArrowUpRight className="w-6 h-6" />
-            </motion.button>
-            <motion.button 
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="border-2 border-primary text-primary font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-primary hover:text-white transition-all"
-            >
-              View Our Products
-            </motion.button>
+            <Link to="/apply">
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-secondary text-slate-950 font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-white transition-all flex items-center gap-3 shadow-lg"
+              >
+                Apply for a Loan <ArrowUpRight className="w-6 h-6" />
+              </motion.button>
+            </Link>
+            <Link to="/loans">
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="border-2 border-primary text-primary font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-primary hover:text-white transition-all"
+              >
+                View Our Products
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
         

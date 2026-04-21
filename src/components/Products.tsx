@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Banknote, Shield, Store, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -79,14 +80,16 @@ export default function Products() {
               </ul>
             </div>
             
-            <button className={`
-              w-full font-headline font-bold py-5 uppercase tracking-widest transition-all relative z-10 rounded-sm
-              ${product.variant === 'dark' ? 'bg-secondary text-primary hover:bg-white' : ''}
-              ${product.variant === 'primary' ? 'bg-white text-primary hover:bg-secondary hover:text-slate-950' : ''}
-              ${product.variant === 'light' ? 'bg-primary text-white hover:bg-slate-950' : ''}
-            `}>
-              Select Protocol
-            </button>
+            <Link to="/apply" className="w-full">
+              <button className={`
+                w-full font-headline font-bold py-5 uppercase tracking-widest transition-all relative z-10 rounded-sm
+                ${product.variant === 'dark' ? 'bg-secondary text-primary hover:bg-white' : ''}
+                ${product.variant === 'primary' ? 'bg-white text-primary hover:bg-secondary hover:text-slate-950' : ''}
+                ${product.variant === 'light' ? 'bg-primary text-white hover:bg-slate-950' : ''}
+              `}>
+                Select Protocol
+              </button>
+            </Link>
           </motion.div>
         ))}
       </div>

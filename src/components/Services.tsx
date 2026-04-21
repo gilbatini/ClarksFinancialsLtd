@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Banknote, Receipt, Landmark, Smartphone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -7,24 +8,28 @@ const services = [
     title: "Money Lending",
     description: "Fast-tracked salary loans from UGX 200,000 to UGX 15,000,000 over 1 to 24 months. Decisions within 24hrs.",
     icon: Banknote,
+    path: "/loans"
   },
   {
     id: "02",
     title: "Utility Bill Payments",
     description: "Pay your electricity, water, pay TV, airtime, and other utility bills quickly and conveniently.",
     icon: Receipt,
+    path: "/services" // Or /loans if they are on the same page
   },
   {
     id: "03",
     title: "Agency Banking",
     description: "Access full banking services through our licensed agents. Deposits, withdrawals, and transfers.",
     icon: Landmark,
+    path: "/services"
   },
   {
     id: "04",
     title: "Mobile Money",
     description: "Loan disbursements and repayments processed via MTN MoMo and Airtel Money directly from your phone.",
     icon: Smartphone,
+    path: "/services"
   },
 ];
 
@@ -74,9 +79,12 @@ export default function Services() {
                 {service.description}
               </p>
             </div>
-            <button className="flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all">
+            <Link 
+              to={service.id === "01" ? "/loans" : "/loans"} 
+              className="flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all"
+            >
               Explore Protocol <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </motion.div>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
@@ -25,20 +26,24 @@ export default function CTA() {
           Join hundreds of Ugandans who have trusted Clarks Financials for fast, transparent, and fair financial services since 2012.
         </motion.p>
         <div className="flex flex-wrap justify-center gap-6">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-secondary text-slate-950 font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-white transition-all shadow-2xl"
-          >
-            Apply Now
-          </motion.button>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="border-2 border-primary text-white font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-primary transition-all shadow-2xl"
-          >
-            See How It Works
-          </motion.button>
+          <Link to="/apply">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary text-slate-950 font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-white transition-all shadow-2xl"
+            >
+              Apply Now
+            </motion.button>
+          </Link>
+          <Link to="/about">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-primary text-white font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-primary transition-all shadow-2xl"
+            >
+              See How It Works
+            </motion.button>
+          </Link>
         </div>
       </div>
     </section>
