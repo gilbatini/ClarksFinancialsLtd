@@ -21,7 +21,7 @@ const products = [
   },
   {
     title: "Agency Banking",
-    description: "Full suite of banking services through our licensed agents including deposits and withdrawals.",
+    description: "Full suite of banking services through our licensed agents (deposits/withdrawals). We do not provide float financing.",
     icon: Store,
     features: ["Transactional Support", "Digital Integration"],
     variant: "light",

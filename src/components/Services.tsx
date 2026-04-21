@@ -20,9 +20,9 @@ const services = [
   {
     id: "03",
     title: "Agency Banking",
-    description: "Access full banking services through our licensed agents. Deposits, withdrawals, and transfers.",
+    description: "Access banking services through our licensed agents including deposits and withdrawals. Please note that we do not offer float financing.",
     icon: Landmark,
-    path: "/services"
+    path: "/loans"
   },
   {
     id: "04",
