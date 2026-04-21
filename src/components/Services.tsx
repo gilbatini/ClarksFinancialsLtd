@@ -27,7 +27,7 @@ const services = [
   {
     id: "04",
     title: "Mobile Money",
-    description: "Loan disbursements and repayments processed via MTN MoMo and Airtel Money directly from your phone.",
+    description: "Loan repayments processed via MTN MoMo and Airtel Money directly from your phone.",
     icon: Smartphone,
     path: "/services"
   },

@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-surface-900 text-white font-body py-16">
       <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
         <div className="col-span-2 md:col-span-1">
-          <Logo light className="mb-6" />
+          <Logo light iconOnly className="mb-6" />
           <p className="text-white/70 text-sm leading-relaxed mb-8">
             Architectural Precision in Finance. Licensed Tier-4 Institution regulated to provide credit services in Uganda.
           </p>

@@ -23,7 +23,7 @@ const faqs = [
     category: "Repayment",
     questions: [
       { q: "How do I repay my loan?", a: "Monthly — paid directly to the Clarks Financials bank account. Also accepted via MTN Mobile Money or Airtel Money." },
-      { q: "What if I miss a payment?", a: "Contact us immediately. Late payment penalties cannot exceed 50% of the outstanding principal under Ugandan law." },
+      { q: "What if I miss a payment?", a: "Contact us immediately to discuss repayment options and avoid additional costs." },
     ]
   }
 ];

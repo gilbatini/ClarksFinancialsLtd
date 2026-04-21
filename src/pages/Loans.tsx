@@ -98,7 +98,6 @@ export default function Loans() {
               <p>• All interest rates displayed at our premises and disclosed before signing.</p>
               <p>• Compound interest is not applied to any product.</p>
               <p>• A signed copy of your loan agreement is provided before disbursement.</p>
-              <p>• Late payment penalties do not exceed 50% of the outstanding principal.</p>
               <p>• We do not accept National IDs, passports, or ATM cards as collateral.</p>
             </div>
           </div>

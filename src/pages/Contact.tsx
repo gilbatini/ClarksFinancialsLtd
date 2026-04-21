@@ -36,7 +36,6 @@ export default function Contact() {
             <Clock className="w-10 h-10 text-primary mb-6" />
             <h3 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Business Hours</h3>
             <p className="text-slate-500 font-medium">Mon - Fri: 8:00am - 5:00pm</p>
-            <p className="text-slate-500 font-medium">Sat: 9:00am - 1:00pm</p>
           </div>
         </div>
       </section>

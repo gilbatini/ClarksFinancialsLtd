@@ -6,7 +6,7 @@ export default function Logo({ className = "", light = false, iconOnly = false }
   const secondaryColor = "#2DC84A";
   
   // Using the latest provided Google Drive direct link for the logo (lh3 format is often more reliable)
-  const logoUrl = "https://lh3.googleusercontent.com/d/1_aagMi8Qidad9UVH5FoBw8rYTzfF9d2t";
+  const logoUrl = "https://lh3.googleusercontent.com/d/1RyJV-6iFB24EHZaSEyx1BYzfFZTpC25Z";
 
   return (
     <div className={`flex items-center ${className}`}>
@@ -22,10 +22,7 @@ export default function Logo({ className = "", light = false, iconOnly = false }
                 referrerPolicy="no-referrer"
                 style={{ 
                   filter: light ? 'brightness(0) invert(1)' : 'none',
-                  objectFit: 'cover',
-                  objectPosition: '0% 50%',
-                  transform: 'scale(1.8)', // Zoom in on the icon part
-                  transformOrigin: '0% 50%'
+                  objectFit: 'contain'
                 }}
               />
             </div>

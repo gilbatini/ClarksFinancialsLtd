@@ -21,9 +21,9 @@ const products = [
   },
   {
     title: "Agency Banking",
-    description: "Specialized credit solutions for banking agents to manage daily float and liquid demands.",
+    description: "Full suite of banking services through our licensed agents including deposits and withdrawals.",
     icon: Store,
-    features: ["Daily Float Financing", "Weekend Support"],
+    features: ["Transactional Support", "Digital Integration"],
     variant: "light",
     image: null
   }

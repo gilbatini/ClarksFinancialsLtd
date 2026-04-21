@@ -68,13 +68,6 @@ export default function Regulatory() {
                   <p className="text-sm text-white/70">We are legally prohibited from holding your National ID, passport, or ATM card as collateral.</p>
                 </div>
               </div>
-              <div className="flex gap-6">
-                <Scale className="w-8 h-8 text-secondary shrink-0" />
-                <div>
-                  <p className="font-bold uppercase tracking-tight mb-2">Protection from Excessive Penalties</p>
-                  <p className="text-sm text-white/70">Late payment penalties cannot exceed 50% of the total outstanding loan principal.</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
