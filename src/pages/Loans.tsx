@@ -55,14 +55,14 @@ export default function Loans() {
                   <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                   <div>
                     <p className="font-bold text-slate-950">Up to UGX 2,000,000</p>
-                    <p className="text-sm text-slate-500">Client commitment to repay (no physical collateral required).</p>
+                    <p className="text-sm text-slate-500">No security required.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                   <div>
                     <p className="font-bold text-slate-950">Above UGX 2,000,000</p>
-                    <p className="text-sm text-slate-500">Chattels, car logbook, land title, or land sales agreement.</p>
+                    <p className="text-sm text-slate-500">Security required: Car logbook, land title, or land sales agreement.</p>
                   </div>
                 </li>
               </ul>
