@@ -76,7 +76,7 @@ export default function Loans() {
                   <h4 className="font-headline text-xl font-bold uppercase">Eligibility Constraints</h4>
                 </div>
                 <ul className="space-y-4 text-sm text-white/80">
-                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Permanently employed for min. 2 years</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Permanently employed</li>
                   <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Ugandan citizen or resident (last 3 years)</li>
                   <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Aged 18 years or above</li>
                   <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Min. monthly salary of UGX 100,000</li>

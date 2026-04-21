@@ -6,7 +6,7 @@ const faqs = [
   {
     category: "Eligibility",
     questions: [
-      { q: "Who can apply?", a: "Ugandan nationals or residents aged 18+, permanently employed for at least two years by a legally registered organisation, earning a minimum of UGX 100,000 per month." },
+      { q: "Who can apply?", a: "Ugandan nationals or residents aged 18+, permanently employed by a legally registered organisation, earning a minimum of UGX 100,000 per month." },
       { q: "Can I apply if I am on probation?", a: "No. We do not provide loans to employees currently serving a probationary period." },
       { q: "Do I need guarantors?", a: "Yes. Two guarantors are required. If the applicant is not a permanent resident, at least one guarantor must be a permanent resident." },
     ]
