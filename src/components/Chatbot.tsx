@@ -5,7 +5,19 @@ import { MessageSquare, X, Send, Loader2, Bot, User, Sparkles } from "lucide-rea
 import { GoogleGenAI } from "@google/genai";
 import { cn } from "../lib/utils";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// Lazy initialization of the Gemini AI client
+let aiInstance: GoogleGenAI | null = null;
+const getAI = () => {
+  if (!aiInstance) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      console.warn("GEMINI_API_KEY is missing. Chatbot will be disabled.");
+      return null;
+    }
+    aiInstance = new GoogleGenAI({ apiKey });
+  }
+  return aiInstance;
+};
 
 const SYSTEM_INSTRUCTION = `
 You are "Clark", a sophisticated AI financial advisor for Clarks Financials Limited. 
@@ -65,7 +77,12 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const response = await ai.models.generateContent({
+      const chatAI = getAI();
+      if (!chatAI) {
+        throw new Error("AI Service unavailable. Check environment variables.");
+      }
+
+      const response = await chatAI.models.generateContent({
         model: "gemini-3-flash-preview",
         contents: messages.concat({ role: "user", text: userMessage }).map(m => ({
           role: m.role,
