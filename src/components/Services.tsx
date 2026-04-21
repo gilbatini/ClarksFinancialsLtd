@@ -6,7 +6,7 @@ const services = [
   {
     id: "01",
     title: "Money Lending",
-    description: "Fast-tracked salary loans from UGX 200,000 to UGX 15,000,000 over 1 to 24 months. Decisions within 24hrs.",
+    description: "Fast-tracked salary loans from UGX 200,000 to UGX 20,000,000 over 1 to 24 months. Decisions within 24hrs.",
     icon: Banknote,
     path: "/loans"
   },

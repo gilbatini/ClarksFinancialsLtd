@@ -14,7 +14,7 @@ const faqs = [
   {
     category: "Loan Details",
     questions: [
-      { q: "How much can I borrow?", a: "UGX 200,000 minimum to UGX 15,000,000 maximum, subject to your salary and creditworthiness. Your monthly instalment cannot exceed 50% of your net salary." },
+      { q: "How much can I borrow?", a: "UGX 200,000 minimum to UGX 20,000,000 maximum, subject to your salary and creditworthiness. Your monthly instalment cannot exceed 50% of your net salary." },
       { q: "How long is the loan term?", a: "1 month minimum to 24 months maximum." },
       { q: "Is collateral required?", a: "For loans up to UGX 2,000,000 — no physical collateral required. For loans above UGX 2,000,000 — chattels, car logbook, land title, or land sales agreement required." },
     ]
