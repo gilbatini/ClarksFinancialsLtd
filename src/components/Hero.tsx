@@ -75,10 +75,10 @@ export default function Hero() {
           </div>
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            className="absolute -bottom-10 -left-10 bg-white p-6 shadow-xl border border-surface-200 hidden lg:block"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="absolute top-1/3 -left-12 bg-white p-6 shadow-2xl border border-surface-200 hidden lg:block z-30"
           >
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Response Time</p>
             <p className="font-headline text-4xl font-black text-primary">02:45 <span className="text-xs">MIN</span></p>
