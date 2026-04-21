@@ -5,16 +5,15 @@ import Products from "../components/Products";
 export default function Loans() {
   return (
     <div className="pt-20">
-      <section className="bg-slate-950 py-24 text-white relative overflow-hidden">
+      <section className="bg-primary py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 architectural-grid opacity-10"></div>
         <div className="container mx-auto px-8 relative z-10">
           <p className="text-secondary font-bold uppercase tracking-widest mb-4">Financial Instruments</p>
           <h1 className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8">
-            TAILORED <br /><span className="text-primary">CREDIT SOLUTIONS.</span>
+            24HRS <br /><span className="text-secondary italic">SALARY LOANS.</span>
           </h1>
-          <p className="max-w-2xl text-lg text-white/60 font-medium">
-            Clarks Financials Limited offers money lending, utility bill payment services, and agency banking — 
-            all in one place with transparent terms and no hidden fees.
+          <p className="max-w-2xl text-lg text-white/70 font-medium">
+            Money out within 24hrs of submitting your documents. We specialize in Salaried Employee Loans with transparent terms and no hidden fees.
           </p>
         </div>
       </section>
@@ -27,8 +26,8 @@ export default function Loans() {
             <div className="flex items-start gap-6">
               <Info className="w-10 h-10 text-primary shrink-0" />
               <div>
-                <h3 className="font-headline text-2xl font-bold text-slate-950 uppercase mb-4">Salaried Employee Loan (Most Popular)</h3>
-                <p className="text-slate-600 font-medium mb-8">Our flagship lending product for employed individuals with a verifiable monthly salary.</p>
+                <h3 className="font-headline text-2xl font-bold text-slate-950 uppercase mb-4">Salaried Employee Loan (24hrs Disbursement)</h3>
+                <p className="text-slate-600 font-medium mb-8">Our flagship product. If you have your documents ready, we ensure money is out within 24hrs in most cases.</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="space-y-2">
@@ -40,8 +39,8 @@ export default function Loans() {
                     <p className="font-headline text-xl font-bold text-slate-950">1 — 24 Months</p>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Approval Time</p>
-                    <p className="font-headline text-xl font-bold text-slate-950">Within 24 Hours</p>
+                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Turnaround Time</p>
+                    <p className="font-headline text-xl font-bold text-primary">24HRS</p>
                   </div>
                 </div>
               </div>
@@ -69,19 +68,22 @@ export default function Loans() {
               </ul>
             </div>
 
-            <div className="bg-slate-950 p-10 text-white">
-              <div className="flex items-center gap-4 mb-8">
-                <AlertTriangle className="w-8 h-8 text-secondary" />
-                <h4 className="font-headline text-xl font-bold uppercase">Eligibility Constraints</h4>
+            <div className="bg-primary p-10 text-white relative overflow-hidden">
+              <div className="absolute inset-0 architectural-grid opacity-10"></div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-8">
+                  <AlertTriangle className="w-8 h-8 text-secondary" />
+                  <h4 className="font-headline text-xl font-bold uppercase">Eligibility Constraints</h4>
+                </div>
+                <ul className="space-y-4 text-sm text-white/80">
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Permanently employed for min. 2 years</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Ugandan citizen or resident (last 3 years)</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Aged 18 years or above</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Min. monthly salary of UGX 100,000</li>
+                  <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Two guarantors required</li>
+                  <li className="pt-4 text-secondary font-bold uppercase tracking-widest text-[10px]">⚠️ We do not provide loans to employees on probation.</li>
+                </ul>
               </div>
-              <ul className="space-y-4 text-sm text-white/70">
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Permanently employed for min. 2 years</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Ugandan citizen or resident (last 3 years)</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Aged 18 years or above</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Min. monthly salary of UGX 100,000</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-secondary" /> Two guarantors required</li>
-                <li className="pt-4 text-secondary font-bold uppercase tracking-widest text-[10px]">⚠️ We do not provide loans to employees on probation.</li>
-              </ul>
             </div>
           </div>
         </div>

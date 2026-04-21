@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageSquare, X, Send, Loader2, Bot, User, Sparkles } from "lucide-react";
@@ -14,14 +15,15 @@ Your tone: Professional, sophisticated, architectural, helpful, and transparent.
 Key info:
 - Head Office: Ambassador House, 2nd Floor, Kampala Road.
 - Branch: Kireka (Geode Building).
-- Products: Salary Loans (UGX 200k - 15M), Utility Bill Payments, Agency Banking, Mobile Money.
-- Approval time: Within 24 hours.
+- Primary Product: Salaried Employee Loans (UGX 200k - 15M).
+- Turnaround Time: 24hrs disbursement in most cases if documents are ready.
+- Required Documents: National ID, 3 latest payslips, 3-month bank statement, Employment letter/contract, 2 guarantors.
 - Eligibility: Permanently employed for 2+ years, Ugandan resident, 18+, min salary 100k UGX.
 - No loans for employees on probation.
-- Two guarantors required.
 
 If asked about interest rates: Mention they are 3% per month on reducing balance for salaried loans, but always advise checking the official disclosure at the office.
 
+Always emphasize that if the client has their documents ready, we can get them money the same day.
 Keep responses concise and elegant. Use financial terminology where appropriate but remain accessible.
 `;
 
@@ -121,8 +123,8 @@ export default function Chatbot() {
             {/* Header */}
             <div className="bg-primary p-6 text-white flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Bot className="w-6 h-6 text-secondary" />
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                  <Logo iconOnly className="scale-75" />
                 </div>
                 <div>
                   <h3 className="font-headline font-black uppercase tracking-tight text-sm">Clark AI</h3>

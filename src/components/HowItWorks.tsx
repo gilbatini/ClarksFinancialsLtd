@@ -4,8 +4,8 @@ import { Quote } from "lucide-react";
 const steps = [
   { id: "01", title: "Apply", description: "Complete our simple application form online or in-branch. Takes under five minutes." },
   { id: "02", title: "Submit Documents", description: "Provide your National ID, payslips, bank statement, and guarantors." },
-  { id: "03", title: "Get Approved", description: "Our credit team delivers a decision within 24 hours and issues an offer letter." },
-  { id: "04", title: "Receive Funds", description: "Funds deposited directly to your bank account or mobile money wallet — same day." },
+  { id: "03", title: "Instant Approval", description: "Our credit team delivers a decision within hours of receiving your full document package." },
+  { id: "04", title: "Same Day Funds", description: "Money out the same day in most cases. Funds deposited directly to your bank or mobile wallet." },
 ];
 
 export default function HowItWorks() {
@@ -18,7 +18,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
         >
           <h2 className="font-headline text-7xl text-slate-950 mb-10 uppercase tracking-tighter leading-[0.9] font-black">
-            THE PATH TO <br /><span className="text-primary">PROSPERITY.</span>
+            THE PATH TO <br /><span className="text-primary italic">PROSPERITY.</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-md mb-12 font-medium">
             Our streamlined architectural process removes the friction from traditional banking. We focus on your future potential.

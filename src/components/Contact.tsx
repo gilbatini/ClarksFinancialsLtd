@@ -17,7 +17,7 @@ export default function Contact() {
         <div className="lg:col-span-5">
           <p className="text-primary font-bold uppercase tracking-widest mb-4">Global Presence</p>
           <h2 className="font-headline text-6xl md:text-7xl text-slate-950 uppercase leading-[0.9] mb-16 tracking-tighter font-black">
-            CONTACT<br /><span className="text-primary">HQ OFFICE.</span>
+            CONTACT<br /><span className="text-primary italic">HQ OFFICE.</span>
           </h2>
           
           <div className="space-y-12">
@@ -110,7 +110,7 @@ export default function Contact() {
                 <textarea className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" rows={2}></textarea>
               </div>
               
-              <button className="w-full bg-primary text-white font-headline font-black py-6 uppercase tracking-widest text-lg hover:bg-slate-950 transition-all shadow-xl" type="submit">
+              <button className="w-full bg-primary text-white font-headline font-black py-6 uppercase tracking-widest text-lg hover:bg-secondary hover:text-primary transition-all shadow-xl" type="submit">
                 Submit Application Protocol
               </button>
               

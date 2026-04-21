@@ -30,8 +30,9 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="bg-slate-950 py-32" id="products">
-      <div className="container mx-auto px-8 text-center mb-24">
+    <section className="bg-surface-900 py-32 relative overflow-hidden" id="products">
+      <div className="absolute inset-0 architectural-grid opacity-10"></div>
+      <div className="container mx-auto px-8 text-center mb-24 relative z-10">
         <p className="text-secondary font-bold uppercase tracking-[0.4em] mb-6">Financial Instruments</p>
         <h2 className="font-headline text-6xl md:text-7xl text-white font-black uppercase tracking-tighter">
           OUR LOAN PRODUCTS
@@ -39,7 +40,7 @@ export default function Products() {
         <div className="w-24 h-2 bg-secondary mx-auto mt-8"></div>
       </div>
       
-      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
         {products.map((product, index) => (
           <motion.div
             key={product.title}
@@ -49,9 +50,9 @@ export default function Products() {
             transition={{ delay: index * 0.1 }}
             className={`
               p-12 border flex flex-col justify-between items-center text-center transition-all duration-500 relative group overflow-hidden
-              ${product.variant === 'dark' ? 'bg-slate-900 border-slate-800 hover:border-primary' : ''}
-              ${product.variant === 'primary' ? 'bg-primary border-primary' : ''}
-              ${product.variant === 'light' ? 'bg-white border-transparent hover:border-primary' : ''}
+              ${product.variant === 'dark' ? 'bg-accent border-white/10 hover:border-secondary' : ''}
+              ${product.variant === 'primary' ? 'bg-white/10 border-white/20 hover:border-secondary' : ''}
+              ${product.variant === 'light' ? 'bg-white border-transparent hover:border-secondary shadow-2xl' : ''}
             `}
           >
             {product.image && (
@@ -65,7 +66,7 @@ export default function Products() {
               <h3 className={`font-headline text-4xl font-bold uppercase mb-4 tracking-tight ${product.variant === 'light' ? 'text-slate-950' : 'text-white'}`}>
                 {product.title}
               </h3>
-              <p className={`mb-10 leading-relaxed ${product.variant === 'light' ? 'text-slate-500' : product.variant === 'primary' ? 'text-white/80' : 'text-slate-400'}`}>
+              <p className={`mb-10 leading-relaxed ${product.variant === 'light' ? 'text-slate-500' : product.variant === 'primary' ? 'text-white/80' : 'text-white/60'}`}>
                 {product.description}
               </p>
               <ul className={`text-left space-y-4 mb-12 text-sm font-bold ${product.variant === 'light' ? 'text-slate-700' : 'text-white/80'}`}>
@@ -80,9 +81,9 @@ export default function Products() {
             
             <button className={`
               w-full font-headline font-bold py-5 uppercase tracking-widest transition-all relative z-10 rounded-sm
-              ${product.variant === 'dark' ? 'bg-primary text-white hover:bg-white hover:text-primary' : ''}
+              ${product.variant === 'dark' ? 'bg-secondary text-primary hover:bg-white' : ''}
               ${product.variant === 'primary' ? 'bg-white text-primary hover:bg-secondary hover:text-slate-950' : ''}
-              ${product.variant === 'light' ? 'bg-slate-950 text-white hover:bg-primary' : ''}
+              ${product.variant === 'light' ? 'bg-primary text-white hover:bg-slate-950' : ''}
             `}>
               Select Protocol
             </button>

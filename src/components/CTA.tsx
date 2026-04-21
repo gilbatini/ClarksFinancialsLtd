@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function CTA() {
   return (
-    <section className="bg-primary py-24 relative overflow-hidden">
+    <section className="bg-surface-900 py-24 relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center opacity-5 select-none pointer-events-none">
         <h2 className="font-headline text-[30rem] text-white leading-none font-black italic">FAST</h2>
       </div>
@@ -28,14 +28,14 @@ export default function CTA() {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-primary font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-secondary hover:text-slate-950 transition-all shadow-2xl"
+            className="bg-secondary text-slate-950 font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-white transition-all shadow-2xl"
           >
             Apply Now
           </motion.button>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-transparent border-2 border-white text-white font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-white hover:text-primary transition-all shadow-2xl"
+            className="border-2 border-primary text-white font-headline font-black px-14 py-6 rounded-sm text-xl tracking-widest uppercase hover:bg-primary transition-all shadow-2xl"
           >
             See How It Works
           </motion.button>

@@ -16,24 +16,24 @@ export default function Hero() {
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
             <span className="text-[10px] font-black uppercase tracking-[0.2em]">Licensed Institution · Kampala, Uganda · Est. 2012</span>
           </div>
-          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-slate-950 font-black text-kern-tight mb-8">
-            FAST APPROVAL<br />ON ALL <span className="text-primary italic">QUICK LOANS.</span>
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-slate-950 font-black text-kern-tight mb-8 uppercase">
+            FAST APPROVAL<br />ON <span className="text-primary italic">SALARIED EMPLOYEE LOAN.</span>
           </h1>
           <p className="text-slate-600 text-lg mb-10 max-w-2xl font-medium leading-relaxed">
-            Clarks Financials Limited has been serving Kampala since 2012. Licensed by the Uganda Microfinance Regulatory Authority (UMRA) and trusted by hundreds of clients across Uganda.
+            Specializing in Salaried Employee Loans. Get your funds within 24hrs of submitting your documents. Licensed by UMRA and serving Uganda since 2012.
           </p>
           <div className="flex flex-wrap gap-4">
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-primary text-white font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-accent transition-all flex items-center gap-3"
+              className="bg-secondary text-slate-950 font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-white transition-all flex items-center gap-3 shadow-lg"
             >
               Apply for a Loan <ArrowUpRight className="w-6 h-6" />
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-white border-2 border-primary text-primary font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-primary/5 transition-all"
+              className="border-2 border-primary text-primary font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-primary hover:text-white transition-all"
             >
               View Our Products
             </motion.button>

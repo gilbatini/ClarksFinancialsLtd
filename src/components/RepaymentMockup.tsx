@@ -32,7 +32,7 @@ export default function RepaymentMockup() {
               </div>
               
               <div className="p-8">
-                <div className="w-8 h-8 bg-primary clip-logo flex items-center justify-center mb-6">
+                <div className="w-8 h-8 bg-primary flex items-center justify-center mb-6 rounded-sm">
                   <div className="w-4 h-4 bg-secondary rounded-full"></div>
                 </div>
                 <h5 className="text-slate-950 font-bold text-xl mb-1">Loan Settlement</h5>
@@ -101,7 +101,7 @@ export default function RepaymentMockup() {
         >
           <p className="text-primary font-bold uppercase tracking-widest mb-4">Omni-Channel Repayment</p>
           <h2 className="font-headline text-6xl md:text-8xl text-slate-950 uppercase leading-[0.9] mb-10 tracking-tighter font-black">
-            EFFORTLESS<br /><span className="text-primary">SETTLEMENT.</span>
+            EFFORTLESS<br /><span className="text-primary italic">SETTLEMENT.</span>
           </h2>
           <p className="text-slate-600 text-lg mb-12 font-medium">
             Integration with Uganda's leading mobile networks ensures real-time ledger updates. Repay anywhere, anytime with instant confirmation.

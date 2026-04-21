@@ -5,7 +5,7 @@ const services = [
   {
     id: "01",
     title: "Money Lending",
-    description: "Fast-tracked salary loans from UGX 200,000 to UGX 15,000,000 over 1 to 24 months. Decisions within 24 hours.",
+    description: "Fast-tracked salary loans from UGX 200,000 to UGX 15,000,000 over 1 to 24 months. Decisions within 24hrs.",
     icon: Banknote,
   },
   {
@@ -30,16 +30,16 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-surface-100 py-32" id="services">
+    <section className="bg-white py-32" id="services">
       <div className="container mx-auto px-8 mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-primary font-bold uppercase tracking-widest mb-4">What We Offer</p>
-          <h2 className="font-headline text-6xl md:text-8xl text-slate-950 font-black text-kern-tight leading-none">
-            YOUR ONE-STOP<br />CENTRE.
+          <p className="text-primary font-bold uppercase tracking-widest mb-4">Core Competencies</p>
+          <h2 className="font-headline text-6xl md:text-8xl text-slate-950 font-black text-kern-tight leading-none uppercase">
+            SPECIALIZED<br />SOLUTIONS.
           </h2>
         </motion.div>
         <motion.p 
@@ -48,7 +48,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="max-w-xs text-slate-500 font-medium"
         >
-          From salary loans to utility bill payments, agency banking, and mobile money — we bring every financial service you need under one roof.
+          Architectural precision in credit structuring for high-performance entities.
         </motion.p>
       </div>
       
@@ -60,9 +60,9 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="group bg-white p-10 h-[420px] border border-surface-200 flex flex-col justify-between hover:border-primary transition-all duration-500 relative overflow-hidden"
+            className="group bg-white p-10 h-[420px] border border-surface-200 flex flex-col justify-between hover:border-primary transition-all duration-500 relative overflow-hidden shadow-sm hover:shadow-xl"
           >
-            <div className="text-primary/10 font-headline text-8xl font-black absolute -top-4 -right-4 group-hover:text-primary/20 transition-all">
+            <div className="text-primary/5 font-headline text-8xl font-black absolute -top-4 -right-4 group-hover:text-primary/10 transition-all">
               {service.id}
             </div>
             <div className="relative z-10">

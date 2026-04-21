@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -42,16 +43,8 @@ export default function Navbar() {
       scrolled ? "bg-white/90 backdrop-blur-md py-3 border-surface-200 shadow-sm" : "bg-transparent py-5 border-transparent"
     )}>
       <div className="container mx-auto px-8 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 bg-primary clip-logo flex items-center justify-center group-hover:rotate-12 transition-transform">
-            <div className="w-4 h-4 bg-secondary rounded-full"></div>
-          </div>
-          <div className={cn(
-            "text-xl font-black tracking-tighter font-headline uppercase transition-colors",
-            scrolled ? "text-primary" : "text-slate-950"
-          )}>
-            Clarks Financials
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <Logo />
         </Link>
 
         {/* Desktop Menu */}

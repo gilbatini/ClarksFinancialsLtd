@@ -22,10 +22,10 @@ export default function Apply() {
         <div className="container mx-auto px-8 relative z-10">
           <p className="text-secondary font-bold uppercase tracking-widest mb-4">Application Protocol</p>
           <h1 className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8">
-            APPLY IN <br /><span className="text-secondary">MINUTES.</span>
+            24HRS <br /><span className="text-secondary">FUNDING.</span>
           </h1>
           <p className="max-w-2xl text-lg text-white/80 font-medium">
-            Once all documents are received, applications are completed, approved, and funds deposited within 24 hours.
+            Money out within 24hrs in most cases. Ensure you have your full document package ready for instant processing.
           </p>
         </div>
       </section>

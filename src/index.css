@@ -5,15 +5,15 @@
   --font-headline: "Space Grotesk", sans-serif;
   --font-body: "Manrope", sans-serif;
 
-  --color-primary: #0033FF;
-  --color-secondary: #3FFF8B;
-  --color-accent: #001AFF;
+  --color-primary: #1B6FC8;
+  --color-secondary: #2DC84A;
+  --color-accent: #0f172a;
   
   --color-surface-50: #f8f9ff;
   --color-surface-100: #f2f3f9;
   --color-surface-200: #e5e7f0;
-  --color-surface-900: #0f172a;
-  --color-surface-950: #020617;
+  --color-surface-900: #0A0A0A;
+  --color-surface-950: #050505;
 
   --radius-sm: 2px;
   --radius-default: 4px;
@@ -23,7 +23,7 @@
 
 @layer base {
   body {
-    @apply bg-surface-50 text-slate-900 font-body selection:bg-primary selection:text-white overflow-x-hidden;
+    @apply bg-surface-50 text-slate-900 font-body selection:bg-secondary selection:text-primary overflow-x-hidden;
   }
 }
 

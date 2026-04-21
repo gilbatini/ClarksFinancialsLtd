@@ -55,7 +55,7 @@ export default function About() {
               <p>
                 We offer affordable loan products and financial services in today's fast-moving environment, 
                 where time and simplicity matter most. Our experienced team processes applications and 
-                disburses approved funds within 24 hours.
+                disburses approved funds within 24hrs.
               </p>
               <p>
                 We operate from two locations in Kampala — our Head Office on Kampala Road and our Branch at Kireka.
