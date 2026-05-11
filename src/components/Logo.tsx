@@ -10,14 +10,14 @@ export default function Logo({ className = "", light = false, iconOnly = false }
   const logoUrl = "https://raw.githubusercontent.com/gilbatini/ClarksFinancialsLtd/main/logo-beta.png";
 
   return (
-    <div className={cn("flex items-center", className)}>
+    <div className={cn("flex items-center transition-all", className)}>
       {!imageError ? (
         <img 
           src={logoUrl} 
           alt="Clarks Financials Limited" 
           className={cn(
             "object-contain transition-all h-auto",
-            iconOnly ? "w-10 h-10" : "h-10 md:h-12 w-auto"
+            iconOnly ? "h-8 md:h-10" : "h-11 md:h-14 lg:h-16"
           )} 
           onError={() => setImageError(true)}
           referrerPolicy="no-referrer"
@@ -28,8 +28,8 @@ export default function Logo({ className = "", light = false, iconOnly = false }
       ) : (
         <div className="flex items-center gap-3">
           <svg 
-            width="36" 
-            height="36" 
+            width="40" 
+            height="40" 
             viewBox="0 0 100 100" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
