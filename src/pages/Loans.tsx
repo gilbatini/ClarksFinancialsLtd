@@ -32,7 +32,7 @@ export default function Loans() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="space-y-2">
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Amount Range</p>
-                    <p className="font-headline text-xl font-bold text-slate-950">UGX 200,000 — 20M</p>
+                    <p className="font-headline text-xl font-bold text-slate-950">Starting UGX 200,000</p>
                   </div>
                   <div className="space-y-2">
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Loan Term</p>

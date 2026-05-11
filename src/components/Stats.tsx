@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const stats = [
   { label: "Serving Since 2012", value: "13+ YRS", color: "text-secondary" },
-  { label: "Maximum Loan", value: "20M+", color: "text-white" },
+  { label: "Maximum Loan", value: "FLEXIBLE", color: "text-white" },
   { label: "Approval Time", value: "24HRS", color: "text-white" },
   { label: "Hidden Fees", value: "0.0%", color: "text-secondary" },
 ];

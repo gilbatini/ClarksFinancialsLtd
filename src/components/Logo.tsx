@@ -1,47 +1,35 @@
 import React, { useState } from 'react';
+import { cn } from '../lib/utils';
 
 export default function Logo({ className = "", light = false, iconOnly = false }: { className?: string, light?: boolean, iconOnly?: boolean }) {
   const [imageError, setImageError] = useState(false);
   const primaryColor = light ? "white" : "#1B6FC8";
   const secondaryColor = "#2DC84A";
   
-  // Using the latest provided Google Drive direct link for the logo (lh3 format is often more reliable)
-  const logoUrl = "https://lh3.googleusercontent.com/d/1RyJV-6iFB24EHZaSEyx1BYzfFZTpC25Z";
+  // Using the raw GitHub link for the new beta logo
+  const logoUrl = "https://raw.githubusercontent.com/gilbatini/ClarksFinancialsLtd/main/logo-beta.png";
 
   return (
-    <div className={`flex items-center ${className}`}>
+    <div className={cn("flex items-center", className)}>
       {!imageError ? (
-        <div className="flex items-center overflow-hidden">
-          {iconOnly ? (
-            <div className="w-10 h-10 overflow-hidden flex items-center justify-center">
-              <img 
-                src={logoUrl} 
-                alt="Clarks Financials Icon" 
-                className="h-10 w-auto max-w-none" 
-                onError={() => setImageError(true)}
-                referrerPolicy="no-referrer"
-                style={{ 
-                  filter: light ? 'brightness(0) invert(1)' : 'none',
-                  objectFit: 'contain'
-                }}
-              />
-            </div>
-          ) : (
-            <img 
-              src={logoUrl} 
-              alt="Clarks Financials Logo" 
-              className="h-10 w-auto" 
-              onError={() => setImageError(true)}
-              referrerPolicy="no-referrer"
-              style={{ filter: light ? 'brightness(0) invert(1)' : 'none' }}
-            />
-          )}
-        </div>
+        <img 
+          src={logoUrl} 
+          alt="Clarks Financials Limited" 
+          className={cn(
+            "object-contain transition-all h-auto",
+            iconOnly ? "w-10 h-10" : "h-10 md:h-12 w-auto"
+          )} 
+          onError={() => setImageError(true)}
+          referrerPolicy="no-referrer"
+          style={{ 
+            filter: light ? 'brightness(0) invert(1)' : 'none'
+          }}
+        />
       ) : (
         <div className="flex items-center gap-3">
           <svg 
-            width="40" 
-            height="40" 
+            width="36" 
+            height="36" 
             viewBox="0 0 100 100" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
@@ -54,19 +42,19 @@ export default function Logo({ className = "", light = false, iconOnly = false }
             <path 
               d="M15 20C5 35 10 70 20 85" 
               stroke={secondaryColor} 
-              strokeWidth="6" 
+              strokeWidth="10" 
               strokeLinecap="round" 
             />
             <path 
               d="M85 20C95 35 90 70 80 85" 
               stroke={secondaryColor} 
-              strokeWidth="6" 
+              strokeWidth="10" 
               strokeLinecap="round" 
             />
           </svg>
           {!iconOnly && (
-            <div className={`font-headline font-black uppercase tracking-tighter text-lg md:text-xl leading-none ${light ? 'text-white' : 'text-primary'}`}>
-              Clarks Financials
+            <div className={`font-headline font-bold uppercase tracking-tight text-lg md:text-xl leading-none ${light ? 'text-white' : 'text-primary'}`}>
+              Clarks Financials Limited
             </div>
           )}
         </div>
