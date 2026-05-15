@@ -1,14 +1,30 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, Dispatch, SetStateAction } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [netSalary, setNetSalary] = useState<number>(200000);
+  const [loanAmount, setLoanAmount] = useState<number>(200000);
+  const [loanTerm, setLoanTerm] = useState<number>(1);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
+  };
+
+  const adjustValue = (setter: Dispatch<SetStateAction<number>>, current: number, delta: number, min: number = 0) => {
+    setter(Math.max(min, current + delta));
+  };
+
+  const formatCurrency = (val: number) => {
+    return new Intl.NumberFormat('en-US').format(val);
+  };
+
+  const handleCurrencyChange = (setter: Dispatch<SetStateAction<number>>, value: string) => {
+    const numericValue = parseInt(value.replace(/[^\d]/g, ''), 10) || 0;
+    setter(numericValue);
   };
 
   return (
@@ -53,7 +69,7 @@ export default function Contact() {
         </div>
         
         <div className="lg:col-span-7">
-          <div className="p-12 border relative bg-white/40 backdrop-blur-xl border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]">
+          <div className="p-12 border relative bg-[#D6E4E8] border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]">
             <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 clip-logo -m-4"></div>
             <h3 className="font-headline text-3xl font-black text-slate-950 uppercase mb-8 border-b border-surface-200 pb-4">
               Application Protocol
@@ -91,17 +107,73 @@ export default function Contact() {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
+                <div className="min-w-0">
                   <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Net Salary (UGX)</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" placeholder="0.00" required type="number" />
+                  <div className="flex border border-surface-200 bg-white overflow-hidden">
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setNetSalary, netSalary, -10000)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
+                    >-</button>
+                    <input 
+                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
+                      value={formatCurrency(netSalary)} 
+                      onChange={(e) => handleCurrencyChange(setNetSalary, e.target.value)}
+                      required 
+                      type="text"
+                    />
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setNetSalary, netSalary, 10000)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
+                    >+</button>
+                  </div>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Loan Amount (UGX)</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" placeholder="0.00" required type="number" />
+                  <div className="flex border border-surface-200 bg-white overflow-hidden">
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setLoanAmount, loanAmount, -10000)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
+                    >-</button>
+                    <input 
+                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
+                      value={formatCurrency(loanAmount)} 
+                      onChange={(e) => handleCurrencyChange(setLoanAmount, e.target.value)}
+                      required 
+                      type="text"
+                    />
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setLoanAmount, loanAmount, 10000)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
+                    >+</button>
+                  </div>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Term (Months)</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" placeholder="1-24" required type="number" />
+                  <div className="flex border border-surface-200 bg-white overflow-hidden">
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setLoanTerm, loanTerm, -1, 1)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
+                    >-</button>
+                    <input 
+                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
+                      value={loanTerm} 
+                      onChange={(e) => setLoanTerm(Number(e.target.value))}
+                      required 
+                      type="number" 
+                      min="1"
+                      max="24"
+                    />
+                    <button 
+                      type="button" 
+                      onClick={() => adjustValue(setLoanTerm, loanTerm, 1, 1)}
+                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
+                    >+</button>
+                  </div>
                 </div>
               </div>
               

@@ -6,8 +6,8 @@ export default function Logo({ className = "", light = false, iconOnly = false }
   const primaryColor = light ? "white" : "#1B6FC8";
   const secondaryColor = "#2DC84A";
   
-  // Using the local logo file from the public folder
-  const logoUrl = "/logo.png";
+  // Using the raw GitHub link for the logo
+  const logoUrl = "https://raw.githubusercontent.com/gilbatini/ClarksFinancialsLtd/main/public/logo.png";
 
   return (
     <div className={cn("flex items-center transition-all", className)}>
