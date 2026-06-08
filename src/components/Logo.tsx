@@ -11,18 +11,15 @@ export default function Logo({ className = "", light = false, iconOnly = false }
   return (
     <div className={cn("flex items-center transition-all", className)}>
       {!imageError ? (
-        <img 
-          src={logoUrl} 
-          alt="Clarks Financials Limited" 
+        <img
+          src={logoUrl}
+          alt="Clarks Financials Limited"
           className={cn(
             "object-contain transition-all h-auto",
             iconOnly ? "h-8 md:h-10" : "h-11 md:h-14 lg:h-16"
-          )} 
+          )}
           onError={() => setImageError(true)}
           referrerPolicy="no-referrer"
-          style={{ 
-            filter: light ? 'brightness(0) invert(1)' : 'none'
-          }}
         />
       ) : (
         <div className="flex items-center gap-3">
