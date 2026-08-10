@@ -1,0 +1,312 @@
+{
+  "generatedAt": "2026-08-10T23:13:33.322Z",
+  "source": "measured lab data: Playwright Chromium PerformanceObserver with network and CPU emulation",
+  "caveat": "INP is a synthetic interaction sample, not CrUX field p75. Zero is only valid when interactionObserved is true.",
+  "baseUrl": "http://127.0.0.1:4173",
+  "runsPerRouteProfile": 3,
+  "requestedMetric": "CLS",
+  "profiles": {
+    "mobile": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "deviceScaleFactor": 2.75,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; Moto G Power) AppleWebKit/537.36 Chrome/126 Mobile Safari/537.36",
+      "network": {
+        "offline": false,
+        "latency": 150,
+        "downloadThroughput": 200000,
+        "uploadThroughput": 93750
+      },
+      "cpuRate": 4
+    },
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126 Safari/537.36",
+      "network": {
+        "offline": false,
+        "latency": 40,
+        "downloadThroughput": 1250000,
+        "uploadThroughput": 625000
+      },
+      "cpuRate": 1
+    }
+  },
+  "summaries": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 3788,
+        "inpMs": 296,
+        "cls": 0
+      },
+      "interactionTimingCoverage": "3/3"
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 4108,
+        "inpMs": 200,
+        "cls": 0.0012
+      },
+      "interactionTimingCoverage": "3/3"
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 2288,
+        "inpMs": 88,
+        "cls": 0
+      },
+      "interactionTimingCoverage": "3/3"
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 1432,
+        "inpMs": 264,
+        "cls": 0.0891
+      },
+      "interactionTimingCoverage": "3/3"
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 1380,
+        "inpMs": 96,
+        "cls": 0.099
+      },
+      "interactionTimingCoverage": "3/3"
+    },
+    {
+      "path": "/apply",
+      "profile": "desktop",
+      "sampleCount": 3,
+      "p75": {
+        "lcpMs": 1008,
+        "inpMs": 64,
+        "cls": 0.0891
+      },
+      "interactionTimingCoverage": "3/3"
+    }
+  ],
+  "samples": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 3496,
+      "inpMs": 288,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 4908
+    },
+    {
+      "path": "/",
+      "profile": "mobile",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 2272,
+      "inpMs": 296,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 4672
+    },
+    {
+      "path": "/",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 3788,
+      "inpMs": 128,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 5502
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 4108,
+      "inpMs": 200,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 5599
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 3296,
+      "inpMs": 200,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 5012
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 3000,
+      "inpMs": 56,
+      "cls": 0.0012,
+      "interactionObserved": true,
+      "wallTimeMs": 4280
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 2288,
+      "inpMs": 72,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 3805
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 2212,
+      "inpMs": 88,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 3863
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 2288,
+      "inpMs": 56,
+      "cls": 0,
+      "interactionObserved": true,
+      "wallTimeMs": 3815
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 672,
+      "inpMs": 48,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 2699
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 888,
+      "inpMs": 264,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 2989
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 1432,
+      "inpMs": 96,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 3139
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 832,
+      "inpMs": 96,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 3264
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 1120,
+      "inpMs": 96,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 3299
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 1380,
+      "inpMs": 72,
+      "cls": 0.099,
+      "interactionObserved": true,
+      "wallTimeMs": 3016
+    },
+    {
+      "path": "/apply",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 824,
+      "inpMs": 64,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 2811
+    },
+    {
+      "path": "/apply",
+      "profile": "desktop",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 1008,
+      "inpMs": 48,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 2858
+    },
+    {
+      "path": "/apply",
+      "profile": "desktop",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 816,
+      "inpMs": 40,
+      "cls": 0.0891,
+      "interactionObserved": true,
+      "wallTimeMs": 2796
+    }
+  ]
+}

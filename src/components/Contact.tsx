@@ -190,18 +190,20 @@ export default function Contact() {
                 Submit Application Protocol
               </button>
               
-              <AnimatePresence>
-                {isSubmitted && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="text-center bg-secondary/20 border border-secondary p-4 text-slate-950 font-black uppercase text-xs tracking-widest"
-                  >
-                    Protocol Initialized Successfully
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="min-h-[54px]" aria-live="polite">
+                <AnimatePresence>
+                  {isSubmitted && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="text-center bg-secondary/20 border border-secondary p-4 text-slate-950 font-black uppercase text-xs tracking-widest"
+                    >
+                      Protocol Initialized Successfully
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </form>
           </div>
         </div>

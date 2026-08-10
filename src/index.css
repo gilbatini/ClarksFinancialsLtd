@@ -22,6 +22,10 @@
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   body {
     @apply bg-surface-50 text-slate-900 font-body selection:bg-secondary selection:text-primary overflow-x-hidden;
   }
@@ -32,6 +36,10 @@
     background-image: linear-gradient(#e5e7f0 1px, transparent 1px), linear-gradient(90deg, #e5e7f0 1px, transparent 1px);
     background-size: 50px 50px;
   }
+  .route-loading-shell {
+    min-block-size: calc(100svh - 5rem);
+  }
+
   
   .text-kern-tight {
     letter-spacing: -0.05em;

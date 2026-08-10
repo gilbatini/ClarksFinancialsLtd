@@ -32,7 +32,7 @@ export default function App() {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
-          <Suspense fallback={<div className="min-h-screen bg-surface-50" aria-hidden="true" />}>
+          <Suspense fallback={<div className="route-loading-shell bg-surface-50" aria-hidden="true" />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
