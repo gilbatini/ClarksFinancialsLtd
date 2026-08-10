@@ -113,10 +113,30 @@ function validateFinancialService(schema) {
   }
 }
 
+function validateFAQPage(schema) {
+  if (!schema.url || !isHttpsUrl(schema.url)) addError(schema, "url must be an absolute HTTPS URL");
+  if (!Array.isArray(schema.mainEntity) || schema.mainEntity.length === 0) {
+    addError(schema, "mainEntity must contain visible borrowing questions");
+    return;
+  }
+  const names = new Set();
+  for (const question of schema.mainEntity) {
+    if (question["@type"] !== "Question" || !question.name) {
+      addError(schema, "each mainEntity item requires @type Question and name");
+    }
+    if (names.has(question.name)) addError(schema, `duplicate FAQ question: ${question.name}`);
+    names.add(question.name);
+    if (question.acceptedAnswer?.["@type"] !== "Answer" || !question.acceptedAnswer.text) {
+      addError(schema, `question requires a populated acceptedAnswer: ${question.name ?? "(unnamed)"}`);
+    }
+  }
+}
+
 function validateSchema(schema) {
   validateCommon(schema);
   if (schema["@type"] === "Organization") validateOrganization(schema);
   if (schema["@type"] === "FinancialService") validateFinancialService(schema);
+  if (schema["@type"] === "FAQPage") validateFAQPage(schema);
 }
 
 const appSource = await readFile(resolve(ROOT, "src/App.tsx"), "utf8");
@@ -136,6 +156,11 @@ if (selected.some((schema) => schema["@type"] === "Organization")) {
 if (selected.some((schema) => schema["@type"] === "FinancialService")
   && !schemasForRoute("/contact").some((schema) => schema["@type"] === "FinancialService")) {
   errors.push("FinancialService schema is not assigned to the contact route");
+}
+
+if (selected.some((schema) => schema["@type"] === "FAQPage")
+  && !schemasForRoute("/faqs").some((schema) => schema["@type"] === "FAQPage")) {
+  errors.push("FAQPage schema is not assigned to the FAQs route");
 }
 
 for (const warning of [...new Set(warnings)]) console.warn(`WARN: ${warning}`);

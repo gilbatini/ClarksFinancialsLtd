@@ -1,3 +1,5 @@
+import { faqCategories } from "../content/faqs.mjs";
+
 export const SITE_URL = "https://www.clarksfinancials.com";
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
@@ -73,9 +75,27 @@ export const financialServiceSchema = {
   currenciesAccepted: "UGX",
 };
 
+export const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${SITE_URL}/faqs#faq`,
+  url: `${SITE_URL}/faqs`,
+  mainEntity: faqCategories.flatMap((category) =>
+    category.questions.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: a,
+      },
+    })),
+  ),
+};
+
 const schemasByRoute = {
   "/": [organizationSchema],
   "/contact": [financialServiceSchema],
+  "/faqs": [faqPageSchema],
 };
 
 export function schemasForRoute(pathname) {
