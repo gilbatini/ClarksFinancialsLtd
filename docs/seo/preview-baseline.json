@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2026-08-10T22:44:41.512Z",
+  "source": "UA-spoofed raw HTTP fetch; JavaScript not executed",
+  "baseUrl": "https://www.clarksfinancials.com",
+  "crawlers": [
+    "whatsapp",
+    "facebook",
+    "linkedin"
+  ],
+  "failureCount": 42,
+  "failures": [
+    "/ whatsapp missing description",
+    "/ whatsapp missing image",
+    "/ facebook missing description",
+    "/ facebook missing image",
+    "/ linkedin missing description",
+    "/ linkedin missing image",
+    "/about whatsapp missing description",
+    "/about whatsapp missing image",
+    "/about facebook missing description",
+    "/about facebook missing image",
+    "/about linkedin missing description",
+    "/about linkedin missing image",
+    "/loans whatsapp missing description",
+    "/loans whatsapp missing image",
+    "/loans facebook missing description",
+    "/loans facebook missing image",
+    "/loans linkedin missing description",
+    "/loans linkedin missing image",
+    "/apply whatsapp missing description",
+    "/apply whatsapp missing image",
+    "/apply facebook missing description",
+    "/apply facebook missing image",
+    "/apply linkedin missing description",
+    "/apply linkedin missing image",
+    "/regulatory whatsapp missing description",
+    "/regulatory whatsapp missing image",
+    "/regulatory facebook missing description",
+    "/regulatory facebook missing image",
+    "/regulatory linkedin missing description",
+    "/regulatory linkedin missing image",
+    "/faqs whatsapp missing description",
+    "/faqs whatsapp missing image",
+    "/faqs facebook missing description",
+    "/faqs facebook missing image",
+    "/faqs linkedin missing description",
+    "/faqs linkedin missing image",
+    "/contact whatsapp missing description",
+    "/contact whatsapp missing image",
+    "/contact facebook missing description",
+    "/contact facebook missing image",
+    "/contact linkedin missing description",
+    "/contact linkedin missing image"
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/about",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/about",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/about",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/about",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/loans",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/apply",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/apply",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/apply",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/apply",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/regulatory",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/faqs",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    },
+    {
+      "path": "/contact",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/contact",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/contact",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/contact",
+          "title": "Clarks Financials Limited",
+          "description": "",
+          "image": "",
+          "ogUrl": ""
+        }
+      }
+    }
+  ]
+}
