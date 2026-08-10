@@ -10,6 +10,7 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
+    "seo:generate-og": "node scripts/seo/generate-og-image.mjs",
     "seo:verify-all": "node scripts/seo/verify-all.mjs"
   },
   "dependencies": {
