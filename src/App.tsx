@@ -14,6 +14,7 @@ import Apply from "./pages/Apply";
 import Regulatory from "./pages/Regulatory";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
+import RouteStructuredData from "./seo/RouteStructuredData";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -29,6 +30,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <RouteStructuredData />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">
