@@ -59,7 +59,7 @@ export default function Hero() {
               referrerPolicy="no-referrer"
             />
             <div className="bg-primary p-8 text-white">
-              <h3 className="font-headline text-2xl text-secondary mb-4 uppercase font-bold tracking-tight">Our Priority Services</h3>
+              <h2 className="font-headline text-2xl text-secondary mb-4 uppercase font-bold tracking-tight">Our Priority Services</h2>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 border-b border-white/10 pb-3 font-medium">
                   <CheckCircle2 className="w-5 h-5 text-secondary" /> Instant Disbursement

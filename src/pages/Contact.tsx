@@ -23,18 +23,18 @@ export default function Contact() {
         <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Phone className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Phone Support</h3>
+            <h2 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Phone Support</h2>
             <p className="text-slate-500 font-medium">0772 502 955</p>
             <p className="text-slate-500 font-medium">0702 502 955</p>
           </div>
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Mail className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Email Enquiries</h3>
+            <h2 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Email Enquiries</h2>
             <p className="text-slate-500 font-medium">loans@clarksfinancials.com</p>
           </div>
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Clock className="w-10 h-10 text-primary mb-6" />
-            <h3 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Business Hours</h3>
+            <h2 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Business Hours</h2>
             <p className="text-slate-500 font-medium">Mon - Fri: 8:00am - 5:00pm</p>
           </div>
         </div>

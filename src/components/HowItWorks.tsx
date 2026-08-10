@@ -53,9 +53,9 @@ export default function HowItWorks() {
                 {step.id}
               </div>
               <div>
-                <h4 className="font-headline text-2xl text-slate-950 uppercase font-bold tracking-tight mb-1">
+                <h3 className="font-headline text-2xl text-slate-950 uppercase font-bold tracking-tight mb-1">
                   {step.title}
-                </h4>
+                </h3>
                 <p className="text-slate-500 text-sm">{step.description}</p>
               </div>
             </motion.div>

@@ -42,7 +42,7 @@ export default function Contact() {
                 <MapPin className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <h4 className="text-slate-950 font-headline text-2xl uppercase font-bold mb-2">Head Office</h4>
+                <h3 className="text-slate-950 font-headline text-2xl uppercase font-bold mb-2">Head Office</h3>
                 <p className="text-slate-500 font-medium">Ambassador House, 2nd Floor<br />Kampala Road, Kampala, Uganda</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                 <Clock className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <h4 className="text-slate-950 font-headline text-2xl uppercase font-bold mb-2">Operation Hours</h4>
+                <h3 className="text-slate-950 font-headline text-2xl uppercase font-bold mb-2">Operation Hours</h3>
                 <p className="text-slate-500 font-medium">Monday - Friday: 08:00 — 17:00</p>
               </div>
             </div>
