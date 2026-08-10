@@ -92,6 +92,28 @@ export const faqPageSchema = {
   ),
 };
 
+const loanProductServiceIds = {
+  "Salary Loan": "salary-loan",
+  Unsecured: "unsecured",
+  "Agency Banking": "agency-banking",
+};
+
+export const loanServiceSchemas = Object.entries(loanProductServiceIds).map(([name, fragment]) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/loans#${fragment}`,
+  name,
+  serviceType: name,
+  url: `${SITE_URL}/loans`,
+  provider: {
+    "@id": ORGANIZATION_ID,
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Uganda",
+  },
+}));
+
 const breadcrumbRouteLabels = {
   "/about": "About",
   "/loans": "Loans",
@@ -129,7 +151,7 @@ export const breadcrumbSchemas = Object.fromEntries(
 const schemasByRoute = {
   "/": [organizationSchema],
   "/about": [breadcrumbSchemas["/about"]],
-  "/loans": [breadcrumbSchemas["/loans"]],
+  "/loans": [breadcrumbSchemas["/loans"], ...loanServiceSchemas],
   "/apply": [breadcrumbSchemas["/apply"]],
   "/regulatory": [breadcrumbSchemas["/regulatory"]],
   "/faqs": [faqPageSchema, breadcrumbSchemas["/faqs"]],

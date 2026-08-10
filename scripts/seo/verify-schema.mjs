@@ -21,6 +21,7 @@ const prohibitedFields = new Set([
   "hasCredential",
   "interestRate",
   "license",
+  "offers",
   "review",
   "reviewRating",
 ]);
@@ -145,12 +146,26 @@ function validateBreadcrumbList(schema) {
   });
 }
 
+function validateService(schema) {
+  for (const field of ["name", "serviceType", "url", "provider", "areaServed"]) {
+    if (!schema[field]) addError(schema, `${field} is required`);
+  }
+  if (schema.url && !isHttpsUrl(schema.url)) addError(schema, "url must be an absolute HTTPS URL");
+  if (schema.provider?.["@id"] !== "https://www.clarksfinancials.com/#organization") {
+    addError(schema, "provider must reference the Organization @id");
+  }
+  if (schema.areaServed?.["@type"] !== "Country" || !schema.areaServed.name) {
+    addError(schema, "areaServed must be a named Country");
+  }
+}
+
 function validateSchema(schema) {
   validateCommon(schema);
   if (schema["@type"] === "Organization") validateOrganization(schema);
   if (schema["@type"] === "FinancialService") validateFinancialService(schema);
   if (schema["@type"] === "FAQPage") validateFAQPage(schema);
   if (schema["@type"] === "BreadcrumbList") validateBreadcrumbList(schema);
+  if (schema["@type"] === "Service") validateService(schema);
 }
 
 const appSource = await readFile(resolve(ROOT, "src/App.tsx"), "utf8");
@@ -189,6 +204,22 @@ if (selected.some((schema) => schema["@type"] === "BreadcrumbList")) {
     if (finalItem?.item !== `https://www.clarksfinancials.com${route}`) {
       errors.push(`BreadcrumbList final item does not match ${route}`);
     }
+  }
+}
+
+if (selected.some((schema) => schema["@type"] === "Service")) {
+  const productSource = await readFile(resolve(ROOT, "src/components/Products.tsx"), "utf8");
+  const productNames = [...productSource.matchAll(/title:\s*"([^"]+)"/g)].map((match) => match[1]);
+  const services = schemasForRoute("/loans").filter((schema) => schema["@type"] === "Service");
+  const serviceNames = services.map((schema) => schema.name);
+  for (const name of productNames) {
+    if (!serviceNames.includes(name)) errors.push(`Service schema missing for product: ${name}`);
+  }
+  for (const name of serviceNames) {
+    if (!productNames.includes(name)) errors.push(`Service schema has no matching product card: ${name}`);
+  }
+  if (new Set(serviceNames).size !== serviceNames.length) {
+    errors.push("Service schema names must be unique");
   }
 }
 
