@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-08-10T22:39:36.997Z",
+  "source": "raw HTML crawl; JavaScript not executed",
+  "baseUrl": "https://www.clarksfinancials.com",
+  "summary": {
+    "routes": 7,
+    "broken": 0,
+    "redirectChains": 0,
+    "orphans": 6
+  },
+  "broken": [],
+  "redirectChains": [],
+  "orphans": [
+    "/about",
+    "/loans",
+    "/apply",
+    "/regulatory",
+    "/faqs",
+    "/contact"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "requestedUrl": "https://www.clarksfinancials.com/",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": 0
+    },
+    {
+      "path": "/about",
+      "requestedUrl": "https://www.clarksfinancials.com/about",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/about",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    },
+    {
+      "path": "/loans",
+      "requestedUrl": "https://www.clarksfinancials.com/loans",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/loans",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    },
+    {
+      "path": "/apply",
+      "requestedUrl": "https://www.clarksfinancials.com/apply",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/apply",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    },
+    {
+      "path": "/regulatory",
+      "requestedUrl": "https://www.clarksfinancials.com/regulatory",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/regulatory",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    },
+    {
+      "path": "/faqs",
+      "requestedUrl": "https://www.clarksfinancials.com/faqs",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/faqs",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    },
+    {
+      "path": "/contact",
+      "requestedUrl": "https://www.clarksfinancials.com/contact",
+      "status": 200,
+      "finalUrl": "https://www.clarksfinancials.com/contact",
+      "redirectChain": [],
+      "outgoingInternalLinks": [],
+      "bytes": 468,
+      "depth": null
+    }
+  ]
+}
