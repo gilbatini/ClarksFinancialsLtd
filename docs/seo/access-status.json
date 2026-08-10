@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-08-10T00:00:00.000Z",
+  "method": "Environment credential presence plus repository and raw production HTML inspection",
+  "systems": {
+    "googleSearchConsole": {
+      "access": "blocked",
+      "credentialEnvironmentVariable": "GSC_CREDENTIALS",
+      "credentialPresent": false,
+      "siteVerificationObservedInHtml": false,
+      "note": "Property existence cannot be confirmed without owner-granted access. No google-site-verification tag is present in raw production HTML."
+    },
+    "googleAnalytics4": {
+      "access": "blocked",
+      "credentialEnvironmentVariable": "GA4_CREDENTIALS",
+      "credentialPresent": false,
+      "trackingCodeObserved": false,
+      "note": "No GA4 measurement ID or Google tag is present in repository source or raw production HTML."
+    },
+    "googleBusinessProfile": {
+      "access": "blocked",
+      "credentialEnvironmentVariable": "GBP_CREDENTIALS",
+      "credentialPresent": false,
+      "profileExistence": "unconfirmed",
+      "note": "Claim and verification status requires access from the Clarks profile owner."
+    },
+    "algoriNext": {
+      "access": "blocked",
+      "requiredEnvironmentVariables": [
+        "ALGORINEXT_EVENT_URL",
+        "ALGORINEXT_TENANT",
+        "ALGORINEXT_TOKEN"
+      ],
+      "credentialsPresent": false,
+      "fallback": "docs/seo/events.ndjson"
+    }
+  }
+}
