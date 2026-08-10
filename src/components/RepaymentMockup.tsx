@@ -104,7 +104,7 @@ export default function RepaymentMockup() {
             EFFORTLESS<br /><span className="text-primary italic">SETTLEMENT.</span>
           </h2>
           <p className="text-slate-600 text-lg mb-12 font-medium">
-            Integration with Uganda's leading mobile networks ensures real-time ledger updates. Repay anywhere, anytime with instant confirmation.
+            Integration with mobile networks in Uganda supports real-time ledger updates. Repay remotely and retain your transaction confirmation.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

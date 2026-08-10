@@ -3,7 +3,7 @@ import { Shield, Users, Heart, Anchor, Target, Eye } from "lucide-react";
 
 const values = [
   { icon: Shield, title: "Integrity", description: "We do what we say. All loan terms, interest rates, and fees are disclosed honestly and in full." },
-  { icon: Users, title: "Teamwork", description: "Our strength lies in the collective effort of our people working together to deliver the best service." },
+  { icon: Users, title: "Teamwork", description: "Our strength lies in the collective effort of our people working together to deliver dependable service." },
   { icon: Heart, title: "Loyalty", description: "We are loyal to our clients, our colleagues, and the communities we serve." },
   { icon: Anchor, title: "Guard Against Arrogance", description: "We remain humble, grounded, and open to learning, respecting every client's circumstances." },
   { icon: Target, title: "Serve the Customer", description: "The client is at the centre of everything we do. We design our products around your needs." },
@@ -53,7 +53,7 @@ export default function About() {
                 making financial services accessible, fast, and transparent for every Ugandan we serve.
               </p>
               <p>
-                We offer affordable loan products and financial services in today's fast-moving environment, 
+                We offer loan products and financial services in today's fast-moving environment,
                 where time and simplicity matter most. Our experienced team processes applications and 
                 disburses approved funds within 24hrs.
               </p>
@@ -71,7 +71,7 @@ export default function About() {
             <div className="bg-surface-50 p-10 border-t-4 border-secondary">
               <Eye className="w-12 h-12 text-secondary mb-6" />
               <h3 className="font-headline text-2xl font-bold text-slate-950 uppercase mb-4">Vision</h3>
-              <p className="text-slate-500 text-sm">Building the best financial institution in Uganda.</p>
+              <p className="text-slate-500 text-sm">Building a trusted financial institution in Uganda.</p>
             </div>
           </div>
         </div>

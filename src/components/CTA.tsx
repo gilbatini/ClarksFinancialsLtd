@@ -23,7 +23,7 @@ export default function CTA() {
           transition={{ delay: 0.1 }}
           className="text-white/80 font-medium text-lg mb-12"
         >
-          Join hundreds of Ugandans who have trusted Clarks Financials for fast, transparent, and fair financial services since 2012.
+          Review the loan requirements, prepare your documents, and contact the Clarks Financials team if you need help before applying.
         </motion.p>
         <div className="flex flex-wrap justify-center gap-6">
           <Link to="/apply">

@@ -27,7 +27,7 @@ export default function HowItWorks() {
           <div className="bg-surface-50 p-10 border-l-4 border-primary relative">
             <Quote className="absolute -top-6 left-6 w-12 h-12 text-primary/20" />
             <p className="italic text-slate-700 text-lg font-medium leading-relaxed">
-              "Clarks Financials provided the funds I needed in less than two days. Their team is professional and transparent in a way others aren't."
+              Prepare your identification, employment, and income documents before applying so the team can review a complete file.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
