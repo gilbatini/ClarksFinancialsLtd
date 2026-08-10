@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-08-10T22:37:49.309Z",
+  "source": "src/App.tsx",
+  "canonicalBaseUrl": "https://www.clarksfinancials.com",
+  "routes": [
+    {
+      "path": "/",
+      "public": true,
+      "keyRoute": true
+    },
+    {
+      "path": "/about",
+      "public": true,
+      "keyRoute": false
+    },
+    {
+      "path": "/loans",
+      "public": true,
+      "keyRoute": true
+    },
+    {
+      "path": "/apply",
+      "public": true,
+      "keyRoute": true
+    },
+    {
+      "path": "/regulatory",
+      "public": true,
+      "keyRoute": false
+    },
+    {
+      "path": "/faqs",
+      "public": true,
+      "keyRoute": false
+    },
+    {
+      "path": "/contact",
+      "public": true,
+      "keyRoute": false
+    }
+  ]
+}
