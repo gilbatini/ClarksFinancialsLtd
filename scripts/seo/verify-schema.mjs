@@ -91,9 +91,32 @@ function validateOrganization(schema) {
   }
 }
 
+function validateFinancialService(schema) {
+  for (const field of ["name", "url", "image", "parentOrganization", "telephone", "email", "address", "openingHoursSpecification", "areaServed"]) {
+    if (!schema[field]) addError(schema, `${field} is required`);
+  }
+  if (schema.url && !isHttpsUrl(schema.url)) addError(schema, "url must be an absolute HTTPS URL");
+  if (schema.image && !isHttpsUrl(schema.image)) addError(schema, "image must be an absolute HTTPS URL");
+  if (schema.parentOrganization?.["@id"] !== "https://www.clarksfinancials.com/#organization") {
+    addError(schema, "parentOrganization must reference the Organization @id");
+  }
+  validateAddress(schema, schema.address);
+  const hours = schema.openingHoursSpecification;
+  if (hours?.["@type"] !== "OpeningHoursSpecification" || !hours.opens || !hours.closes) {
+    addError(schema, "openingHoursSpecification requires @type, opens, and closes");
+  }
+  if (!Array.isArray(hours?.dayOfWeek) || hours.dayOfWeek.length === 0) {
+    addError(schema, "openingHoursSpecification.dayOfWeek must list business days");
+  }
+  if (schema.areaServed?.["@type"] !== "Country" || !schema.areaServed.name) {
+    addError(schema, "areaServed must be a named Country");
+  }
+}
+
 function validateSchema(schema) {
   validateCommon(schema);
   if (schema["@type"] === "Organization") validateOrganization(schema);
+  if (schema["@type"] === "FinancialService") validateFinancialService(schema);
 }
 
 const appSource = await readFile(resolve(ROOT, "src/App.tsx"), "utf8");
@@ -108,6 +131,11 @@ if (selected.some((schema) => schema["@type"] === "Organization")) {
   if (!schemasForRoute("/").some((schema) => schema["@type"] === "Organization")) {
     errors.push("Organization schema is not assigned to the home route");
   }
+}
+
+if (selected.some((schema) => schema["@type"] === "FinancialService")
+  && !schemasForRoute("/contact").some((schema) => schema["@type"] === "FinancialService")) {
+  errors.push("FinancialService schema is not assigned to the contact route");
 }
 
 for (const warning of [...new Set(warnings)]) console.warn(`WARN: ${warning}`);

@@ -47,8 +47,35 @@ export const organizationSchema = {
   address: headOfficeAddress,
 };
 
+export const financialServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "@id": `${SITE_URL}/#financial-service-kampala-road`,
+  name: "Clarks Financials Limited — Kampala Road",
+  url: `${SITE_URL}/contact`,
+  image: `${SITE_URL}/logo-2-orgnal.jpg`,
+  parentOrganization: {
+    "@id": ORGANIZATION_ID,
+  },
+  telephone: "+256772502955",
+  email: "loans@clarksfinancials.com",
+  address: headOfficeAddress,
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "17:00",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "Uganda",
+  },
+  currenciesAccepted: "UGX",
+};
+
 const schemasByRoute = {
   "/": [organizationSchema],
+  "/contact": [financialServiceSchema],
 };
 
 export function schemasForRoute(pathname) {
