@@ -1,37 +1,13 @@
-import { useState, FormEvent, Dispatch, SetStateAction } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { MapPin, Clock } from "lucide-react";
+import { motion } from "motion/react";
+import { MapPin, Clock, MessageCircle, Phone } from "lucide-react";
+import { business } from "../lib/business";
 
 export default function Contact() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [netSalary, setNetSalary] = useState<number>(200000);
-  const [loanAmount, setLoanAmount] = useState<number>(200000);
-  const [loanTerm, setLoanTerm] = useState<number>(1);
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
-  const adjustValue = (setter: Dispatch<SetStateAction<number>>, current: number, delta: number, min: number = 0) => {
-    setter(Math.max(min, current + delta));
-  };
-
-  const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat('en-US').format(val);
-  };
-
-  const handleCurrencyChange = (setter: Dispatch<SetStateAction<number>>, value: string) => {
-    const numericValue = parseInt(value.replace(/[^\d]/g, ''), 10) || 0;
-    setter(numericValue);
-  };
-
   return (
     <section className="bg-white py-32" id="contact">
       <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-20">
         <div className="lg:col-span-5">
-          <p className="text-primary font-bold uppercase tracking-widest mb-4">Global Presence</p>
+          <p className="text-primary font-bold uppercase tracking-widest mb-4">Kampala Office</p>
           <h2 className="font-headline text-6xl md:text-7xl text-slate-950 uppercase leading-[0.9] mb-16 tracking-tighter font-black">
             CONTACT<br /><span className="text-primary italic">HQ OFFICE.</span>
           </h2>
@@ -72,133 +48,37 @@ export default function Contact() {
           <div className="p-12 border relative bg-[#D6E4E8] border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]">
             <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 clip-logo -m-4"></div>
             <h3 className="font-headline text-3xl font-black text-slate-950 uppercase mb-8 border-b border-surface-200 pb-4">
-              Application Protocol
+              Application Support
             </h3>
             
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <div className="space-y-8">
+              <p className="text-slate-600 font-medium leading-relaxed">
+                For your privacy, this website does not collect or submit identity, income, employer, loan amount, or application-document details. Contact the team through an official channel and confirm how documents should be provided.
+              </p>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Full Legal Name</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 placeholder:text-slate-300 font-medium transition-all" required type="text" />
+                <div className="bg-white border border-surface-200 p-6">
+                  <h4 className="font-headline text-lg font-black uppercase text-slate-950 mb-3">Before You Contact Us</h4>
+                  <p className="text-sm text-slate-600 leading-relaxed">Have your questions ready, but keep identity numbers and financial documents private until a team member confirms an approved process.</p>
                 </div>
-                <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Phone Number</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" placeholder="+256..." required type="tel" />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">National ID (NIN)</label>
-                  <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" required type="text" />
-                </div>
-                <div>
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Employment Status</label>
-                  <select className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all appearance-none">
-                    <option>Permanent</option>
-                    <option>Contract</option>
-                  </select>
+                <div className="bg-white border border-surface-200 p-6">
+                  <h4 className="font-headline text-lg font-black uppercase text-slate-950 mb-3">Official Channels</h4>
+                  <p className="text-sm text-slate-600 leading-relaxed">Use the published phone numbers, WhatsApp contact, or email address shown on this website.</p>
                 </div>
               </div>
 
-              <div>
-                <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Employer Name & Address</label>
-                <input className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" required type="text" />
+              <div className="bg-secondary/20 border border-secondary p-5">
+                <h4 className="font-headline font-black uppercase text-slate-950 mb-2">Privacy Note</h4>
+                <p className="text-sm text-slate-700">Never send passwords, PINs, or mobile-money authorization codes. Confirm the recipient before sharing any requested document.</p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="min-w-0">
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Net Salary (UGX)</label>
-                  <div className="flex border border-surface-200 bg-white overflow-hidden">
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setNetSalary, netSalary, -10000)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
-                    >-</button>
-                    <input 
-                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
-                      value={formatCurrency(netSalary)} 
-                      onChange={(e) => handleCurrencyChange(setNetSalary, e.target.value)}
-                      required 
-                      type="text"
-                    />
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setNetSalary, netSalary, 10000)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
-                    >+</button>
-                  </div>
-                </div>
-                <div className="min-w-0">
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Loan Amount (UGX)</label>
-                  <div className="flex border border-surface-200 bg-white overflow-hidden">
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setLoanAmount, loanAmount, -10000)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
-                    >-</button>
-                    <input 
-                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
-                      value={formatCurrency(loanAmount)} 
-                      onChange={(e) => handleCurrencyChange(setLoanAmount, e.target.value)}
-                      required 
-                      type="text"
-                    />
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setLoanAmount, loanAmount, 10000)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
-                    >+</button>
-                  </div>
-                </div>
-                <div className="min-w-0">
-                  <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Term (Months)</label>
-                  <div className="flex border border-surface-200 bg-white overflow-hidden">
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setLoanTerm, loanTerm, -1, 1)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-r border-surface-200 transition-colors shrink-0"
-                    >-</button>
-                    <input 
-                      className="flex-1 min-w-0 border-none focus:ring-0 p-4 text-slate-900 font-headline font-bold transition-all text-center" 
-                      value={loanTerm} 
-                      onChange={(e) => setLoanTerm(Number(e.target.value))}
-                      required 
-                      type="number" 
-                      min="1"
-                      max="24"
-                    />
-                    <button 
-                      type="button" 
-                      onClick={() => adjustValue(setLoanTerm, loanTerm, 1, 1)}
-                      className="px-4 bg-surface-50 hover:bg-surface-100 text-slate-600 font-black border-l border-surface-200 transition-colors shrink-0"
-                    >+</button>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-[10px] font-black uppercase tracking-widest mb-2 text-slate-600">Loan Purpose</label>
-                <textarea className="w-full bg-white border border-surface-200 focus:border-primary focus:ring-0 p-4 text-slate-900 font-medium transition-all" rows={2}></textarea>
-              </div>
-              
-              <button className="w-full bg-primary text-white font-headline font-black py-6 uppercase tracking-widest text-lg hover:bg-secondary hover:text-primary transition-all shadow-xl" type="submit">
-                Submit Application Protocol
-              </button>
-              
-              <AnimatePresence>
-                {isSubmitted && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="text-center bg-secondary/20 border border-secondary p-4 text-slate-950 font-black uppercase text-xs tracking-widest"
-                  >
-                    Protocol Initialized Successfully
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </form>
+
+              <a aria-label="Contact Clarks Financials on WhatsApp" className="w-full bg-primary text-white font-headline font-black py-6 uppercase tracking-widest text-lg hover:bg-secondary hover:text-primary transition-all shadow-xl flex items-center justify-center gap-3" data-seo-cta href="https://wa.me/256772502955?text=Hello%20Clarks%20Financials%2C%20I%20would%20like%20application%20support." rel="noreferrer" target="_blank">
+                <MessageCircle className="w-5 h-5" /> Contact Team on WhatsApp
+              </a>
+              <a className="w-full border border-primary text-primary font-headline font-black py-4 uppercase tracking-widest text-sm hover:bg-white transition-all flex items-center justify-center gap-3" href={business.phones[0].href}>
+                <Phone className="w-4 h-4" /> Call {business.phones[0].display}
+              </a>
+            </div>
           </div>
         </div>
       </div>
