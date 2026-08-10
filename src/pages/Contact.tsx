@@ -20,7 +20,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white deferred-section">
         <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Phone className="w-10 h-10 text-primary mb-6" />
@@ -42,7 +42,7 @@ export default function Contact() {
 
       <ContactComponent />
 
-      <section className="py-24 bg-surface-100">
+      <section className="py-24 bg-surface-100 deferred-section">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white p-10 border border-surface-200">

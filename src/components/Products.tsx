@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Banknote, Shield, Store, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "./SiteLink";
 
 const products = [
   {
@@ -31,7 +31,7 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="bg-surface-900 py-32 relative overflow-hidden" id="products">
+    <section className="bg-surface-900 py-32 relative overflow-hidden deferred-section" id="products">
       <div className="absolute inset-0 architectural-grid opacity-10"></div>
       <div className="container mx-auto px-8 text-center mb-24 relative z-10">
         <p className="text-secondary font-bold uppercase tracking-[0.4em] mb-6">Financial Instruments</p>

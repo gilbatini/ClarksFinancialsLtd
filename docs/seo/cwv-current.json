@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10T23:25:08.547Z",
+  "generatedAt": "2026-08-11T00:05:49.938Z",
   "source": "measured lab data: Playwright Chromium PerformanceObserver with network and CPU emulation",
   "caveat": "INP is a synthetic interaction sample, not CrUX field p75. Zero is only valid when interactionObserved is true.",
-  "baseUrl": "http://127.0.0.1:4173",
+  "baseUrl": "local-dist",
   "runsPerRouteProfile": 3,
-  "requestedMetric": "CLS",
+  "requestedMetric": "LCP",
   "profiles": {
     "mobile": {
       "viewport": {
@@ -47,9 +47,9 @@
       "profile": "mobile",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 3020,
-        "inpMs": 120,
-        "cls": 0
+        "lcpMs": 1520,
+        "inpMs": 56,
+        "cls": 0.0023
       },
       "interactionTimingCoverage": "3/3"
     },
@@ -58,9 +58,9 @@
       "profile": "mobile",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 2800,
-        "inpMs": 96,
-        "cls": 0
+        "lcpMs": 1328,
+        "inpMs": 48,
+        "cls": 0.0013
       },
       "interactionTimingCoverage": "3/3"
     },
@@ -69,9 +69,9 @@
       "profile": "mobile",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 3200,
-        "inpMs": 96,
-        "cls": 0
+        "lcpMs": 1380,
+        "inpMs": 72,
+        "cls": 0.0025
       },
       "interactionTimingCoverage": "3/3"
     },
@@ -80,31 +80,31 @@
       "profile": "desktop",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 2188,
-        "inpMs": 128,
+        "lcpMs": 308,
+        "inpMs": 0,
         "cls": 0
       },
-      "interactionTimingCoverage": "3/3"
+      "interactionTimingCoverage": "0/3"
     },
     {
       "path": "/loans",
       "profile": "desktop",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 896,
-        "inpMs": 584,
-        "cls": 0
+        "lcpMs": 348,
+        "inpMs": 0,
+        "cls": 0.0096
       },
-      "interactionTimingCoverage": "3/3"
+      "interactionTimingCoverage": "0/3"
     },
     {
       "path": "/apply",
       "profile": "desktop",
       "sampleCount": 3,
       "p75": {
-        "lcpMs": 1320,
-        "inpMs": 56,
-        "cls": 0
+        "lcpMs": 400,
+        "inpMs": 40,
+        "cls": 0.0096
       },
       "interactionTimingCoverage": "3/3"
     }
@@ -115,198 +115,198 @@
       "profile": "mobile",
       "run": 1,
       "status": 200,
-      "lcpMs": 3020,
-      "inpMs": 104,
-      "cls": 0,
+      "lcpMs": 1512,
+      "inpMs": 40,
+      "cls": 0.0023,
       "interactionObserved": true,
-      "wallTimeMs": 4725
+      "wallTimeMs": 5440
     },
     {
       "path": "/",
       "profile": "mobile",
       "run": 2,
       "status": 200,
-      "lcpMs": 3020,
-      "inpMs": 112,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4369
-    },
-    {
-      "path": "/",
-      "profile": "mobile",
-      "run": 3,
-      "status": 200,
-      "lcpMs": 2316,
-      "inpMs": 120,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4236
-    },
-    {
-      "path": "/loans",
-      "profile": "mobile",
-      "run": 1,
-      "status": 200,
-      "lcpMs": 2604,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4404
-    },
-    {
-      "path": "/loans",
-      "profile": "mobile",
-      "run": 2,
-      "status": 200,
-      "lcpMs": 2800,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4416
-    },
-    {
-      "path": "/loans",
-      "profile": "mobile",
-      "run": 3,
-      "status": 200,
-      "lcpMs": 2620,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4428
-    },
-    {
-      "path": "/apply",
-      "profile": "mobile",
-      "run": 1,
-      "status": 200,
-      "lcpMs": 3020,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4297
-    },
-    {
-      "path": "/apply",
-      "profile": "mobile",
-      "run": 2,
-      "status": 200,
-      "lcpMs": 3200,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4120
-    },
-    {
-      "path": "/apply",
-      "profile": "mobile",
-      "run": 3,
-      "status": 200,
-      "lcpMs": 3076,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 4196
-    },
-    {
-      "path": "/",
-      "profile": "desktop",
-      "run": 1,
-      "status": 200,
-      "lcpMs": 1784,
-      "inpMs": 128,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 2779
-    },
-    {
-      "path": "/",
-      "profile": "desktop",
-      "run": 2,
-      "status": 200,
-      "lcpMs": 1596,
-      "inpMs": 96,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 2767
-    },
-    {
-      "path": "/",
-      "profile": "desktop",
-      "run": 3,
-      "status": 200,
-      "lcpMs": 2188,
-      "inpMs": 120,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 3393
-    },
-    {
-      "path": "/loans",
-      "profile": "desktop",
-      "run": 1,
-      "status": 200,
-      "lcpMs": 772,
-      "inpMs": 48,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 2708
-    },
-    {
-      "path": "/loans",
-      "profile": "desktop",
-      "run": 2,
-      "status": 200,
-      "lcpMs": 688,
-      "inpMs": 120,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 2799
-    },
-    {
-      "path": "/loans",
-      "profile": "desktop",
-      "run": 3,
-      "status": 200,
-      "lcpMs": 896,
-      "inpMs": 584,
-      "cls": 0,
-      "interactionObserved": true,
-      "wallTimeMs": 3568
-    },
-    {
-      "path": "/apply",
-      "profile": "desktop",
-      "run": 1,
-      "status": 200,
-      "lcpMs": 1320,
+      "lcpMs": 1520,
       "inpMs": 56,
-      "cls": 0,
+      "cls": 0.0023,
       "interactionObserved": true,
-      "wallTimeMs": 2994
+      "wallTimeMs": 5473
+    },
+    {
+      "path": "/",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 1504,
+      "inpMs": 32,
+      "cls": 0.0023,
+      "interactionObserved": true,
+      "wallTimeMs": 5448
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 1328,
+      "inpMs": 48,
+      "cls": 0.0013,
+      "interactionObserved": true,
+      "wallTimeMs": 5273
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 1324,
+      "inpMs": 48,
+      "cls": 0.0013,
+      "interactionObserved": true,
+      "wallTimeMs": 5260
+    },
+    {
+      "path": "/loans",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 1328,
+      "inpMs": 48,
+      "cls": 0.0013,
+      "interactionObserved": true,
+      "wallTimeMs": 5283
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 1380,
+      "inpMs": 72,
+      "cls": 0.0025,
+      "interactionObserved": true,
+      "wallTimeMs": 5393
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 1376,
+      "inpMs": 48,
+      "cls": 0.0025,
+      "interactionObserved": true,
+      "wallTimeMs": 5299
+    },
+    {
+      "path": "/apply",
+      "profile": "mobile",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 1328,
+      "inpMs": 64,
+      "cls": 0.0025,
+      "interactionObserved": true,
+      "wallTimeMs": 5296
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 276,
+      "inpMs": 0,
+      "cls": 0,
+      "interactionObserved": false,
+      "wallTimeMs": 2984
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 308,
+      "inpMs": 0,
+      "cls": 0,
+      "interactionObserved": false,
+      "wallTimeMs": 2961
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 264,
+      "inpMs": 0,
+      "cls": 0,
+      "interactionObserved": false,
+      "wallTimeMs": 2966
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 320,
+      "inpMs": 0,
+      "cls": 0.0096,
+      "interactionObserved": false,
+      "wallTimeMs": 3017
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 2,
+      "status": 200,
+      "lcpMs": 348,
+      "inpMs": 0,
+      "cls": 0.0096,
+      "interactionObserved": false,
+      "wallTimeMs": 3089
+    },
+    {
+      "path": "/loans",
+      "profile": "desktop",
+      "run": 3,
+      "status": 200,
+      "lcpMs": 316,
+      "inpMs": 0,
+      "cls": 0.0096,
+      "interactionObserved": false,
+      "wallTimeMs": 3106
+    },
+    {
+      "path": "/apply",
+      "profile": "desktop",
+      "run": 1,
+      "status": 200,
+      "lcpMs": 296,
+      "inpMs": 40,
+      "cls": 0.0096,
+      "interactionObserved": true,
+      "wallTimeMs": 2924
     },
     {
       "path": "/apply",
       "profile": "desktop",
       "run": 2,
       "status": 200,
-      "lcpMs": 640,
-      "inpMs": 32,
-      "cls": 0,
+      "lcpMs": 316,
+      "inpMs": 40,
+      "cls": 0.0096,
       "interactionObserved": true,
-      "wallTimeMs": 2659
+      "wallTimeMs": 2908
     },
     {
       "path": "/apply",
       "profile": "desktop",
       "run": 3,
       "status": 200,
-      "lcpMs": 1012,
-      "inpMs": 32,
-      "cls": 0,
+      "lcpMs": 400,
+      "inpMs": 40,
+      "cls": 0.0096,
       "interactionObserved": true,
-      "wallTimeMs": 2658
+      "wallTimeMs": 2970
     }
   ]
 }

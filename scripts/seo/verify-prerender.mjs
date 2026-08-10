@@ -12,7 +12,12 @@ for (const route of routes) {
     : resolve(ROOT, `dist${route}/index.html`);
   try {
     const html = await readFile(file, "utf8");
-    if (!html.match(/<main\b/i)) failures.push(`${route}: prerendered body is missing <main>`);
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
+    if (!main) {
+      failures.push(`${route}: prerendered body is missing <main>`);
+    } else if (!/<h1\b/i.test(main)) {
+      failures.push(`${route}: prerendered <main> is missing route-specific <h1> content`);
+    }
   } catch {
     failures.push(`${route}: missing ${file}`);
   }

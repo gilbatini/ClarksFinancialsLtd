@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-10T22:37:49.309Z",
-  "source": "src/App.tsx",
+  "source": "pages/*/+Page.tsx",
   "canonicalBaseUrl": "https://www.clarksfinancials.com",
   "routes": [
     {

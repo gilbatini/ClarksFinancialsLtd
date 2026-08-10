@@ -1,7 +1,8 @@
 import Logo from "./Logo";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Link from "./SiteLink";
 import { cn } from "../lib/utils";
 
 const navLinks = [

@@ -1,9 +1,9 @@
-import { appendFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 
 export const ROOT = resolve(import.meta.dirname, "../..");
 export const DOCS_DIR = resolve(ROOT, "docs/seo");
-export const ROUTER_FILE = resolve(ROOT, "src/App.tsx");
+export const PAGES_DIR = resolve(ROOT, "pages");
 export const ROUTES_FILE = resolve(DOCS_DIR, "routes.json");
 export const DEFAULT_BASE_URL = "https://www.clarksfinancials.com";
 
@@ -21,8 +21,18 @@ export async function writeJson(file, value) {
 }
 
 export async function extractRouterPaths() {
-  const source = await readFile(ROUTER_FILE, "utf8");
-  return [...source.matchAll(/<Route\s+path=["']([^"']+)["']/g)].map((match) => match[1]);
+  const entries = await readdir(PAGES_DIR, { withFileTypes: true });
+  const routes = [];
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    try {
+      await readFile(resolve(PAGES_DIR, entry.name, "+Page.tsx"));
+      routes.push(entry.name === "index" ? "/" : `/${entry.name}`);
+    } catch {
+      // A directory without a +Page module is not a public route.
+    }
+  }
+  return routes.sort((a, b) => (a === "/" ? -1 : b === "/" ? 1 : a.localeCompare(b)));
 }
 
 export async function loadRoutes() {

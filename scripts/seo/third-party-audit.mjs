@@ -13,7 +13,7 @@ const failures = [];
 
 if (externalScripts.length) failures.push(`${externalScripts.length} render-blocking external script(s) found`);
 if (scriptTags.length !== 1 || moduleScripts.length !== 1) {
-  failures.push(`Expected one deferred module entry script, found ${scriptTags.length} scripts and ${moduleScripts.length} modules`);
+  failures.push(`Expected one deferred first-party module, found ${scriptTags.length} scripts and ${moduleScripts.length} modules`);
 }
 if (!/lazy\(\(\) => import\("\.\/components\/Chatbot"\)\)/.test(appSource)) {
   failures.push("WhatsApp module is not dynamically imported");
@@ -26,8 +26,8 @@ if (/from ["']motion\/react["']/.test(navbarSource)) {
 const report = {
   generatedAt: new Date().toISOString(),
   source: "index.html plus static source inspection",
-  firstPartyScripts: scriptTags.map(() => ({
-    src: "/src/main.tsx",
+  firstPartyScripts: scriptTags.map((tag) => ({
+    src: tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] || null,
     type: "module",
     loading: "deferred by HTML module-script semantics",
   })),
@@ -47,5 +47,5 @@ if (failures.length) {
   for (const failure of failures) console.error(`FAIL ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log("PASS C-05 script audit: 0 third-party tags; module entry deferred; WhatsApp loaded on idle");
+  console.log("PASS C-05 script audit: 0 third-party tags; first-party modules deferred; WhatsApp loaded on idle");
 }

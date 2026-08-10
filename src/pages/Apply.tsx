@@ -1,7 +1,7 @@
-import Contact from "../components/Contact";
+import { lazy, Suspense } from "react";
 import HowItWorks from "../components/HowItWorks";
-import { motion } from "motion/react";
 import { FileText, UserCheck, ShieldCheck, Users, MapPin } from "lucide-react";
+const Contact = lazy(() => import("../components/Contact"));
 
 const requirements = [
   { icon: FileText, text: "Identification details" },
@@ -32,7 +32,7 @@ export default function Apply() {
 
       <HowItWorks />
 
-      <section className="py-24 bg-surface-50">
+      <section className="py-24 bg-surface-50 deferred-section">
         <div className="container mx-auto px-8">
           <div className="text-center mb-16">
             <h2 className="font-headline text-4xl font-black text-slate-950 uppercase mb-4">Documents to Discuss</h2>
@@ -40,23 +40,21 @@ export default function Apply() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {requirements.map((req, index) => (
-              <motion.div 
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
                 className="bg-white p-6 border border-surface-200 flex items-center gap-4"
               >
                 <req.icon className="w-6 h-6 text-primary shrink-0" />
                 <span className="text-sm font-bold text-slate-700">{req.text}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <Contact />
+      <Suspense fallback={<div className="min-h-screen bg-white" aria-hidden="true" />}>
+        <Contact />
+      </Suspense>
     </div>
   );
 }

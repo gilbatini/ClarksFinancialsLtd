@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Shield, Users, Heart, Anchor, Target, Eye } from "lucide-react";
 
 const values = [
@@ -16,33 +15,26 @@ export default function About() {
       <section className="bg-primary py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 architectural-grid opacity-10"></div>
         <div className="container mx-auto px-8 relative z-10">
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <p
             className="text-secondary font-bold uppercase tracking-widest mb-4"
           >
             Who We Are
-          </motion.p>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </p>
+          <h1
             className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8"
           >
             LOCAL SERVICE. <br />CLEAR INFORMATION.
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          </h1>
+          <p
             transition={{ delay: 0.2 }}
             className="max-w-2xl text-lg text-white/80 font-medium"
           >
             Learn about Clarks Financials Limited, its customer-service approach, and the team supporting borrowers through the application process in Uganda.
-          </motion.p>
+          </p>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white deferred-section">
         <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="font-headline text-5xl font-black text-slate-950 uppercase mb-8">Our Story</h2>
@@ -73,7 +65,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface-100">
+      <section className="py-24 bg-surface-100 deferred-section">
         <div className="container mx-auto px-8">
           <div className="text-center mb-16">
             <p className="text-primary font-bold uppercase tracking-widest mb-4">Our Core Values</p>
@@ -81,18 +73,14 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <motion.div 
+              <div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className="bg-white p-10 border border-surface-200 hover:border-primary transition-all group"
               >
                 <value.icon className="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">{value.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{value.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

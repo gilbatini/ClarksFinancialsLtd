@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "./SiteLink";
 
 export default function CTA() {
   return (
-    <section className="bg-surface-900 py-24 relative overflow-hidden">
+    <section className="bg-surface-900 py-24 relative overflow-hidden deferred-section">
       <div className="absolute inset-0 flex items-center justify-center opacity-5 select-none pointer-events-none">
         <h2 className="font-headline text-[30rem] text-white leading-none font-black italic">FAST</h2>
       </div>

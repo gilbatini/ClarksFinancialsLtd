@@ -16,13 +16,13 @@ if (!entryKey) {
 }
 
 const routeEntries = new Map([
-  ["/", "src/pages/Home.tsx"],
-  ["/about", "src/pages/About.tsx"],
-  ["/loans", "src/pages/Loans.tsx"],
-  ["/apply", "src/pages/Apply.tsx"],
-  ["/regulatory", "src/pages/Regulatory.tsx"],
-  ["/faqs", "src/pages/FAQs.tsx"],
-  ["/contact", "src/pages/Contact.tsx"],
+  ["/", "virtual:vike:page-entry:client:/pages/index"],
+  ["/about", "virtual:vike:page-entry:client:/pages/about"],
+  ["/loans", "virtual:vike:page-entry:client:/pages/loans"],
+  ["/apply", "virtual:vike:page-entry:client:/pages/apply"],
+  ["/regulatory", "virtual:vike:page-entry:client:/pages/regulatory"],
+  ["/faqs", "virtual:vike:page-entry:client:/pages/faqs"],
+  ["/contact", "virtual:vike:page-entry:client:/pages/contact"],
 ]);
 
 const compressedSizeCache = new Map();
@@ -46,7 +46,7 @@ function collectStaticImports(key, collected = new Set()) {
 }
 
 const dynamicEntries = Object.entries(manifest).filter(
-  ([key, chunk]) => key.startsWith("src/pages/") && chunk.isDynamicEntry,
+  ([key, chunk]) => key.startsWith("virtual:vike:page-entry:client:/pages/") && chunk.isEntry,
 );
 if (dynamicEntries.length !== routes.length) {
   throw new Error(
@@ -57,7 +57,7 @@ if (dynamicEntries.length !== routes.length) {
 const results = [];
 for (const route of routes) {
   const routeEntry = routeEntries.get(route.path);
-  if (!routeEntry || !manifest[routeEntry]?.isDynamicEntry) {
+  if (!routeEntry || !manifest[routeEntry]?.isEntry) {
     throw new Error(`Route ${route.path} has no route-level dynamic entry`);
   }
 

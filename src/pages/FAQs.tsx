@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { Plus, Minus } from "lucide-react";
 import { faqCategories } from "../content/faqs.mjs";
 
@@ -14,18 +13,11 @@ function FAQItem({ q, a }: { q: string, a: string, key?: string | number }) {
         <span className="font-bold text-slate-950">{q}</span>
         {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
       </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <p className="pb-6 text-slate-500 font-medium leading-relaxed">{a}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <div className="overflow-hidden">
+          <p className="pb-6 text-slate-500 font-medium leading-relaxed">{a}</p>
+        </div>
+      )}
     </div>
   );
 }
@@ -43,7 +35,7 @@ export default function FAQs() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white deferred-section">
         <div className="container mx-auto px-8 max-w-4xl">
           {faqCategories.map((category, idx) => (
             <div key={idx} className="mb-16">

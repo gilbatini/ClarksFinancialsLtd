@@ -2,6 +2,7 @@
 import { chromium } from "playwright";
 import { resolve } from "node:path";
 import { absoluteUrl, DEFAULT_BASE_URL, readJson, ROOT, ROUTES_FILE, writeJson } from "./lib.mjs";
+import { startDistServer } from "./browser-runner.mjs";
 
 const runArgIndex = process.argv.indexOf("--runs");
 const runs = runArgIndex >= 0 ? Number(process.argv[runArgIndex + 1]) : 3;
@@ -9,7 +10,9 @@ const metricArgIndex = process.argv.indexOf("--metric");
 const requestedMetric = metricArgIndex >= 0 ? process.argv[metricArgIndex + 1]?.toUpperCase() : null;
 const outputArgIndex = process.argv.indexOf("--output");
 const outputFile = outputArgIndex >= 0 ? process.argv[outputArgIndex + 1] : "docs/seo/cwv-baseline.json";
-const baseUrl = process.env.SEO_BASE_URL || DEFAULT_BASE_URL;
+let localServer;
+let baseUrl = process.env.SEO_BASE_URL || DEFAULT_BASE_URL;
+if (!process.env.SEO_BASE_URL) ({ server: localServer, baseUrl } = await startDistServer());
 const manifest = await readJson(ROUTES_FILE);
 const keyRoutes = manifest.routes.filter((route) => route.keyRoute).map((route) => route.path);
 
@@ -108,6 +111,7 @@ try {
   }
 } finally {
   await browser.close();
+  if (localServer) await new Promise((resolveClose) => localServer.close(resolveClose));
 }
 
 const summaries = [];
@@ -136,7 +140,7 @@ const output = {
   generatedAt: new Date().toISOString(),
   source: "measured lab data: Playwright Chromium PerformanceObserver with network and CPU emulation",
   caveat: "INP is a synthetic interaction sample, not CrUX field p75. Zero is only valid when interactionObserved is true.",
-  baseUrl,
+  baseUrl: localServer ? "local-dist" : baseUrl,
   runsPerRouteProfile: runs,
   requestedMetric,
   profiles,

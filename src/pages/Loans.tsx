@@ -1,6 +1,6 @@
-import { motion } from "motion/react";
+import { lazy, Suspense } from "react";
 import { CheckCircle2, AlertTriangle, Info } from "lucide-react";
-import Products from "../components/Products";
+const Products = lazy(() => import("../components/Products"));
 
 export default function Loans() {
   return (
@@ -18,9 +18,11 @@ export default function Loans() {
         </div>
       </section>
 
-      <Products />
+      <Suspense fallback={<div className="min-h-screen bg-surface-900" aria-hidden="true" />}>
+        <Products />
+      </Suspense>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white deferred-section">
         <div className="container mx-auto px-8">
           <div className="bg-surface-50 p-12 border-l-8 border-primary mb-16">
             <div className="flex items-start gap-6">
@@ -89,7 +91,7 @@ export default function Loans() {
         </div>
       </section>
 
-      <section className="py-24 bg-surface-100">
+      <section className="py-24 bg-surface-100 deferred-section">
         <div className="container mx-auto px-8">
           <div className="bg-primary p-12 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 clip-logo -m-12"></div>

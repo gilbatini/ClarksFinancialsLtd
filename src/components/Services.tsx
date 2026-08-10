@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight, Banknote, Receipt, Landmark, Smartphone } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "./SiteLink";
 
 const services = [
   {
@@ -35,7 +35,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-white py-32" id="services">
+    <section className="bg-white py-32 deferred-section" id="services">
       <div className="container mx-auto px-8 mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <motion.div
           initial={{ opacity: 0, x: -30 }}

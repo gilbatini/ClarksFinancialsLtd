@@ -17,7 +17,7 @@ const contentTypes = {
   ".webp": "image/webp",
 };
 
-async function startDistServer() {
+export async function startDistServer() {
   const dist = resolve(ROOT, "dist");
   const server = createServer(async (request, response) => {
     try {

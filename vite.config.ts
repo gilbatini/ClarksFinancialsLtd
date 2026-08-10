@@ -14,6 +14,14 @@ export default defineConfig(({mode}) => {
     plugins: [vike(), react(), tailwindcss()],
     build: {
       manifest: true,
+      rollupOptions: {
+        output: {
+          manualChunks(moduleId) {
+            if (moduleId.includes("/node_modules/react/") || moduleId.includes("/node_modules/react-dom/") || moduleId.includes("/node_modules/react-router/") || moduleId.includes("/node_modules/react-router-dom/")) return "react-vendor";
+            if (moduleId.includes("/node_modules/lucide-react/")) return "icons";
+          },
+        },
+      },
     },
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T23:53:24.498Z",
+  "generatedAt": "2026-08-11T00:04:29.233Z",
   "source": "Vite manifest and gzip-compressed production assets",
   "budget": {
     "metric": "initial route JavaScript transfer size",
@@ -10,126 +10,115 @@
   "routes": [
     {
       "path": "/",
-      "entry": "src/pages/Home.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/index",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-BdaZPnDA.js",
-        "assets/chunks/chunk-rFZaKA7B.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-CQaji3GT.js",
-        "assets/chunks/chunk-CtCGQwOX.js",
-        "assets/chunks/chunk-DDGdc8NP.js",
-        "assets/chunks/chunk-C003D2I4.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_index.0ivHdcbZ.js",
+        "assets/chunks/chunk-D5Hhrq-7.js"
       ],
-      "gzipBytes": 155266,
-      "gzipKiB": 151.63,
+      "gzipBytes": 115036,
+      "gzipKiB": 112.34,
       "budgetKiB": 145,
-      "passed": false
+      "passed": true
     },
     {
       "path": "/about",
-      "entry": "src/pages/About.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/about",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-BjatBnG7.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-JPfEUjnY.js",
-        "assets/chunks/chunk-tDF6IWyN.js",
-        "assets/chunks/chunk-C003D2I4.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_about.DwT2fhdP.js",
+        "assets/chunks/chunk-D5Hhrq-7.js"
       ],
-      "gzipBytes": 59340,
-      "gzipKiB": 57.95,
+      "gzipBytes": 114933,
+      "gzipKiB": 112.24,
       "budgetKiB": 145,
       "passed": true
     },
     {
       "path": "/loans",
-      "entry": "src/pages/Loans.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/loans",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-DtcmSVMR.js",
-        "assets/chunks/chunk-rFZaKA7B.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-CQaji3GT.js",
-        "assets/chunks/chunk-JPfEUjnY.js",
-        "assets/chunks/chunk-C003D2I4.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_loans.CEu4fBcF.js",
+        "assets/chunks/chunk-D5Hhrq-7.js"
       ],
-      "gzipBytes": 153760,
-      "gzipKiB": 150.16,
+      "gzipBytes": 115159,
+      "gzipKiB": 112.46,
       "budgetKiB": 145,
-      "passed": false
+      "passed": true
     },
     {
       "path": "/apply",
-      "entry": "src/pages/Apply.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/apply",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-8EtCgMr6.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-C5OgObTH.js",
-        "assets/chunks/chunk-rFZaKA7B.js",
-        "assets/chunks/chunk-B9ntHXbV.js",
-        "assets/chunks/chunk-BKHaOqAg.js",
-        "assets/chunks/chunk-DDGdc8NP.js",
-        "assets/chunks/chunk-C003D2I4.js",
-        "assets/chunks/chunk-tDF6IWyN.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_apply.BfaZ0tHM.js",
+        "assets/chunks/chunk-D5Hhrq-7.js",
+        "assets/chunks/chunk-B4mVfBY0.js"
       ],
-      "gzipBytes": 155465,
-      "gzipKiB": 151.82,
+      "gzipBytes": 115688,
+      "gzipKiB": 112.98,
       "budgetKiB": 145,
-      "passed": false
+      "passed": true
     },
     {
       "path": "/regulatory",
-      "entry": "src/pages/Regulatory.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/regulatory",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-5EzQkiE_.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-BKHaOqAg.js",
-        "assets/chunks/chunk-CtCGQwOX.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_regulatory.B_8MNqKy.js",
+        "assets/chunks/chunk-D5Hhrq-7.js"
       ],
-      "gzipBytes": 20205,
-      "gzipKiB": 19.73,
+      "gzipBytes": 114698,
+      "gzipKiB": 112.01,
       "budgetKiB": 145,
       "passed": true
     },
     {
       "path": "/faqs",
-      "entry": "src/pages/FAQs.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/faqs",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-DfEsZvPX.js",
-        "assets/chunks/chunk-rFZaKA7B.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-C003D2I4.js",
-        "assets/chunks/chunk-DzlGyl7L.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_faqs.BPV6f7Xp.js",
+        "assets/chunks/chunk-D5Hhrq-7.js"
       ],
-      "gzipBytes": 153094,
-      "gzipKiB": 149.51,
+      "gzipBytes": 114149,
+      "gzipKiB": 111.47,
       "budgetKiB": 145,
-      "passed": false
+      "passed": true
     },
     {
       "path": "/contact",
-      "entry": "src/pages/Contact.tsx",
+      "entry": "virtual:vike:page-entry:client:/pages/contact",
       "chunks": [
-        "assets/entries/entry-server-routing.DayuuPKb.js",
-        "assets/chunks/chunk-BN7OAwQf.js",
-        "assets/chunks/chunk-wA9FevFN.js",
-        "assets/chunks/chunk-rFZaKA7B.js",
-        "assets/chunks/chunk-DRPAsfSL.js",
-        "assets/chunks/chunk-C5OgObTH.js",
-        "assets/chunks/chunk-B9ntHXbV.js"
+        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_contact.CbVwQobL.js",
+        "assets/chunks/chunk-D5Hhrq-7.js",
+        "assets/chunks/chunk-BSPEvGD7.js"
       ],
-      "gzipBytes": 114694,
-      "gzipKiB": 112.01,
+      "gzipBytes": 116106,
+      "gzipKiB": 113.38,
       "budgetKiB": 145,
       "passed": true
     }

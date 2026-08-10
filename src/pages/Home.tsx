@@ -1,17 +1,21 @@
+import { lazy, Suspense } from "react";
 import Hero from "../components/Hero";
-import Stats from "../components/Stats";
-import Services from "../components/Services";
-import HowItWorks from "../components/HowItWorks";
-import CTA from "../components/CTA";
+
+const Stats = lazy(() => import("../components/Stats"));
+const Services = lazy(() => import("../components/Services"));
+const HowItWorks = lazy(() => import("../components/HowItWorks"));
+const CTA = lazy(() => import("../components/CTA"));
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
-      <Services />
-      <HowItWorks />
-      <CTA />
+      <Suspense fallback={<div className="min-h-[2400px]" aria-hidden="true" />}>
+        <Stats />
+        <Services />
+        <HowItWorks />
+        <CTA />
+      </Suspense>
     </>
   );
 }

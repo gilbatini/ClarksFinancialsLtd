@@ -9,7 +9,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="bg-surface-900 py-12 overflow-hidden relative">
+    <section className="bg-surface-900 py-12 overflow-hidden relative deferred-section">
       <div className="absolute inset-0 architectural-grid opacity-10"></div>
       <div className="container mx-auto px-8 relative z-10">
         <div className="flex flex-wrap justify-between items-center gap-8 text-white">

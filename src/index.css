@@ -57,6 +57,11 @@
     min-block-size: 100svh;
   }
 
+  .deferred-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
+  }
+
   
   .text-kern-tight {
     letter-spacing: -0.05em;

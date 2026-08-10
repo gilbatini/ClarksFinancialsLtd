@@ -17,7 +17,7 @@ export default function Regulatory() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white deferred-section">
         <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div className="space-y-12">
             <div>

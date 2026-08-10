@@ -4,7 +4,7 @@ import { business } from "../lib/business";
 
 export default function Contact() {
   return (
-    <section className="bg-white py-32" id="contact">
+    <section className="bg-white py-32 deferred-section" id="contact">
       <div className="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-20">
         <div className="lg:col-span-5">
           <p className="text-primary font-bold uppercase tracking-widest mb-4">Kampala Office</p>

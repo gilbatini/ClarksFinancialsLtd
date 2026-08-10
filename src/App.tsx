@@ -3,29 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { lazy, Suspense, useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, StaticRouter, useLocation } from "react-router-dom";
+import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
+import { MemoryRouter, StaticRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RouteStructuredData from "./seo/RouteStructuredData";
 import RouteMetadata from "./seo/RouteMetadata";
 
 const Chatbot = lazy(() => import("./components/Chatbot"));
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Loans = lazy(() => import("./pages/Loans"));
-const Apply = lazy(() => import("./pages/Apply"));
-const Regulatory = lazy(() => import("./pages/Regulatory"));
-const FAQs = lazy(() => import("./pages/FAQs"));
-const Contact = lazy(() => import("./pages/Contact"));
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
 
 function DeferredChatbot() {
   const [ready, setReady] = useState(false);
@@ -49,27 +34,14 @@ function DeferredChatbot() {
   );
 }
 
-function Site() {
+function Site({ children }: { children: ReactNode }) {
   return (
     <>
       <RouteMetadata />
-      <ScrollToTop />
       <RouteStructuredData />
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-grow">
-          <Suspense fallback={<div className="route-loading-shell bg-surface-50" aria-hidden="true" />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/loans" element={<Loans />} />
-              <Route path="/apply" element={<Apply />} />
-              <Route path="/regulatory" element={<Regulatory />} />
-              <Route path="/faqs" element={<FAQs />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Suspense>
-        </main>
+        <main className="flex-grow">{children}</main>
         <Footer />
         <DeferredChatbot />
       </div>
@@ -79,20 +51,21 @@ function Site() {
 
 type AppProps = {
   serverPath?: string;
+  children?: ReactNode;
 };
 
-export default function App({ serverPath = "/" }: AppProps) {
+export default function App({ serverPath = "/", children }: AppProps) {
   if (typeof window === "undefined") {
     return (
       <StaticRouter location={serverPath}>
-        <Site />
+        <Site>{children}</Site>
       </StaticRouter>
     );
   }
 
   return (
-    <BrowserRouter>
-      <Site />
-    </BrowserRouter>
+    <MemoryRouter initialEntries={[serverPath]}>
+      <Site>{children}</Site>
+    </MemoryRouter>
   );
 }

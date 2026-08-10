@@ -1,18 +1,12 @@
-import { motion } from "motion/react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "./SiteLink";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden border-b border-surface-200 pt-32 lg:pt-20" id="home">
       <div className="absolute inset-0 architectural-grid opacity-40"></div>
       <div className="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="lg:col-span-7 py-12 lg:py-20"
-        >
+        <div className="lg:col-span-7 py-12 lg:py-20">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-sm mb-6">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
             <span className="text-[10px] font-black uppercase tracking-[0.2em]">Loan Information · Kampala, Uganda</span>
@@ -25,32 +19,23 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/apply">
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 className="bg-secondary text-slate-950 font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-white transition-all flex items-center gap-3 shadow-lg"
               >
                 Apply for a Loan <ArrowUpRight className="w-6 h-6" />
-              </motion.button>
+              </button>
             </Link>
             <Link to="/loans">
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 className="border-2 border-primary text-primary font-headline font-bold px-10 py-5 rounded-default text-lg tracking-widest uppercase hover:bg-primary hover:text-white transition-all"
               >
                 View Our Products
-              </motion.button>
+              </button>
             </Link>
           </div>
-        </motion.div>
+        </div>
         
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="lg:col-span-5 relative"
-        >
+        <div className="lg:col-span-5 relative">
           <div className="bg-primary p-1 rounded-default shadow-2xl overflow-hidden group">
             <img 
               alt="Stacks of Ugandan shilling banknotes"
@@ -79,16 +64,13 @@ export default function Hero() {
             </div>
           </div>
           
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+          <div
             className="absolute top-1/3 -left-12 bg-white p-6 shadow-2xl border border-surface-200 hidden lg:block z-30"
           >
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Need Help?</p>
             <p className="font-headline text-4xl font-black text-primary">CONTACT</p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

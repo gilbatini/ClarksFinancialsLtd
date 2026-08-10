@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import { Share2, Phone, Send } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "./SiteLink";
 import { business } from "../lib/business";
 
 export default function Footer() {
