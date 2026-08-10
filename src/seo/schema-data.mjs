@@ -92,10 +92,48 @@ export const faqPageSchema = {
   ),
 };
 
+const breadcrumbRouteLabels = {
+  "/about": "About",
+  "/loans": "Loans",
+  "/apply": "Apply",
+  "/regulatory": "Regulatory",
+  "/faqs": "FAQs",
+  "/contact": "Contact",
+};
+
+export const breadcrumbSchemas = Object.fromEntries(
+  Object.entries(breadcrumbRouteLabels).map(([path, label]) => [
+    path,
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": `${SITE_URL}${path}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: SITE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: label,
+          item: `${SITE_URL}${path}`,
+        },
+      ],
+    },
+  ]),
+);
+
 const schemasByRoute = {
   "/": [organizationSchema],
-  "/contact": [financialServiceSchema],
-  "/faqs": [faqPageSchema],
+  "/about": [breadcrumbSchemas["/about"]],
+  "/loans": [breadcrumbSchemas["/loans"]],
+  "/apply": [breadcrumbSchemas["/apply"]],
+  "/regulatory": [breadcrumbSchemas["/regulatory"]],
+  "/faqs": [faqPageSchema, breadcrumbSchemas["/faqs"]],
+  "/contact": [financialServiceSchema, breadcrumbSchemas["/contact"]],
 };
 
 export function schemasForRoute(pathname) {

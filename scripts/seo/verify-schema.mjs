@@ -2,7 +2,7 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { allSchemas, schemaVerificationTodos, schemasForRoute } from "../../src/seo/schema-data.mjs";
-import { ROOT, assert } from "./lib.mjs";
+import { ROOT, assert, loadRoutes } from "./lib.mjs";
 
 const requestedType = process.argv.includes("--type")
   ? process.argv[process.argv.indexOf("--type") + 1]
@@ -132,11 +132,25 @@ function validateFAQPage(schema) {
   }
 }
 
+function validateBreadcrumbList(schema) {
+  if (!Array.isArray(schema.itemListElement) || schema.itemListElement.length < 2) {
+    addError(schema, "itemListElement must contain at least Home and the current page");
+    return;
+  }
+  schema.itemListElement.forEach((item, index) => {
+    if (item["@type"] !== "ListItem") addError(schema, `breadcrumb item ${index + 1} must be a ListItem`);
+    if (item.position !== index + 1) addError(schema, `breadcrumb item ${index + 1} has a non-sequential position`);
+    if (!item.name) addError(schema, `breadcrumb item ${index + 1} requires a name`);
+    if (!isHttpsUrl(item.item)) addError(schema, `breadcrumb item ${index + 1} requires an absolute HTTPS item URL`);
+  });
+}
+
 function validateSchema(schema) {
   validateCommon(schema);
   if (schema["@type"] === "Organization") validateOrganization(schema);
   if (schema["@type"] === "FinancialService") validateFinancialService(schema);
   if (schema["@type"] === "FAQPage") validateFAQPage(schema);
+  if (schema["@type"] === "BreadcrumbList") validateBreadcrumbList(schema);
 }
 
 const appSource = await readFile(resolve(ROOT, "src/App.tsx"), "utf8");
@@ -161,6 +175,21 @@ if (selected.some((schema) => schema["@type"] === "FinancialService")
 if (selected.some((schema) => schema["@type"] === "FAQPage")
   && !schemasForRoute("/faqs").some((schema) => schema["@type"] === "FAQPage")) {
   errors.push("FAQPage schema is not assigned to the FAQs route");
+}
+
+if (selected.some((schema) => schema["@type"] === "BreadcrumbList")) {
+  const nonHomeRoutes = (await loadRoutes()).filter((route) => route !== "/");
+  for (const route of nonHomeRoutes) {
+    const breadcrumb = schemasForRoute(route).find((schema) => schema["@type"] === "BreadcrumbList");
+    if (!breadcrumb) {
+      errors.push(`BreadcrumbList schema is not assigned to ${route}`);
+      continue;
+    }
+    const finalItem = breadcrumb.itemListElement.at(-1);
+    if (finalItem?.item !== `https://www.clarksfinancials.com${route}`) {
+      errors.push(`BreadcrumbList final item does not match ${route}`);
+    }
+  }
 }
 
 for (const warning of [...new Set(warnings)]) console.warn(`WARN: ${warning}`);
