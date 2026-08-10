@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-08-10T23:00:30.652Z",
+  "source": "Vite manifest and gzip-compressed production assets",
+  "budget": {
+    "metric": "initial route JavaScript transfer size",
+    "maxGzipKiB": 145
+  },
+  "routeLevelCodeSplitting": true,
+  "dynamicPageEntries": 7,
+  "routes": [
+    {
+      "path": "/",
+      "entry": "src/pages/Home.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/Home-BX-OEYGT.js",
+        "assets/circle-check-CmVxNTDi.js",
+        "assets/landmark-BPZ_XVKc.js",
+        "assets/HowItWorks-VsyuEy-M.js"
+      ],
+      "gzipBytes": 136354,
+      "gzipKiB": 133.16,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/about",
+      "entry": "src/pages/About.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/About-BZQFNK77.js",
+        "assets/shield-BurdQtRM.js",
+        "assets/users-CiULpkv8.js"
+      ],
+      "gzipBytes": 133390,
+      "gzipKiB": 130.26,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/loans",
+      "entry": "src/pages/Loans.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/Loans-DnMsQdSq.js",
+        "assets/circle-check-CmVxNTDi.js",
+        "assets/shield-BurdQtRM.js"
+      ],
+      "gzipBytes": 134888,
+      "gzipKiB": 131.73,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/apply",
+      "entry": "src/pages/Apply.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/Apply-17ckP2T0.js",
+        "assets/Contact-BJFChpNC.js",
+        "assets/HowItWorks-VsyuEy-M.js",
+        "assets/shield-check-GCfLTmJh.js",
+        "assets/users-CiULpkv8.js"
+      ],
+      "gzipBytes": 136506,
+      "gzipKiB": 133.31,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/regulatory",
+      "entry": "src/pages/Regulatory.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/Regulatory--xD2qzOi.js",
+        "assets/landmark-BPZ_XVKc.js",
+        "assets/shield-check-GCfLTmJh.js"
+      ],
+      "gzipBytes": 132970,
+      "gzipKiB": 129.85,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/faqs",
+      "entry": "src/pages/FAQs.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/FAQs-BDdAJSo9.js"
+      ],
+      "gzipBytes": 132288,
+      "gzipKiB": 129.19,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/contact",
+      "entry": "src/pages/Contact.tsx",
+      "chunks": [
+        "assets/index-q2Yqm0Sq.js",
+        "assets/Contact-BCskKtIA.js",
+        "assets/Contact-BJFChpNC.js"
+      ],
+      "gzipBytes": 134125,
+      "gzipKiB": 130.98,
+      "budgetKiB": 145,
+      "passed": true
+    }
+  ]
+}
