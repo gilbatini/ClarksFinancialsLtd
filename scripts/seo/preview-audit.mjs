@@ -66,7 +66,7 @@ for (const path of routes) {
     const ogDescription = extractMeta(response.body, "property", "og:description");
     previews[crawler] = {
       status: response.status,
-      finalUrl: response.finalUrl,
+      finalUrl: asserting && localServer ? absoluteUrl(path) : response.finalUrl,
       title: ogTitle || extractTitle(response.body),
       description: ogDescription || extractMeta(response.body, "name", "description"),
       image: extractMeta(response.body, "property", "og:image"),
@@ -90,9 +90,9 @@ for (const route of records) {
 
 const file = resolve(ROOT, asserting ? "docs/seo/preview-current.json" : "docs/seo/preview-baseline.json");
 await writeJson(file, {
-  generatedAt: new Date().toISOString(),
+  ...(!asserting && { generatedAt: new Date().toISOString() }),
   source: "UA-spoofed raw HTTP fetch; JavaScript not executed",
-  baseUrl,
+  baseUrl: asserting && localServer ? "local-dist" : baseUrl,
   crawlers: Object.keys(crawlers),
   failureCount: failures.length,
   failures,
