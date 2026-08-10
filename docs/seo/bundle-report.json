@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T23:00:30.652Z",
+  "generatedAt": "2026-08-10T23:17:53.221Z",
   "source": "Vite manifest and gzip-compressed production assets",
   "budget": {
     "metric": "initial route JavaScript transfer size",
@@ -12,14 +12,15 @@
       "path": "/",
       "entry": "src/pages/Home.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/Home-BX-OEYGT.js",
-        "assets/circle-check-CmVxNTDi.js",
-        "assets/landmark-BPZ_XVKc.js",
-        "assets/HowItWorks-VsyuEy-M.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/Home-_xPYJXAN.js",
+        "assets/proxy-xLegDO1T.js",
+        "assets/circle-check-C7a1pk2o.js",
+        "assets/landmark-MytHeJMa.js",
+        "assets/HowItWorks-CExuRU5h.js"
       ],
-      "gzipBytes": 136354,
-      "gzipKiB": 133.16,
+      "gzipBytes": 133180,
+      "gzipKiB": 130.06,
       "budgetKiB": 145,
       "passed": true
     },
@@ -27,13 +28,14 @@
       "path": "/about",
       "entry": "src/pages/About.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/About-BZQFNK77.js",
-        "assets/shield-BurdQtRM.js",
-        "assets/users-CiULpkv8.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/About-CKe3As3J.js",
+        "assets/proxy-xLegDO1T.js",
+        "assets/shield-CK3RTWrN.js",
+        "assets/users-DWalGlEs.js"
       ],
-      "gzipBytes": 133390,
-      "gzipKiB": 130.26,
+      "gzipBytes": 130426,
+      "gzipKiB": 127.37,
       "budgetKiB": 145,
       "passed": true
     },
@@ -41,13 +43,14 @@
       "path": "/loans",
       "entry": "src/pages/Loans.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/Loans-DnMsQdSq.js",
-        "assets/circle-check-CmVxNTDi.js",
-        "assets/shield-BurdQtRM.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/Loans-D7yfkaZW.js",
+        "assets/circle-check-C7a1pk2o.js",
+        "assets/shield-CK3RTWrN.js",
+        "assets/proxy-xLegDO1T.js"
       ],
-      "gzipBytes": 134888,
-      "gzipKiB": 131.73,
+      "gzipBytes": 131453,
+      "gzipKiB": 128.37,
       "budgetKiB": 145,
       "passed": true
     },
@@ -55,15 +58,17 @@
       "path": "/apply",
       "entry": "src/pages/Apply.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/Apply-17ckP2T0.js",
-        "assets/Contact-BJFChpNC.js",
-        "assets/HowItWorks-VsyuEy-M.js",
-        "assets/shield-check-GCfLTmJh.js",
-        "assets/users-CiULpkv8.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/Apply-TCqUpP9T.js",
+        "assets/Contact-DLSs0LrF.js",
+        "assets/index-CZSeaA4D.js",
+        "assets/proxy-xLegDO1T.js",
+        "assets/HowItWorks-CExuRU5h.js",
+        "assets/shield-check-CiFi8Hjf.js",
+        "assets/users-DWalGlEs.js"
       ],
-      "gzipBytes": 136506,
-      "gzipKiB": 133.31,
+      "gzipBytes": 135299,
+      "gzipKiB": 132.13,
       "budgetKiB": 145,
       "passed": true
     },
@@ -71,13 +76,13 @@
       "path": "/regulatory",
       "entry": "src/pages/Regulatory.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/Regulatory--xD2qzOi.js",
-        "assets/landmark-BPZ_XVKc.js",
-        "assets/shield-check-GCfLTmJh.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/Regulatory-DVU7V3M4.js",
+        "assets/landmark-MytHeJMa.js",
+        "assets/shield-check-CiFi8Hjf.js"
       ],
-      "gzipBytes": 132970,
-      "gzipKiB": 129.85,
+      "gzipBytes": 89451,
+      "gzipKiB": 87.35,
       "budgetKiB": 145,
       "passed": true
     },
@@ -85,11 +90,13 @@
       "path": "/faqs",
       "entry": "src/pages/FAQs.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/FAQs-BDdAJSo9.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/FAQs-CNgMJeUx.js",
+        "assets/index-CZSeaA4D.js",
+        "assets/proxy-xLegDO1T.js"
       ],
-      "gzipBytes": 132288,
-      "gzipKiB": 129.19,
+      "gzipBytes": 131231,
+      "gzipKiB": 128.16,
       "budgetKiB": 145,
       "passed": true
     },
@@ -97,12 +104,14 @@
       "path": "/contact",
       "entry": "src/pages/Contact.tsx",
       "chunks": [
-        "assets/index-q2Yqm0Sq.js",
-        "assets/Contact-BCskKtIA.js",
-        "assets/Contact-BJFChpNC.js"
+        "assets/index-jnjbdxv-.js",
+        "assets/Contact-M4OR4JvV.js",
+        "assets/Contact-DLSs0LrF.js",
+        "assets/index-CZSeaA4D.js",
+        "assets/proxy-xLegDO1T.js"
       ],
-      "gzipBytes": 134125,
-      "gzipKiB": 130.98,
+      "gzipBytes": 132898,
+      "gzipKiB": 129.78,
       "budgetKiB": 145,
       "passed": true
     }

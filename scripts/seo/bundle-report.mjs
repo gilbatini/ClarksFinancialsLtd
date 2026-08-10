@@ -45,7 +45,9 @@ function collectStaticImports(key, collected = new Set()) {
   return collected;
 }
 
-const dynamicEntries = Object.values(manifest).filter((chunk) => chunk.isDynamicEntry);
+const dynamicEntries = Object.entries(manifest).filter(
+  ([key, chunk]) => key.startsWith("src/pages/") && chunk.isDynamicEntry,
+);
 if (dynamicEntries.length !== routes.length) {
   throw new Error(
     `Expected one dynamic page entry per public route (${routes.length}), found ${dynamicEntries.length}`,

@@ -11,7 +11,8 @@
     "lint": "tsc --noEmit",
     "seo:bundle-report": "node scripts/seo/bundle-report.mjs",
     "seo:verify-images": "node scripts/seo/verify-images.mjs",
-    "seo:verify-alt": "node scripts/seo/verify-alt.mjs"
+    "seo:verify-alt": "node scripts/seo/verify-alt.mjs",
+    "seo:third-party-audit": "node scripts/seo/third-party-audit.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
