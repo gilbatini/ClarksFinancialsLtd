@@ -3,7 +3,7 @@ import { Quote } from "lucide-react";
 
 const steps = [
   { id: "01", title: "Contact the Team", description: "Review the application guidance, then contact our team or visit the Kampala office to confirm the next steps." },
-  { id: "02", title: "Submit Documents", description: "Provide your National ID, payslips, bank statement, and guarantors." },
+  { id: "02", title: "Confirm Documents", description: "Ask the team which identification, employment, income, or guarantor documents apply to your enquiry." },
   { id: "03", title: "Application Review", description: "Our credit team reviews your application after receiving the required document package." },
   { id: "04", title: "Decision & Next Steps", description: "The team explains the outcome and, when approved, confirms the disbursement process." },
 ];
@@ -21,19 +21,19 @@ export default function HowItWorks() {
             THE PATH TO <br /><span className="text-primary italic">PROSPERITY.</span>
           </h2>
           <p className="text-slate-600 text-lg max-w-md mb-12 font-medium">
-            Our streamlined architectural process removes the friction from traditional banking. We focus on your future potential.
+            Use this preparation guide to understand the enquiry and review stages before sharing documents.
           </p>
           
           <div className="bg-surface-50 p-10 border-l-4 border-primary relative">
             <Quote className="absolute -top-6 left-6 w-12 h-12 text-primary/20" />
             <p className="italic text-slate-700 text-lg font-medium leading-relaxed">
-              Prepare your identification, employment, and income documents before applying so the team can review a complete file.
+              Confirm the current document checklist and approved submission method with the team before sharing personal information.
             </p>
             <div className="mt-6 flex items-center gap-4">
               <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
               <div>
-                <p className="font-bold text-slate-950 uppercase text-sm tracking-widest">James K.</p>
-                <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Tech Entrepreneur</p>
+                <p className="font-bold text-slate-950 uppercase text-sm tracking-widest">Application Checklist</p>
+                <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Preparation Guide</p>
               </div>
             </div>
           </div>

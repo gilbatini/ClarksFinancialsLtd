@@ -9,10 +9,10 @@ export default function Regulatory() {
         <div className="container mx-auto px-8 relative z-10">
           <p className="text-primary font-bold uppercase tracking-widest mb-4">Legal Framework</p>
           <h1 className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8">
-            LICENSED. <br /><span className="text-primary">REGULATED.</span> TRUSTED.
+            REGULATORY <br /><span className="text-primary">INFORMATION.</span>
           </h1>
           <p className="max-w-2xl text-lg text-white/60 font-medium">
-            Clarks Financials Limited operates under the full oversight of the Uganda Microfinance Regulatory Authority (UMRA).
+            This page summarizes the legal framework and borrower protections published by UMRA. Confirm Clarks Financials current licence status directly with UMRA.
           </p>
         </div>
       </section>

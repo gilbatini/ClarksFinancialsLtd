@@ -6,7 +6,7 @@ const services = [
   {
     id: "01",
     title: "Money Lending",
-    description: "Fast-tracked salary loans starting from UGX 200,000 for durations of 1 to 24 months. Decisions within 24hrs.",
+    description: "Information about salary-loan applications, document categories, review steps, and borrower questions.",
     icon: Banknote,
     path: "/loans"
   },
@@ -20,7 +20,7 @@ const services = [
   {
     id: "03",
     title: "Agency Banking",
-    description: "Access banking services through our licensed agents including deposits and withdrawals. Please note that we do not offer float financing.",
+    description: "Information about agency-banking transaction support and the questions to confirm with the team.",
     icon: Landmark,
     path: "/loans"
   },

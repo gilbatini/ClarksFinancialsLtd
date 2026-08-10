@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
 
 const stats = [
-  { label: "Serving Since", value: "2012", color: "text-secondary" },
-  { label: "Maximum Loan", value: "FLEXIBLE", color: "text-white" },
-  { label: "Approval Time", value: "24HRS", color: "text-white" },
-  { label: "Terms & Fees", value: "DISCLOSED", color: "text-secondary" },
+  { label: "Application", value: "GUIDANCE", color: "text-secondary" },
+  { label: "Documents", value: "CHECKLIST", color: "text-white" },
+  { label: "Next Step", value: "CONTACT", color: "text-white" },
+  { label: "Support", value: "KAMPALA", color: "text-secondary" },
 ];
 
 export default function Stats() {

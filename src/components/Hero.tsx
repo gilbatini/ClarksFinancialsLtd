@@ -15,13 +15,13 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-sm mb-6">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Licensed Institution · Kampala, Uganda · Est. 2012</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Loan Information · Kampala, Uganda</span>
           </div>
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-slate-950 font-black text-kern-tight mb-8 uppercase">
             SALARY LOAN<br /><span className="text-primary italic">INFORMATION.</span>
           </h1>
           <p className="text-slate-600 text-lg mb-10 max-w-2xl font-medium leading-relaxed">
-            Review the salaried employee loan requirements, documents, and application steps. Clarks Financials has served Uganda since 2012.
+            Review the salaried employee loan process, document categories, and questions to discuss before contacting the team.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/apply">

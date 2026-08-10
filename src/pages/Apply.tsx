@@ -4,14 +4,14 @@ import { motion } from "motion/react";
 import { FileText, UserCheck, ShieldCheck, Users, MapPin } from "lucide-react";
 
 const requirements = [
-  { icon: FileText, text: "Copy of National Identification Card" },
-  { icon: UserCheck, text: "Employer-issued identification" },
-  { icon: FileText, text: "Latest three payslips" },
-  { icon: FileText, text: "Three-month bank statement" },
-  { icon: ShieldCheck, text: "Appointment letter or contract" },
-  { icon: UserCheck, text: "One passport-size photograph" },
-  { icon: Users, text: "Two guarantors" },
-  { icon: MapPin, text: "Map to residence or utility bill" },
+  { icon: FileText, text: "Identification details" },
+  { icon: UserCheck, text: "Employment details" },
+  { icon: FileText, text: "Recent income records" },
+  { icon: FileText, text: "Banking information" },
+  { icon: ShieldCheck, text: "Any requested security documents" },
+  { icon: UserCheck, text: "Current contact information" },
+  { icon: Users, text: "Guarantor details, if requested" },
+  { icon: MapPin, text: "Address confirmation, if requested" },
 ];
 
 export default function Apply() {
@@ -22,7 +22,7 @@ export default function Apply() {
         <div className="container mx-auto px-8 relative z-10">
           <p className="text-secondary font-bold uppercase tracking-widest mb-4">Application Protocol</p>
           <h1 className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8">
-            24HRS <br /><span className="text-secondary">FUNDING.</span>
+            APPLICATION <br /><span className="text-secondary">GUIDANCE.</span>
           </h1>
           <p className="max-w-2xl text-lg text-white/80 font-medium">
             Prepare the required document package before contacting the team so your application can be reviewed.
@@ -35,8 +35,8 @@ export default function Apply() {
       <section className="py-24 bg-surface-50">
         <div className="container mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl font-black text-slate-950 uppercase mb-4">Documents Required</h2>
-            <p className="text-slate-500 font-medium">Ensure you have these ready for a smooth application process.</p>
+            <h2 className="font-headline text-4xl font-black text-slate-950 uppercase mb-4">Documents to Discuss</h2>
+            <p className="text-slate-500 font-medium">Confirm the current document list with the team before sharing personal information.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {requirements.map((req, index) => (

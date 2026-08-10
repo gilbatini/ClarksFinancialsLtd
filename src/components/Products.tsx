@@ -7,7 +7,7 @@ const products = [
     title: "Salary Loan",
     description: "Salary-loan information for salaried employees, including document, term, and repayment requirements.",
     icon: Banknote,
-    features: ["Document Requirements", "Up to 24 Months Tenor"],
+    features: ["Document Requirements", "Term Information"],
     variant: "dark",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIC4DLSQ5WkExY4GoSKagIDrX6nb1UzIUxxK297OSlg_TIseqoMRckC_Ed25VIP-cPnho70n_vfoDv-18x9egUFtHvvquFjD8juMkXn4TdHYFIupWRWuRoiCT1h4H8cJoSs8Ug6V6NBzuw4HfU7-P2R6EPmCXgyREixnZHTKoY8FB21NalRo8wEeBazQKWhc-eSkyxXrnbA1Aa2l45hi5RaHbEegNTHO5TlYJQmvOFCueDODiBM6fJk3X546LY0OCWEMcvTS6ap5c"
   },
@@ -21,7 +21,7 @@ const products = [
   },
   {
     title: "Agency Banking",
-    description: "Full suite of banking services through our licensed agents (deposits/withdrawals). We do not provide float financing.",
+    description: "Agency-banking information, including transaction support and service-scope questions to confirm with the team.",
     icon: Store,
     features: ["Transactional Support", "Digital Integration"],
     variant: "light",

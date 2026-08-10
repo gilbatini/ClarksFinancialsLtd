@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Shield, Users, Heart, Anchor, Target, Eye } from "lucide-react";
 
 const values = [
-  { icon: Shield, title: "Integrity", description: "We do what we say. All loan terms, interest rates, and fees are disclosed honestly and in full." },
+  { icon: Shield, title: "Integrity", description: "We aim to communicate application steps and requested documents clearly." },
   { icon: Users, title: "Teamwork", description: "Our strength lies in the collective effort of our people working together to deliver dependable service." },
   { icon: Heart, title: "Loyalty", description: "We are loyal to our clients, our colleagues, and the communities we serve." },
   { icon: Anchor, title: "Guard Against Arrogance", description: "We remain humble, grounded, and open to learning, respecting every client's circumstances." },
@@ -29,7 +29,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="font-headline text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8"
           >
-            OVER A DECADE OF <br />TRUSTED SERVICE.
+            LOCAL SERVICE. <br />CLEAR INFORMATION.
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -37,8 +37,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="max-w-2xl text-lg text-white/80 font-medium"
           >
-            Clarks Financials Limited is a licensed Ugandan Microfinance institution, fully regulated by UMRA. 
-            Incorporated in 2012, we provide accessible, fast, and transparent financial services.
+            Learn about Clarks Financials Limited, its customer-service approach, and the team supporting borrowers through the application process in Uganda.
           </motion.p>
         </div>
       </section>
@@ -49,16 +48,13 @@ export default function About() {
             <h2 className="font-headline text-5xl font-black text-slate-950 uppercase mb-8">Our Story</h2>
             <div className="space-y-6 text-slate-600 font-medium leading-relaxed">
               <p>
-                Since our incorporation in 2012, Clarks Financials Limited has been committed to one purpose: 
-                making financial services accessible, fast, and transparent for every Ugandan we serve.
+                Clarks Financials Limited provides information about loan enquiries, document preparation, and the application-review process.
               </p>
               <p>
-                We offer loan products and financial services in today's fast-moving environment,
-                where time and simplicity matter most. Our experienced team processes applications and 
-                disburses approved funds within 24hrs.
+                Applicants can contact the team to discuss available services, current requirements, and the steps that follow a completed review.
               </p>
               <p>
-                We operate from two locations in Kampala — our Head Office on Kampala Road and our Branch at Kireka.
+                For in-person support, visit the head office at Ambassador House on Kampala Road after confirming opening hours.
               </p>
             </div>
           </div>

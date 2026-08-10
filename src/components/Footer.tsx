@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="col-span-2 md:col-span-1">
           <Logo light className="mb-6" />
           <p className="text-white/70 text-sm leading-relaxed mb-8">
-            Architectural Precision in Finance. Licensed Tier-4 Institution regulated to provide credit services in Uganda.
+            Loan information and customer support from Kampala, Uganda.
           </p>
           <div className="flex gap-4">
             <a aria-label="Email Clarks Financials" className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all rounded-sm" href={"mailto:" + business.email}>
@@ -60,7 +60,7 @@ export default function Footer() {
       </div>
       
       <div className="container mx-auto px-8 mt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold text-white/40 tracking-widest uppercase">
-        <p>Clarks Financials Limited is licensed by the Uganda Microfinance Regulatory Authority (UMRA) under the Tier 4 Microfinance Institutions and Money Lenders Act, 2016. Incorporated in Uganda, 2012. All lending activities are conducted in accordance with applicable Ugandan law. © 2026 Clarks Financials Limited. All rights reserved.</p>
+        <p>Clarks Financials Limited · Kampala, Uganda. © 2026. All rights reserved.</p>
         <div className="flex gap-8 mt-4 md:mt-0 shrink-0">
           <span>Kampala, Uganda</span>
         </div>
