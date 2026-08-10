@@ -174,6 +174,35 @@ if (!appSource.includes("<RouteStructuredData")) errors.push("src/App.tsx does n
 const selected = requestedType ? allSchemas.filter((schema) => schema["@type"] === requestedType) : allSchemas;
 if (selected.length === 0) errors.push(`No ${requestedType ?? "supported"} schema found`);
 selected.forEach(validateSchema);
+const ids = new Map();
+for (const schema of selected) {
+  if (!schema["@id"]) {
+    addError(schema, "@id is required for stable entity identity");
+  } else if (ids.has(schema["@id"])) {
+    addError(schema, `duplicate @id also used by ${ids.get(schema["@id"])}`);
+  } else {
+    ids.set(schema["@id"], schema["@type"]);
+  }
+
+  try {
+    const serialized = JSON.stringify(schema);
+    JSON.parse(serialized);
+    if (serialized.includes("TODO(clarks-verify)")) {
+      addError(schema, "TODO(clarks-verify) text must never be published in JSON-LD");
+    }
+  } catch (error) {
+    addError(schema, `JSON serialization failed: ${error.message}`);
+  }
+}
+
+if (!requestedType) {
+  for (const type of supportedTypes) {
+    if (!selected.some((schema) => schema["@type"] === type)) {
+      errors.push(`Aggregate validation requires at least one ${type} schema`);
+    }
+  }
+}
+
 
 if (selected.some((schema) => schema["@type"] === "Organization")) {
   await access(resolve(ROOT, "public/logo-2-orgnal.jpg")).catch(() => errors.push("Organization logo asset is missing"));
