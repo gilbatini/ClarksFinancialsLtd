@@ -50,7 +50,7 @@ export default function Chatbot() {
               <span className="text-[10px] font-black text-[#25D366] uppercase tracking-widest">Active on WhatsApp</span>
             </div>
             <p className="text-xs font-bold text-slate-950 leading-snug">
-              Chat with our loan officers directly on WhatsApp for instant approval!
+              Start a WhatsApp conversation with our loan team.
             </p>
           </motion.div>
         )}
@@ -73,7 +73,7 @@ export default function Chatbot() {
                 </div>
                 <div>
                   <h3 className="font-bold text-sm">Clarks Financials</h3>
-                  <p className="text-[10px] text-white/70">Typically replies immediately</p>
+                  <p className="text-[10px] text-white/70">Replies during business hours</p>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)} className="hover:bg-white/10 p-2 rounded-full transition-colors font-bold">
@@ -87,7 +87,7 @@ export default function Chatbot() {
                 <div className="absolute top-0 -left-2 w-0 h-0 border-t-[10px] border-t-white border-l-[10px] border-l-transparent"></div>
                 <p className="text-xs font-medium text-slate-800 leading-relaxed">
                   Hi there! 👋 <br /><br />
-                  I'm your Clarks Financials assistant. Click the button below to start a secure chat with our team on WhatsApp for any loan inquiries.
+                  I'm your Clarks Financials assistant. Click the button below to start a WhatsApp conversation with our team for any loan inquiries.
                 </p>
                 <p className="text-[9px] text-slate-400 text-right mt-1">9:41 AM</p>
               </div>

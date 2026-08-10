@@ -25,7 +25,7 @@ export default function Apply() {
             24HRS <br /><span className="text-secondary">FUNDING.</span>
           </h1>
           <p className="max-w-2xl text-lg text-white/80 font-medium">
-            Money out within 24hrs in most cases. Ensure you have your full document package ready for instant processing.
+            Prepare the required document package before contacting the team so your application can be reviewed.
           </p>
         </div>
       </section>

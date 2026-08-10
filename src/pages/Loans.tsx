@@ -13,7 +13,7 @@ export default function Loans() {
             24HRS <br /><span className="text-secondary italic">SALARY LOANS.</span>
           </h1>
           <p className="max-w-2xl text-lg text-white/70 font-medium">
-            Money out within 24hrs of submitting your documents. We specialize in Salaried Employee Loans with transparent terms and no hidden fees.
+            Review the Salaried Employee Loan requirements, security, terms, and borrower disclosures before applying.
           </p>
         </div>
       </section>

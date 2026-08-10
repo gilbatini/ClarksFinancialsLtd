@@ -4,8 +4,8 @@ import { Quote } from "lucide-react";
 const steps = [
   { id: "01", title: "Apply", description: "Complete our simple application form online or in-branch. Takes under five minutes." },
   { id: "02", title: "Submit Documents", description: "Provide your National ID, payslips, bank statement, and guarantors." },
-  { id: "03", title: "Instant Approval", description: "Our credit team delivers a decision within hours of receiving your full document package." },
-  { id: "04", title: "Same Day Funds", description: "Money out the same day in most cases. Funds deposited directly to your bank account." },
+  { id: "03", title: "Application Review", description: "Our credit team reviews your application after receiving the required document package." },
+  { id: "04", title: "Decision & Next Steps", description: "The team explains the outcome and, when approved, confirms the disbursement process." },
 ];
 
 export default function HowItWorks() {

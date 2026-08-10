@@ -123,7 +123,7 @@ export default function RepaymentMockup() {
               </div>
               <div>
                 <p className="text-slate-950 font-bold text-sm">Secure Bridge</p>
-                <p className="text-slate-500 text-xs">Military-grade encryption tunnels.</p>
+                <p className="text-slate-500 text-xs">Use the relevant provider confirmation to keep a record of each payment.</p>
               </div>
             </div>
           </div>

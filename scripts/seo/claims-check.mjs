@@ -5,6 +5,11 @@ import { assert, ROOT } from "./lib.mjs";
 
 const patterns = [
   { label: "market-leading claim", expression: /Uganda['’]s\s+leading|industry[- ]leading/gi },
+  { label: "competitive claim", expression: /\bcompetitive\b/gi },
+  { label: "instant-outcome claim", expression: /\binstant\s+(?:approval|disbursement|processing|funding)\b/gi },
+  { label: "fabricated response metric", expression: /\b02:45\b|\btypically replies immediately\b/gi },
+  { label: "unsupported security claim", expression: /\bmilitary[- ]grade\b/gi },
+  { label: "unsupported zero-fee statistic", expression: /\b0\.0%\b/gi },
   { label: "best claim", expression: /\b(?:the|Uganda['’]s)\s+best\b|\bbest\s+(?:service|rates?|terms?|financial)/gi },
   { label: "fastest claim", expression: /\bfastest\b/gi },
   { label: "lowest claim", expression: /\blowest\b/gi },

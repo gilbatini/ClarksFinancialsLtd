@@ -18,10 +18,10 @@ export default function Hero() {
             <span className="text-[10px] font-black uppercase tracking-[0.2em]">Licensed Institution · Kampala, Uganda · Est. 2012</span>
           </div>
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-slate-950 font-black text-kern-tight mb-8 uppercase">
-            FAST APPROVAL<br />ON <span className="text-primary italic">SALARIED EMPLOYEE LOAN.</span>
+            SALARY LOAN<br /><span className="text-primary italic">INFORMATION.</span>
           </h1>
           <p className="text-slate-600 text-lg mb-10 max-w-2xl font-medium leading-relaxed">
-            Specializing in Salaried Employee Loans. Get your funds within 24hrs of submitting your documents. Licensed by UMRA and serving Uganda since 2012.
+            Review the salaried employee loan requirements, documents, and application steps. Clarks Financials has served Uganda since 2012.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/apply">
@@ -62,13 +62,13 @@ export default function Hero() {
               <h2 className="font-headline text-2xl text-secondary mb-4 uppercase font-bold tracking-tight">Our Priority Services</h2>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 border-b border-white/10 pb-3 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-secondary" /> Instant Disbursement
+                  <CheckCircle2 className="w-5 h-5 text-secondary" /> Application Review
                 </li>
                 <li className="flex items-center gap-3 border-b border-white/10 pb-3 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-secondary" /> Flexible Terms
+                  <CheckCircle2 className="w-5 h-5 text-secondary" /> Term Information
                 </li>
                 <li className="flex items-center gap-3 pb-1 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-secondary" /> No Collateral Required
+                  <CheckCircle2 className="w-5 h-5 text-secondary" /> Security Requirements
                 </li>
               </ul>
             </div>
@@ -80,8 +80,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="absolute top-1/3 -left-12 bg-white p-6 shadow-2xl border border-surface-200 hidden lg:block z-30"
           >
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Response Time</p>
-            <p className="font-headline text-4xl font-black text-primary">02:45 <span className="text-xs">MIN</span></p>
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Need Help?</p>
+            <p className="font-headline text-4xl font-black text-primary">CONTACT</p>
           </motion.div>
         </motion.div>
       </div>

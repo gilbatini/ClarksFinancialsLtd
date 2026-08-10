@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 const products = [
   {
     title: "Salary Loan",
-    description: "Fast credit for salaried employees with competitive interest rates and easy payroll deductions.",
+    description: "Salary-loan information for salaried employees, including document, term, and repayment requirements.",
     icon: Banknote,
-    features: ["Competitive Funding", "Up to 24 Months Tenor"],
+    features: ["Document Requirements", "Up to 24 Months Tenor"],
     variant: "dark",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIC4DLSQ5WkExY4GoSKagIDrX6nb1UzIUxxK297OSlg_TIseqoMRckC_Ed25VIP-cPnho70n_vfoDv-18x9egUFtHvvquFjD8juMkXn4TdHYFIupWRWuRoiCT1h4H8cJoSs8Ug6V6NBzuw4HfU7-P2R6EPmCXgyREixnZHTKoY8FB21NalRo8wEeBazQKWhc-eSkyxXrnbA1Aa2l45hi5RaHbEegNTHO5TlYJQmvOFCueDODiBM6fJk3X546LY0OCWEMcvTS6ap5c"
   },
   {
     title: "Unsecured",
-    description: "Quick personal and business funding without the need for traditional collateral or security.",
+    description: "Loan information for personal and business needs, with security requirements based on the requested amount.",
     icon: Shield,
-    features: ["No Title Deeds Required", "48-Hour Processing"],
+    features: ["Security Requirements", "Application Review"],
     variant: "primary",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDuo43h8nUEyjqe8UyzX3y9pyofLa_n2wDUsEuvlPZFVBCCulVbnu287FdPw_ohisATBYTB-n99tivaEjkOdZxvfx22h-cKzlvOwyxtnMRT-TQuDHS7RIv_SfdX7Yjm1-OaiBgLLwXYdNq9JkehGurwgkS4YH5Xo4pCe7yGu-nn7083assgCRgyFZlrEOgCVbz90ogXETvguXX8H3AptyLhvEbHXTSAzXgXCtcaGqbSmeQ_UFdhbABgTamq2HJ0wXt08Jh5HsSTBtU"
   },
