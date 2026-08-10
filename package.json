@@ -10,7 +10,8 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "seo:bundle-report": "node scripts/seo/bundle-report.mjs",
-    "seo:verify-images": "node scripts/seo/verify-images.mjs"
+    "seo:verify-images": "node scripts/seo/verify-images.mjs",
+    "seo:verify-alt": "node scripts/seo/verify-alt.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
