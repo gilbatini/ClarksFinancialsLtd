@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-08-10T22:38:24.011Z",
+  "source": "raw HTTP fetch; JavaScript not executed",
+  "baseUrl": "https://www.clarksfinancials.com",
+  "routes": [
+    {
+      "path": "/",
+      "requestedUrl": "https://www.clarksfinancials.com/",
+      "finalUrl": "https://www.clarksfinancials.com/",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/about",
+      "requestedUrl": "https://www.clarksfinancials.com/about",
+      "finalUrl": "https://www.clarksfinancials.com/about",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/loans",
+      "requestedUrl": "https://www.clarksfinancials.com/loans",
+      "finalUrl": "https://www.clarksfinancials.com/loans",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/apply",
+      "requestedUrl": "https://www.clarksfinancials.com/apply",
+      "finalUrl": "https://www.clarksfinancials.com/apply",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/regulatory",
+      "requestedUrl": "https://www.clarksfinancials.com/regulatory",
+      "finalUrl": "https://www.clarksfinancials.com/regulatory",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/faqs",
+      "requestedUrl": "https://www.clarksfinancials.com/faqs",
+      "finalUrl": "https://www.clarksfinancials.com/faqs",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    },
+    {
+      "path": "/contact",
+      "requestedUrl": "https://www.clarksfinancials.com/contact",
+      "finalUrl": "https://www.clarksfinancials.com/contact",
+      "status": 200,
+      "bytes": 468,
+      "head": "<meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <link rel=\"icon\" type=\"image/png\" href=\"/fav.png\" />\n    <title>Clarks Financials Limited</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-DvQ__ynQ.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-CJHDK_UL.css\">",
+      "rootHasContent": false
+    }
+  ]
+}
