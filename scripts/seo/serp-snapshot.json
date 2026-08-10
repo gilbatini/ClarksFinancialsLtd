@@ -1,0 +1,62 @@
+{
+  "observedAt": "2026-08-10",
+  "source": "Current web search results sampled with Uganda-specific queries; ordering is the search provider's observed order, not a GSC rank measurement.",
+  "queries": [
+    {
+      "query": "salary loans Uganda",
+      "intent": "Compare or apply for a salary-backed loan in Uganda",
+      "results": [
+        { "title": "Salary Loan | Stanbic Bank", "url": "https://www.stanbic.co.ug/uganda/personal/products-and-services/borrow-for-your-needs/salary-loan" },
+        { "title": "Get a Quick Salary Loan With Ease - Apply Today | Bank of Baroda Uganda", "url": "https://www.bankofbaroda.ug/personal-banking/loans/salary-loan" },
+        { "title": "Salary Loans in Uganda | SenteGuide", "url": "https://senteguide.com/products/loans/salary-loans" },
+        { "title": "Personal Loans | Absa Uganda", "url": "https://www.absa.co.ug/personal/personal-loans/" },
+        { "title": "Salary Loans - NCBA Uganda", "url": "https://ug.ncbagroup.com/salary-loans/" },
+        { "title": "Salary Loan Uganda | KCB", "url": "https://ug.kcbgroup.com/salary-loan" },
+        { "title": "Loans – Standard Chartered Uganda", "url": "https://www.sc.com/ug/borrow/" },
+        { "title": "Salary Loans — Azima Financial Services", "url": "https://azimafinancial.com/salary-loans" }
+      ]
+    },
+    {
+      "query": "quick loans Kampala Uganda",
+      "intent": "Find a fast local lender or mobile-loan provider",
+      "results": [
+        { "title": "QuickLoan - Fast & Easy Loans in Uganda", "url": "https://www.quickloan.tech/" },
+        { "title": "Loan companies in Kampala, Central Region, Uganda", "url": "https://www.cybo.com/UG/kampala/loan-companies/" },
+        { "title": "KYOLINA — Get Quick Loans in Kampala", "url": "https://kyolina.com/" },
+        { "title": "Loans – Standard Chartered Uganda", "url": "https://www.sc.com/ug/borrow/" },
+        { "title": "Baikal Financial Services — Microfinance built for Uganda", "url": "https://baikalfinance.ug/" },
+        { "title": "Affordable Loans in Kampala, Uganda | Opes Investment Firm", "url": "https://opesinvestmentfirm.com/" },
+        { "title": "Quick Loans | Zimba", "url": "https://zimbasacco.com/products/quick-loans" },
+        { "title": "Mobile loan | FINCA Uganda", "url": "https://finca.ug/borrow/mobile-loan/" }
+      ]
+    },
+    {
+      "query": "personal loans Uganda",
+      "intent": "Research personal borrowing products, terms, and eligibility",
+      "results": [
+        { "title": "Personal Loans | Absa Uganda", "url": "https://www.absa.co.ug/personal/personal-loans/" },
+        { "title": "Loans – Standard Chartered Uganda", "url": "https://www.sc.com/ug/borrow/" },
+        { "title": "Salary Loan | Stanbic Bank", "url": "https://www.stanbic.co.ug/uganda/personal/products-and-services/borrow-for-your-needs/salary-loan" },
+        { "title": "Salary Loans - NCBA Uganda", "url": "https://ug.ncbagroup.com/salary-loans/" },
+        { "title": "Mobile loan | FINCA Uganda", "url": "https://finca.ug/borrow/mobile-loan/" },
+        { "title": "Salary Loan Uganda | KCB", "url": "https://ug.kcbgroup.com/salary-loan" },
+        { "title": "Salary Loans in Uganda | SenteGuide", "url": "https://senteguide.com/products/loans/salary-loans" },
+        { "title": "Salary Loans | Premier Credit Uganda", "url": "https://www.premiercredit.co.ug/products/salary-loans/" }
+      ]
+    },
+    {
+      "query": "money lenders Kampala Uganda",
+      "intent": "Find and assess a locally available money lender",
+      "results": [
+        { "title": "Loan companies in Kampala, Central Region, Uganda", "url": "https://www.cybo.com/UG/kampala/loan-companies/" },
+        { "title": "KYOLINA — Get Quick Loans in Kampala", "url": "https://kyolina.com/" },
+        { "title": "Affordable Loans in Kampala, Uganda | Opes Investment Firm", "url": "https://opesinvestmentfirm.com/" },
+        { "title": "Sanyulyo Financial Services", "url": "https://sanyulyofinancialservices.com/" },
+        { "title": "Baikal Financial Services — Microfinance built for Uganda", "url": "https://baikalfinance.ug/" },
+        { "title": "QuickLoan - Fast & Easy Loans in Uganda", "url": "https://www.quickloan.tech/" },
+        { "title": "Salary Loans — Azima Financial Services", "url": "https://azimafinancial.com/salary-loans" },
+        { "title": "Mobile loan | FINCA Uganda", "url": "https://finca.ug/borrow/mobile-loan/" }
+      ]
+    }
+  ]
+}
