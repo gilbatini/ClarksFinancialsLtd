@@ -53,9 +53,14 @@ export default function Hero() {
         >
           <div className="bg-primary p-1 rounded-default shadow-2xl overflow-hidden group">
             <img 
-              alt="Professional Financial Focus" 
+              alt="Stacks of Ugandan shilling banknotes"
               className="w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuChJhpkG3fM0YkjB1qtoBFBtH6KZ4z9rkMfIeANJGeaD67hiM5Fk5Nk3Q-yXDR5K2U1CNgKpqPxbWq-sBTVCD-zwIFI38sr39sslcA-urLBtGACqV2mVJYe2cDPwhCuBdCmjpcljyO0rZOFWfPkwJVHiWIljmiVJ-4EmGNmBV9zacRGzdIAG9VzHFJwfumjlMu6fwxwHytzbMjCoDD2_nH8QO3OB-DlGV3mhVcKq4qVf8S3oC_BlWhSPSYjOga1jV4XfrN0qbTo5rM"
+              src="/images/hero-team.webp"
+              width={512}
+              height={512}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
             <div className="bg-primary p-8 text-white">

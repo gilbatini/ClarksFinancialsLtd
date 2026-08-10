@@ -6,7 +6,7 @@ export default function Logo({ className = "", light = false, iconOnly = false }
   const primaryColor = light ? "white" : "#1B6FC8";
   const secondaryColor = "#2DC84A";
   
-  const logoUrl = "/logo-2-orgnal.jpg";
+  const logoUrl = "/images/clarks-financials-logo.webp";
 
   return (
     <div className={cn("flex items-center transition-all", className)}>
@@ -14,6 +14,10 @@ export default function Logo({ className = "", light = false, iconOnly = false }
         <img
           src={logoUrl}
           alt="Clarks Financials Limited"
+          width={512}
+          height={130}
+          loading="eager"
+          decoding="async"
           className={cn(
             "object-contain transition-all h-auto",
             iconOnly ? "h-8 md:h-10" : "h-11 md:h-14 lg:h-16"

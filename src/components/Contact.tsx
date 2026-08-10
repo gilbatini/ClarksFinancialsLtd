@@ -61,8 +61,12 @@ export default function Contact() {
           <div className="mt-20 border-2 border-primary grayscale hover:grayscale-0 transition-all duration-700 h-64 overflow-hidden rounded-sm shadow-xl">
             <img 
               className="w-full h-full object-cover" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJd-VUQd_hHCOmgPvW4fl6szpA0tK5yJiUnYGpg08-5sFONg0UqJukxVG4KoLJ-xNrHcWAMogWz5YK590dgDc1WP9bXVTRulvo0xjVIwA3CkiMuqpfLlqqI7pcbtgfxka38Ywk5ny_SDs5S9PugMViKj3Zmdhbpzbsn9rWlVwzMiShMZokLfYl57-3Khk4BePWZOFXtFq_fi9WcL3DqS6AQ61yW1JNhxfg6AU3tvmJGFVXQMGCD1rkOje5Vx6jQF8KXIaM-4QRSgY" 
-              alt="HQ Office"
+              src="/images/kampala-office.webp"
+              alt="Illuminated corridor leading to an office reception"
+              width={512}
+              height={512}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
           </div>
