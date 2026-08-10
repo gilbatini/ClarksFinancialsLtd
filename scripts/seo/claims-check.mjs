@@ -21,7 +21,7 @@ async function sourceFiles(directory) {
   for (const entry of entries) {
     const file = resolve(directory, entry.name);
     if (entry.isDirectory()) files.push(...await sourceFiles(file));
-    else if ([".ts", ".tsx", ".html", ".json"].includes(extname(entry.name))) files.push(file);
+    else if ([".ts", ".tsx", ".mjs", ".html", ".json"].includes(extname(entry.name))) files.push(file);
   }
   return files;
 }
