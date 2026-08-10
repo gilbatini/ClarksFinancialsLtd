@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Quote } from "lucide-react";
 
 const steps = [
-  { id: "01", title: "Apply", description: "Complete our simple application form online or in-branch. Takes under five minutes." },
+  { id: "01", title: "Contact the Team", description: "Review the application guidance, then contact our team or visit the Kampala office to confirm the next steps." },
   { id: "02", title: "Submit Documents", description: "Provide your National ID, payslips, bank statement, and guarantors." },
   { id: "03", title: "Application Review", description: "Our credit team reviews your application after receiving the required document package." },
   { id: "04", title: "Decision & Next Steps", description: "The team explains the outcome and, when approved, confirms the disbursement process." },

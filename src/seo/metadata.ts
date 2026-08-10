@@ -39,6 +39,6 @@ export const routeMetadata: Record<string, RouteMetadata> = {
   "/contact": {
     title: "Contact Clarks Financials | Kampala, Uganda",
     description:
-      "Contact Clarks Financials in Kampala by phone, email, WhatsApp, or the online form for help with loan enquiries and applications.",
+      "Contact Clarks Financials in Kampala by phone, email, or WhatsApp for help with loan enquiries and application guidance.",
   },
 };

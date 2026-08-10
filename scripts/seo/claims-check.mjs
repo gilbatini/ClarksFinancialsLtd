@@ -9,6 +9,8 @@ const patterns = [
   { label: "instant-outcome claim", expression: /\binstant\s+(?:approval|disbursement|processing|funding)\b/gi },
   { label: "fabricated response metric", expression: /\b02:45\b|\btypically replies immediately\b/gi },
   { label: "unsupported security claim", expression: /\bmilitary[- ]grade\b/gi },
+  { label: "unsupported online-submission claim", expression: /application form online|online application form/gi },
+  { label: "unsupported completion-time claim", expression: /under five minutes/gi },
   { label: "unsupported zero-fee statistic", expression: /\b0\.0%\b/gi },
   { label: "best claim", expression: /\b(?:the|Uganda['’]s)\s+best\b|\bbest\s+(?:service|rates?|terms?|financial)/gi },
   { label: "fastest claim", expression: /\bfastest\b/gi },
