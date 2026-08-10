@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes, StaticRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
@@ -25,9 +25,9 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+function Site() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar />
@@ -45,6 +45,26 @@ export default function App() {
         <Footer />
         <Chatbot />
       </div>
-    </Router>
+    </>
+  );
+}
+
+type AppProps = {
+  serverPath?: string;
+};
+
+export default function App({ serverPath = "/" }: AppProps) {
+  if (typeof window === "undefined") {
+    return (
+      <StaticRouter location={serverPath}>
+        <Site />
+      </StaticRouter>
+    );
+  }
+
+  return (
+    <BrowserRouter>
+      <Site />
+    </BrowserRouter>
   );
 }
