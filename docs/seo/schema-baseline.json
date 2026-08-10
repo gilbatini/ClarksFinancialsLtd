@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-08-10T22:44:10.460Z",
+  "source": "raw HTTP fetch; JavaScript not executed",
+  "baseUrl": "https://www.clarksfinancials.com",
+  "totalBlocks": 0,
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/loans",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/apply",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/regulatory",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/faqs",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "blockCount": 0,
+      "blocks": []
+    }
+  ]
+}
