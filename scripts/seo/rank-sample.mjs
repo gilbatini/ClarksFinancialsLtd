@@ -2,8 +2,9 @@
 import { appendFile, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { emitEvent, ensureParent, readJson, ROOT } from "./lib.mjs";
+import { loadRankSource } from "./gsc-rank-source.mjs";
 
-const competitors = await readJson(resolve(ROOT, "docs/seo/competitors.json"));
+const competitors = await loadRankSource(await readJson(resolve(ROOT, "docs/seo/competitors.json")));
 const sampleFile = resolve(ROOT, "docs/seo/rank-samples.ndjson");
 let previous = [];
 try {

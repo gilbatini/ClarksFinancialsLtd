@@ -1,0 +1,35 @@
+name: Weekly SEO rank sampling
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Sample priority search queries
+        run: npm run seo:rank-sample
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          ALGORINEXT_EVENT_URL: ${{ secrets.ALGORINEXT_EVENT_URL }}
+          ALGORINEXT_TENANT: ${{ secrets.ALGORINEXT_TENANT }}
+          ALGORINEXT_TOKEN: ${{ secrets.ALGORINEXT_TOKEN }}
+      - name: Preserve local telemetry fallback
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-rank-telemetry
+          path: docs/seo/events.ndjson
