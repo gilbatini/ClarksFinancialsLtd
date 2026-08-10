@@ -53,7 +53,7 @@ export const financialServiceSchema = {
   "@context": "https://schema.org",
   "@type": "FinancialService",
   "@id": `${SITE_URL}/#financial-service-kampala-road`,
-  name: "Clarks Financials Limited — Kampala Road",
+  name: "Clarks Financials Limited",
   url: `${SITE_URL}/contact`,
   image: `${SITE_URL}/logo-2-orgnal.jpg`,
   parentOrganization: {

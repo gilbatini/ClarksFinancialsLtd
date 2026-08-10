@@ -48,23 +48,21 @@ export default function Footer() {
         </div>
         
         <div>
-          <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Stay Synced</h4>
+          <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Email Enquiries</h4>
           <div className="flex">
-            <input className="bg-white/10 border border-white/20 text-xs p-3 w-full focus:ring-0 focus:border-secondary placeholder:text-white/30" placeholder="Email Address" />
-            <button className="bg-secondary text-primary px-4 hover:bg-white transition-colors">
+            <a className="bg-white/10 border border-white/20 text-xs p-3 w-full hover:border-secondary transition-colors" href={"mailto:" + business.email}>{business.email}</a>
+            <a aria-label="Email Clarks Financials" className="bg-secondary text-primary px-4 hover:bg-white transition-colors flex items-center" href={"mailto:" + business.email}>
               <Send className="w-4 h-4" />
-            </button>
+            </a>
           </div>
-          <p className="mt-4 text-[10px] text-white/40 uppercase tracking-widest">Architectural Ledger Update</p>
+          <p className="mt-4 text-[10px] text-white/40 uppercase tracking-widest">Contact our team directly</p>
         </div>
       </div>
       
       <div className="container mx-auto px-8 mt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold text-white/40 tracking-widest uppercase">
         <p>Clarks Financials Limited is licensed by the Uganda Microfinance Regulatory Authority (UMRA) under the Tier 4 Microfinance Institutions and Money Lenders Act, 2016. Incorporated in Uganda, 2012. All lending activities are conducted in accordance with applicable Ugandan law. © 2026 Clarks Financials Limited. All rights reserved.</p>
         <div className="flex gap-8 mt-4 md:mt-0 shrink-0">
-          <span>Kampala</span>
-          <span>Nairobi</span>
-          <span>Johannesburg</span>
+          <span>Kampala, Uganda</span>
         </div>
       </div>
     </footer>
