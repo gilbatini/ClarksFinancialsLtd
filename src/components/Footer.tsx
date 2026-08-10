@@ -13,10 +13,10 @@ export default function Footer() {
             Architectural Precision in Finance. Licensed Tier-4 Institution regulated to provide credit services in Uganda.
           </p>
           <div className="flex gap-4">
-            <a className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all rounded-sm" href="#">
+            <a aria-label="Email Clarks Financials" className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all rounded-sm" href={"mailto:" + business.email}>
               <Share2 className="w-4 h-4" />
             </a>
-            <a className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all rounded-sm" href="#">
+            <a aria-label="Call Clarks Financials" className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all rounded-sm" href={business.phones[0].href}>
               <Phone className="w-4 h-4" />
             </a>
           </div>
@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="space-y-4 text-white/50 text-sm">
               <li data-nap-phone>{business.phones.map((phone, index) => <span key={phone.href}>{index > 0 ? " | " : ""}<a className="hover:text-secondary transition-all" href={phone.href}>{phone.display}</a></span>)}</li>
               <li data-nap-email><a className="hover:text-secondary transition-all" href={"mailto:" + business.email}>{business.email}</a></li>
-              <li>{business.website}</li>
+              <li><a className="hover:text-secondary transition-all" href={"https://" + business.website}>{business.website}</a></li>
               <li data-nap-address>{business.headOffice}</li>
             </ul>
           </address>
