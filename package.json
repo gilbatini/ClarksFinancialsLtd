@@ -10,7 +10,8 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
-    "seo:claims-check": "node scripts/seo/claims-check.mjs"
+    "seo:claims-check": "node scripts/seo/claims-check.mjs",
+    "seo:rank-sample": "node scripts/seo/rank-sample.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
