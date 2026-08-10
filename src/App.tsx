@@ -14,6 +14,7 @@ import Apply from "./pages/Apply";
 import Regulatory from "./pages/Regulatory";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
+import RouteMetadata from "./seo/RouteMetadata";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -28,6 +29,7 @@ function ScrollToTop() {
 function Site() {
   return (
     <>
+      <RouteMetadata />
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar />
