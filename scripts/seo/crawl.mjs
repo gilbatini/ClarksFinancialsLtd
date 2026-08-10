@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-import { resolve } from "node:path";
+import { createServer } from "node:http";
+import { readFile } from "node:fs/promises";
+import { extname, resolve } from "node:path";
 import {
   absoluteUrl,
   assert,
@@ -9,8 +11,43 @@ import {
   writeJson,
 } from "./lib.mjs";
 
+async function startDistServer() {
+  const dist = resolve(ROOT, "dist");
+  const server = createServer(async (request, response) => {
+    try {
+      const pathname = new URL(request.url ?? "/", "http://local").pathname;
+      const relative = pathname === "/"
+        ? "index.html"
+        : extname(pathname) ? pathname.slice(1) : `${pathname.slice(1).replace(/\/$/, "")}/index.html`;
+      const file = resolve(dist, relative);
+      if (file !== resolve(dist, "index.html") && !file.startsWith(`${dist}/`)) {
+        response.statusCode = 400;
+        response.end("Bad request");
+        return;
+      }
+      const body = await readFile(file);
+      response.statusCode = 200;
+      response.setHeader("content-type", extname(file) === ".html" ? "text/html; charset=utf-8" : "application/octet-stream");
+      response.end(body);
+    } catch {
+      response.statusCode = 404;
+      response.end("Not found");
+    }
+  });
+  await new Promise((resolveListen) => server.listen(0, "127.0.0.1", resolveListen));
+  const address = server.address();
+  assert(address && typeof address === "object", "Local crawl server did not bind to a port");
+  server.unref();
+  return { server, baseUrl: `http://127.0.0.1:${address.port}` };
+}
+
 const routes = await loadRoutes();
-const baseUrl = process.env.SEO_BASE_URL || DEFAULT_BASE_URL;
+const asserting = process.argv.includes("--assert");
+let localServer;
+let baseUrl = process.env.SEO_BASE_URL || DEFAULT_BASE_URL;
+if (asserting && !process.env.SEO_BASE_URL) {
+  ({ server: localServer, baseUrl } = await startDistServer());
+}
 const origin = new URL(baseUrl).origin;
 
 async function fetchTrace(initialUrl) {
@@ -82,7 +119,7 @@ const orphans = routes.filter((path) => path !== "/" && !depth.has(path));
 await writeJson(resolve(ROOT, "docs/seo/crawl.json"), {
   generatedAt: new Date().toISOString(),
   source: "raw HTML crawl; JavaScript not executed",
-  baseUrl,
+  baseUrl: localServer ? "local-dist" : baseUrl,
   summary: { routes: pages.length, broken: broken.length, redirectChains: redirectChains.length, orphans: orphans.length },
   broken,
   redirectChains,
@@ -90,7 +127,8 @@ await writeJson(resolve(ROOT, "docs/seo/crawl.json"), {
   pages,
 });
 
-if (process.argv.includes("--assert")) {
+if (localServer) await new Promise((resolveClose) => localServer.close(resolveClose));
+if (asserting) {
   assert(broken.length === 0, `Broken routes: ${broken.join(", ")}`);
   assert(redirectChains.length === 0, `Redirect chains: ${redirectChains.join(", ")}`);
   assert(orphans.length === 0, `Orphan routes: ${orphans.join(", ")}`);

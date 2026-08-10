@@ -1,93 +1,142 @@
 {
-  "generatedAt": "2026-08-10T22:39:36.997Z",
+  "generatedAt": "2026-08-10T23:35:43.365Z",
   "source": "raw HTML crawl; JavaScript not executed",
-  "baseUrl": "https://www.clarksfinancials.com",
+  "baseUrl": "local-dist",
   "summary": {
     "routes": 7,
     "broken": 0,
     "redirectChains": 0,
-    "orphans": 6
+    "orphans": 0
   },
   "broken": [],
   "redirectChains": [],
-  "orphans": [
-    "/about",
-    "/loans",
-    "/apply",
-    "/regulatory",
-    "/faqs",
-    "/contact"
-  ],
+  "orphans": [],
   "pages": [
     {
       "path": "/",
-      "requestedUrl": "https://www.clarksfinancials.com/",
+      "requestedUrl": "http://127.0.0.1:37085/",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/",
+      "finalUrl": "http://127.0.0.1:37085/",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 32134,
       "depth": 0
     },
     {
       "path": "/about",
-      "requestedUrl": "https://www.clarksfinancials.com/about",
+      "requestedUrl": "http://127.0.0.1:37085/about",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/about",
+      "finalUrl": "http://127.0.0.1:37085/about",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 21083,
+      "depth": 1
     },
     {
       "path": "/loans",
-      "requestedUrl": "https://www.clarksfinancials.com/loans",
+      "requestedUrl": "http://127.0.0.1:37085/loans",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/loans",
+      "finalUrl": "http://127.0.0.1:37085/loans",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 30210,
+      "depth": 1
     },
     {
       "path": "/apply",
-      "requestedUrl": "https://www.clarksfinancials.com/apply",
+      "requestedUrl": "http://127.0.0.1:37085/apply",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/apply",
+      "finalUrl": "http://127.0.0.1:37085/apply",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 29098,
+      "depth": 1
     },
     {
       "path": "/regulatory",
-      "requestedUrl": "https://www.clarksfinancials.com/regulatory",
+      "requestedUrl": "http://127.0.0.1:37085/regulatory",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/regulatory",
+      "finalUrl": "http://127.0.0.1:37085/regulatory",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 17405,
+      "depth": 1
     },
     {
       "path": "/faqs",
-      "requestedUrl": "https://www.clarksfinancials.com/faqs",
+      "requestedUrl": "http://127.0.0.1:37085/faqs",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/faqs",
+      "finalUrl": "http://127.0.0.1:37085/faqs",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 20743,
+      "depth": 1
     },
     {
       "path": "/contact",
-      "requestedUrl": "https://www.clarksfinancials.com/contact",
+      "requestedUrl": "http://127.0.0.1:37085/contact",
       "status": 200,
-      "finalUrl": "https://www.clarksfinancials.com/contact",
+      "finalUrl": "http://127.0.0.1:37085/contact",
       "redirectChain": [],
-      "outgoingInternalLinks": [],
-      "bytes": 468,
-      "depth": null
+      "outgoingInternalLinks": [
+        "/",
+        "/about",
+        "/loans",
+        "/regulatory",
+        "/apply",
+        "/faqs",
+        "/contact"
+      ],
+      "bytes": 24042,
+      "depth": 1
     }
   ]
 }
