@@ -19,6 +19,13 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Restore rank-sample history
+        uses: actions/cache@v4
+        with:
+          path: docs/seo/rank-samples.ndjson
+          key: seo-rank-history-${{ github.run_id }}
+          restore-keys: |
+            seo-rank-history-
       - name: Sample priority search queries
         run: npm run seo:rank-sample
         env:
@@ -32,4 +39,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: seo-rank-telemetry
-          path: docs/seo/events.ndjson
+          path: |
+            docs/seo/events.ndjson
+            docs/seo/rank-samples.ndjson

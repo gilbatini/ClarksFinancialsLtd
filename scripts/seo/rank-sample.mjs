@@ -5,6 +5,7 @@ import { emitEvent, ensureParent, readJson, ROOT } from "./lib.mjs";
 import { loadRankSource } from "./gsc-rank-source.mjs";
 
 const competitors = await loadRankSource(await readJson(resolve(ROOT, "docs/seo/competitors.json")));
+const liveGscSource = competitors.source?.startsWith("Google Search Console") ?? false;
 const sampleFile = resolve(ROOT, "docs/seo/rank-samples.ndjson");
 let previous = [];
 try {
@@ -25,7 +26,7 @@ const records = competitors.queries.map((entry) => {
     position: match?.observedOrder ?? null,
     status: match ? "observed" : "not_observed_within_sample",
     sampleDepth: entry.results.length,
-    source: `research_snapshot:${competitors.observedAt}`,
+    source: liveGscSource ? `google_search_console:${competitors.observedAt}` : `research_snapshot:${competitors.observedAt}`,
     change: prior?.position != null && match?.observedOrder != null ? prior.position - match.observedOrder : null,
     note: prior ? "Compared with prior independently dated snapshot." : "No independently dated prior sample; movement not available.",
   };
@@ -38,15 +39,17 @@ if (newRecords.length) {
   await appendFile(sampleFile, `${newRecords.map((record) => JSON.stringify(record)).join("\n")}\n`);
 }
 
+const newKeys = new Set(newRecords.map((record) => `${record.observedAt}|${record.query}`));
 for (const record of records) {
+  const freshObservation = liveGscSource || newKeys.has(`${record.observedAt}|${record.query}`);
   await emitEvent("seo.metric.sampled", "F-04", "F", {
-    metric: "organic_observed_position",
-    value: record.position,
-    unit: "position",
-    source: record.source,
+    metric: freshObservation ? "organic_observed_position" : "rank_collection_available",
+    value: freshObservation ? record.position : 0,
+    unit: freshObservation ? "position" : "boolean",
+    source: freshObservation ? record.source : "blocked:gsc-credentials-missing; dated research snapshot already recorded",
     url: record.url,
     keyword: record.query,
-    status: record.status,
+    status: freshObservation ? record.status : "no_fresh_observation",
     sample_depth: record.sampleDepth,
     movement: record.change,
   });

@@ -12,4 +12,6 @@ for (const secret of ["GSC_CREDENTIALS", "GSC_SITE_URL", "ALGORINEXT_EVENT_URL",
   assert(workflow.includes(`secrets.${secret}`), `${secret} wiring missing`);
 }
 assert(workflow.includes("actions/upload-artifact@v4"), "Fallback telemetry artifact missing");
+assert(workflow.includes("actions/cache@v4"), "Persistent rank-history cache missing");
+assert(workflow.includes("docs/seo/rank-samples.ndjson"), "Rank-sample history artifact missing");
 console.log("PASS F-05: weekly rank-sampling job registered with GSC and telemetry secret wiring");
