@@ -1,48 +1,58 @@
-import { spawn } from "node:child_process";
-import { createServer } from "node:net";
-import { resolve } from "node:path";
+import { createServer } from "node:http";
+import { readFile } from "node:fs/promises";
+import { extname, resolve } from "node:path";
 import { chromium } from "playwright";
-import { ROOT } from "./lib.mjs";
+import { assert, ROOT } from "./lib.mjs";
 
-async function freePort() {
-  return new Promise((resolvePort, reject) => {
-    const server = createServer();
-    server.unref();
-    server.on("error", reject);
-    server.listen(0, "127.0.0.1", () => {
-      const address = server.address();
-      server.close(() => resolvePort(address.port));
-    });
-  });
-}
+const contentTypes = {
+  ".css": "text/css; charset=utf-8",
+  ".html": "text/html; charset=utf-8",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".js": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".mjs": "text/javascript; charset=utf-8",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+  ".webp": "image/webp",
+};
 
-async function waitForServer(url, timeoutMs = 30_000) {
-  const startedAt = Date.now();
-  while (Date.now() - startedAt < timeoutMs) {
+async function startDistServer() {
+  const dist = resolve(ROOT, "dist");
+  const server = createServer(async (request, response) => {
     try {
-      const response = await fetch(url);
-      if (response.ok) return;
+      const pathname = new URL(request.url ?? "/", "http://local").pathname;
+      const relative = pathname === "/"
+        ? "index.html"
+        : extname(pathname) ? pathname.slice(1) : `${pathname.slice(1).replace(/\/$/, "")}/index.html`;
+      const file = resolve(dist, relative);
+      if (file !== resolve(dist, "index.html") && !file.startsWith(`${dist}/`)) {
+        response.statusCode = 400;
+        response.end("Bad request");
+        return;
+      }
+      const body = await readFile(file);
+      response.statusCode = 200;
+      response.setHeader("content-type", contentTypes[extname(file)] ?? "application/octet-stream");
+      response.end(body);
     } catch {
-      // Vite is still starting.
+      response.statusCode = 404;
+      response.end("Not found");
     }
-    await new Promise((resolveWait) => setTimeout(resolveWait, 150));
-  }
-  throw new Error(`Timed out waiting for ${url}`);
+  });
+  await new Promise((resolveListen) => server.listen(0, "127.0.0.1", resolveListen));
+  const address = server.address();
+  assert(address && typeof address === "object", "Local dist server did not bind to a port");
+  server.unref();
+  return { server, baseUrl: `http://127.0.0.1:${address.port}` };
 }
 
 export async function withRenderedSite(callback) {
   const externalBaseUrl = process.env.SEO_BASE_URL;
-  let child;
+  let localServer;
   let baseUrl = externalBaseUrl;
   if (!baseUrl) {
-    const port = await freePort();
-    baseUrl = `http://127.0.0.1:${port}`;
-    child = spawn(resolve(ROOT, "node_modules/.bin/vite"), ["--host", "127.0.0.1", "--port", String(port), "--strictPort"], {
-      cwd: ROOT,
-      stdio: "ignore",
-      env: { ...process.env, DISABLE_HMR: "true" },
-    });
-    await waitForServer(baseUrl);
+    ({ server: localServer, baseUrl } = await startDistServer());
   }
 
   const browser = await chromium.launch({ headless: true, args: ["--no-sandbox"] });
@@ -50,12 +60,6 @@ export async function withRenderedSite(callback) {
     return await callback({ browser, baseUrl });
   } finally {
     await browser.close();
-    if (child) {
-      child.kill("SIGTERM");
-      await new Promise((resolveExit) => {
-        child.once("exit", resolveExit);
-        setTimeout(resolveExit, 2_000);
-      });
-    }
+    if (localServer) await new Promise((resolveClose) => localServer.close(resolveClose));
   }
 }

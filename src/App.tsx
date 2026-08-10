@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes, StaticRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot";
@@ -15,6 +15,7 @@ import Regulatory from "./pages/Regulatory";
 import FAQs from "./pages/FAQs";
 import Contact from "./pages/Contact";
 import RouteStructuredData from "./seo/RouteStructuredData";
+import RouteMetadata from "./seo/RouteMetadata";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -26,9 +27,10 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+function Site() {
   return (
-    <Router>
+    <>
+      <RouteMetadata />
       <ScrollToTop />
       <RouteStructuredData />
       <div className="min-h-screen flex flex-col">
@@ -47,6 +49,26 @@ export default function App() {
         <Footer />
         <Chatbot />
       </div>
-    </Router>
+    </>
+  );
+}
+
+type AppProps = {
+  serverPath?: string;
+};
+
+export default function App({ serverPath = "/" }: AppProps) {
+  if (typeof window === "undefined") {
+    return (
+      <StaticRouter location={serverPath}>
+        <Site />
+      </StaticRouter>
+    );
+  }
+
+  return (
+    <BrowserRouter>
+      <Site />
+    </BrowserRouter>
   );
 }
