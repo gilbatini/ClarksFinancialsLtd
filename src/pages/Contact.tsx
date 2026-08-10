@@ -1,6 +1,7 @@
 import ContactComponent from "../components/Contact";
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { business } from "../lib/business";
 
 export default function Contact() {
   return (
@@ -24,13 +25,12 @@ export default function Contact() {
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Phone className="w-10 h-10 text-primary mb-6" />
             <h2 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Phone Support</h2>
-            <p className="text-slate-500 font-medium">0772 502 955</p>
-            <p className="text-slate-500 font-medium">0702 502 955</p>
+            {business.phones.map((phone) => <p className="text-slate-500 font-medium" key={phone.href}><a href={phone.href}>{phone.display}</a></p>)}
           </div>
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Mail className="w-10 h-10 text-primary mb-6" />
             <h2 className="font-headline text-xl font-bold text-slate-950 uppercase mb-4">Email Enquiries</h2>
-            <p className="text-slate-500 font-medium">loans@clarksfinancials.com</p>
+            <p className="text-slate-500 font-medium"><a href={"mailto:" + business.email}>{business.email}</a></p>
           </div>
           <div className="bg-surface-50 p-10 border border-surface-200">
             <Clock className="w-10 h-10 text-primary mb-6" />
@@ -49,8 +49,7 @@ export default function Contact() {
               <MapPin className="w-10 h-10 text-primary mb-6" />
               <h3 className="font-headline text-2xl font-bold text-slate-950 uppercase mb-4">Head Office — Kampala Road</h3>
               <p className="text-slate-500 font-medium leading-relaxed">
-                Ambassador House, 2nd Floor,<br />
-                Kampala Road, Kampala, Uganda
+                {business.headOffice}
               </p>
             </div>
             <div className="bg-white p-10 border border-surface-200">

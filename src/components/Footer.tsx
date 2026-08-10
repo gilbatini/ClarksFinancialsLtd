@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import { Share2, Phone, Send } from "lucide-react";
 import { Link } from "react-router-dom";
+import { business } from "../lib/business";
 
 export default function Footer() {
   return (
@@ -35,12 +36,15 @@ export default function Footer() {
         
         <div>
           <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Contact</h4>
-          <ul className="space-y-4 text-white/50 text-sm">
-            <li>0772 502 955 | 0702 502 955</li>
-            <li>loans@clarksfinancials.com</li>
-            <li>www.clarksfinancials.com</li>
-            <li>Ambassador House, 2nd Floor, Kampala Road</li>
-          </ul>
+          <address className="not-italic" data-seo-nap>
+            <span className="sr-only" data-nap-name>{business.name}</span>
+            <ul className="space-y-4 text-white/50 text-sm">
+              <li data-nap-phone>{business.phones.map((phone, index) => <span key={phone.href}>{index > 0 ? " | " : ""}<a className="hover:text-secondary transition-all" href={phone.href}>{phone.display}</a></span>)}</li>
+              <li data-nap-email><a className="hover:text-secondary transition-all" href={"mailto:" + business.email}>{business.email}</a></li>
+              <li>{business.website}</li>
+              <li data-nap-address>{business.headOffice}</li>
+            </ul>
+          </address>
         </div>
         
         <div>
