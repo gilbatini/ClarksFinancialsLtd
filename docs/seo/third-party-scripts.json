@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-08-10T23:53:32.021Z",
+  "source": "index.html plus static source inspection",
+  "firstPartyScripts": [
+    {
+      "src": "/src/main.tsx",
+      "type": "module",
+      "loading": "deferred by HTML module-script semantics"
+    }
+  ],
+  "thirdPartyScripts": [],
+  "deferredFeatures": [
+    {
+      "feature": "WhatsApp assistant",
+      "strategy": "dynamic import scheduled with requestIdleCallback and timeout fallback"
+    }
+  ],
+  "navigationAnimation": "CSS grid/opacity transition; no JavaScript animation runtime",
+  "passed": true
+}

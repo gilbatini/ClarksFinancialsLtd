@@ -7,6 +7,8 @@ const runArgIndex = process.argv.indexOf("--runs");
 const runs = runArgIndex >= 0 ? Number(process.argv[runArgIndex + 1]) : 3;
 const metricArgIndex = process.argv.indexOf("--metric");
 const requestedMetric = metricArgIndex >= 0 ? process.argv[metricArgIndex + 1]?.toUpperCase() : null;
+const outputArgIndex = process.argv.indexOf("--output");
+const outputFile = outputArgIndex >= 0 ? process.argv[outputArgIndex + 1] : "docs/seo/cwv-baseline.json";
 const baseUrl = process.env.SEO_BASE_URL || DEFAULT_BASE_URL;
 const manifest = await readJson(ROUTES_FILE);
 const keyRoutes = manifest.routes.filter((route) => route.keyRoute).map((route) => route.path);
@@ -141,8 +143,35 @@ const output = {
   summaries,
   samples,
 };
-await writeJson(resolve(ROOT, "docs/seo/cwv-baseline.json"), output);
-console.log(`PASS A-04: wrote ${samples.length} measured CWV samples (${runs} runs × ${keyRoutes.length} routes × 2 profiles)`);
+await writeJson(resolve(ROOT, outputFile), output);
+console.log(`PASS CWV sample: wrote ${samples.length} measurements to ${outputFile} (${runs} runs × ${keyRoutes.length} routes × 2 profiles)`);
 for (const summary of summaries) {
   console.log(`${summary.profile} ${summary.path}: LCP ${summary.p75.lcpMs}ms, INP ${summary.p75.inpMs}ms, CLS ${summary.p75.cls}`);
+}
+
+if (requestedMetric) {
+  const metricConfig = {
+    LCP: { field: "lcpMs", budget: 2500, unit: "ms" },
+    INP: { field: "inpMs", budget: 200, unit: "ms" },
+    CLS: { field: "cls", budget: 0.1, unit: "" },
+  }[requestedMetric];
+  if (!metricConfig) throw new Error(`Unknown metric: ${requestedMetric}`);
+
+  const mobileSummaries = summaries.filter((summary) => summary.profile === "mobile");
+  const failures = mobileSummaries.filter(
+    (summary) => summary.p75[metricConfig.field] > metricConfig.budget,
+  );
+  if (requestedMetric === "INP") {
+    for (const summary of mobileSummaries) {
+      if (summary.interactionTimingCoverage !== `${runs}/${runs}`) failures.push(summary);
+    }
+  }
+  if (failures.length) {
+    for (const failure of new Set(failures)) {
+      console.error(`FAIL ${requestedMetric} ${failure.path}: ${failure.p75[metricConfig.field]}${metricConfig.unit}`);
+    }
+    process.exitCode = 1;
+  } else {
+    console.log(`PASS ${requestedMetric}: all mobile route p75 values meet the ${metricConfig.budget}${metricConfig.unit} budget`);
+  }
 }

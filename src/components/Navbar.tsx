@@ -1,6 +1,5 @@
 import Logo from "./Logo";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../lib/utils";
@@ -90,21 +89,23 @@ export default function Navbar() {
         <button 
           className="lg:hidden text-slate-950 p-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          aria-label={isOpen ? "Close navigation" : "Open navigation"}
         >
           {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-surface-200 overflow-hidden"
+          <div
+            id="mobile-navigation"
+            className={cn(
+              "lg:hidden grid bg-white overflow-hidden transition-[grid-template-rows,opacity] duration-200",
+              isOpen ? "grid-rows-[1fr] opacity-100 border-b border-surface-200" : "grid-rows-[0fr] opacity-0 pointer-events-none border-b border-transparent",
+            )}
           >
-            <div className="container mx-auto px-8 py-8 flex flex-col gap-6">
+            <div className="min-h-0 container mx-auto px-8 py-8 flex flex-col gap-6">
               {navLinks.map((link) => (
                 <div key={link.name} className="flex flex-col gap-4">
                   <Link 
@@ -138,9 +139,7 @@ export default function Navbar() {
                 Apply Now
               </Link>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
     </nav>
   );
 }

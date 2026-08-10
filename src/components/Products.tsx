@@ -9,7 +9,7 @@ const products = [
     icon: Banknote,
     features: ["Document Requirements", "Term Information"],
     variant: "dark",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIC4DLSQ5WkExY4GoSKagIDrX6nb1UzIUxxK297OSlg_TIseqoMRckC_Ed25VIP-cPnho70n_vfoDv-18x9egUFtHvvquFjD8juMkXn4TdHYFIupWRWuRoiCT1h4H8cJoSs8Ug6V6NBzuw4HfU7-P2R6EPmCXgyREixnZHTKoY8FB21NalRo8wEeBazQKWhc-eSkyxXrnbA1Aa2l45hi5RaHbEegNTHO5TlYJQmvOFCueDODiBM6fJk3X546LY0OCWEMcvTS6ap5c"
+    image: "/images/salary-loan-texture.webp"
   },
   {
     title: "Unsecured",
@@ -17,7 +17,7 @@ const products = [
     icon: Shield,
     features: ["Security Requirements", "Application Review"],
     variant: "primary",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDuo43h8nUEyjqe8UyzX3y9pyofLa_n2wDUsEuvlPZFVBCCulVbnu287FdPw_ohisATBYTB-n99tivaEjkOdZxvfx22h-cKzlvOwyxtnMRT-TQuDHS7RIv_SfdX7Yjm1-OaiBgLLwXYdNq9JkehGurwgkS4YH5Xo4pCe7yGu-nn7083assgCRgyFZlrEOgCVbz90ogXETvguXX8H3AptyLhvEbHXTSAzXgXCtcaGqbSmeQ_UFdhbABgTamq2HJ0wXt08Jh5HsSTBtU"
+    image: "/images/unsecured-loan-texture.webp"
   },
   {
     title: "Agency Banking",
@@ -58,7 +58,17 @@ export default function Products() {
           >
             {product.image && (
               <div className={`absolute inset-0 opacity-10 grayscale ${product.variant === 'primary' ? 'brightness-200' : 'group-hover:opacity-20'} transition-all`}>
-                <img alt="Finance Texture" className="w-full h-full object-cover" src={product.image} referrerPolicy="no-referrer" />
+                <img
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-cover"
+                  src={product.image}
+                  width={512}
+                  height={512}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                />
               </div>
             )}
             
