@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-10T23:35:43.365Z",
+  "generatedAt": "2026-08-11T00:27:29.944Z",
   "source": "raw HTML crawl; JavaScript not executed",
-  "baseUrl": "local-dist",
+  "baseUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app",
   "summary": {
     "routes": 7,
     "broken": 0,
@@ -14,9 +14,9 @@
   "pages": [
     {
       "path": "/",
-      "requestedUrl": "http://127.0.0.1:37085/",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -27,14 +27,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 32134,
+      "bytes": 18835,
       "depth": 0
     },
     {
       "path": "/about",
-      "requestedUrl": "http://127.0.0.1:37085/about",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/about",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/about",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/about",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -45,14 +45,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 21083,
+      "bytes": 21930,
       "depth": 1
     },
     {
       "path": "/loans",
-      "requestedUrl": "http://127.0.0.1:37085/loans",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/loans",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/loans",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/loans",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -63,14 +63,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 30210,
+      "bytes": 22540,
       "depth": 1
     },
     {
       "path": "/apply",
-      "requestedUrl": "http://127.0.0.1:37085/apply",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/apply",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/apply",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/apply",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -81,14 +81,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 29098,
+      "bytes": 24050,
       "depth": 1
     },
     {
       "path": "/regulatory",
-      "requestedUrl": "http://127.0.0.1:37085/regulatory",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/regulatory",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/regulatory",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/regulatory",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -99,14 +99,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 17405,
+      "bytes": 18834,
       "depth": 1
     },
     {
       "path": "/faqs",
-      "requestedUrl": "http://127.0.0.1:37085/faqs",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/faqs",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/faqs",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/faqs",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -117,14 +117,14 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 20743,
+      "bytes": 22203,
       "depth": 1
     },
     {
       "path": "/contact",
-      "requestedUrl": "http://127.0.0.1:37085/contact",
+      "requestedUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/contact",
       "status": 200,
-      "finalUrl": "http://127.0.0.1:37085/contact",
+      "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/contact",
       "redirectChain": [],
       "outgoingInternalLinks": [
         "/",
@@ -135,7 +135,7 @@
         "/faqs",
         "/contact"
       ],
-      "bytes": 24042,
+      "bytes": 24969,
       "depth": 1
     }
   ]
