@@ -23,6 +23,7 @@ const routeEntries = new Map([
   ["/regulatory", "virtual:vike:page-entry:client:/pages/regulatory"],
   ["/faqs", "virtual:vike:page-entry:client:/pages/faqs"],
   ["/contact", "virtual:vike:page-entry:client:/pages/contact"],
+  ["/news", "virtual:vike:page-entry:client:/pages/news"],
 ]);
 
 const compressedSizeCache = new Map();

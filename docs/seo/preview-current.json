@@ -1,6 +1,6 @@
 {
   "source": "UA-spoofed raw HTTP fetch; JavaScript not executed",
-  "baseUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app",
+  "baseUrl": "local-dist",
   "crawlers": [
     "whatsapp",
     "facebook",
@@ -14,7 +14,7 @@
       "previews": {
         "whatsapp": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/",
+          "finalUrl": "https://www.clarksfinancials.com/",
           "title": "Clarks Financials | Loan Services in Uganda",
           "description": "Explore loan services from Clarks Financials in Uganda, learn how the application process works, and contact the team for guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -22,7 +22,7 @@
         },
         "facebook": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/",
+          "finalUrl": "https://www.clarksfinancials.com/",
           "title": "Clarks Financials | Loan Services in Uganda",
           "description": "Explore loan services from Clarks Financials in Uganda, learn how the application process works, and contact the team for guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -30,7 +30,7 @@
         },
         "linkedin": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/",
+          "finalUrl": "https://www.clarksfinancials.com/",
           "title": "Clarks Financials | Loan Services in Uganda",
           "description": "Explore loan services from Clarks Financials in Uganda, learn how the application process works, and contact the team for guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -43,7 +43,7 @@
       "previews": {
         "whatsapp": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/about",
+          "finalUrl": "https://www.clarksfinancials.com/about",
           "title": "About Clarks Financials | Uganda Loan Provider",
           "description": "Learn about Clarks Financials, its approach to customer service in Uganda, and the team supporting borrowers through the loan process.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -51,7 +51,7 @@
         },
         "facebook": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/about",
+          "finalUrl": "https://www.clarksfinancials.com/about",
           "title": "About Clarks Financials | Uganda Loan Provider",
           "description": "Learn about Clarks Financials, its approach to customer service in Uganda, and the team supporting borrowers through the loan process.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -59,40 +59,11 @@
         },
         "linkedin": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/about",
+          "finalUrl": "https://www.clarksfinancials.com/about",
           "title": "About Clarks Financials | Uganda Loan Provider",
           "description": "Learn about Clarks Financials, its approach to customer service in Uganda, and the team supporting borrowers through the loan process.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
           "ogUrl": "https://www.clarksfinancials.com/about"
-        }
-      }
-    },
-    {
-      "path": "/loans",
-      "previews": {
-        "whatsapp": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/loans",
-          "title": "Loan Options in Uganda | Clarks Financials",
-          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/loans"
-        },
-        "facebook": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/loans",
-          "title": "Loan Options in Uganda | Clarks Financials",
-          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/loans"
-        },
-        "linkedin": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/loans",
-          "title": "Loan Options in Uganda | Clarks Financials",
-          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/loans"
         }
       }
     },
@@ -101,7 +72,7 @@
       "previews": {
         "whatsapp": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/apply",
+          "finalUrl": "https://www.clarksfinancials.com/apply",
           "title": "Apply for a Loan | Clarks Financials Uganda",
           "description": "Start your Clarks Financials loan enquiry, review the documents requested for an application, and choose how to contact the team.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -109,7 +80,7 @@
         },
         "facebook": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/apply",
+          "finalUrl": "https://www.clarksfinancials.com/apply",
           "title": "Apply for a Loan | Clarks Financials Uganda",
           "description": "Start your Clarks Financials loan enquiry, review the documents requested for an application, and choose how to contact the team.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -117,69 +88,11 @@
         },
         "linkedin": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/apply",
+          "finalUrl": "https://www.clarksfinancials.com/apply",
           "title": "Apply for a Loan | Clarks Financials Uganda",
           "description": "Start your Clarks Financials loan enquiry, review the documents requested for an application, and choose how to contact the team.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
           "ogUrl": "https://www.clarksfinancials.com/apply"
-        }
-      }
-    },
-    {
-      "path": "/regulatory",
-      "previews": {
-        "whatsapp": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/regulatory",
-          "title": "Regulatory Information | Clarks Financials",
-          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/regulatory"
-        },
-        "facebook": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/regulatory",
-          "title": "Regulatory Information | Clarks Financials",
-          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/regulatory"
-        },
-        "linkedin": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/regulatory",
-          "title": "Regulatory Information | Clarks Financials",
-          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/regulatory"
-        }
-      }
-    },
-    {
-      "path": "/faqs",
-      "previews": {
-        "whatsapp": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/faqs",
-          "title": "Loan Questions & Answers | Clarks Financials",
-          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/faqs"
-        },
-        "facebook": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/faqs",
-          "title": "Loan Questions & Answers | Clarks Financials",
-          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/faqs"
-        },
-        "linkedin": {
-          "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/faqs",
-          "title": "Loan Questions & Answers | Clarks Financials",
-          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
-          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
-          "ogUrl": "https://www.clarksfinancials.com/faqs"
         }
       }
     },
@@ -188,7 +101,7 @@
       "previews": {
         "whatsapp": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/contact",
+          "finalUrl": "https://www.clarksfinancials.com/contact",
           "title": "Contact Clarks Financials | Kampala, Uganda",
           "description": "Contact Clarks Financials in Kampala by phone, email, or WhatsApp for help with loan enquiries and application guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -196,7 +109,7 @@
         },
         "facebook": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/contact",
+          "finalUrl": "https://www.clarksfinancials.com/contact",
           "title": "Contact Clarks Financials | Kampala, Uganda",
           "description": "Contact Clarks Financials in Kampala by phone, email, or WhatsApp for help with loan enquiries and application guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
@@ -204,11 +117,127 @@
         },
         "linkedin": {
           "status": 200,
-          "finalUrl": "https://clarksfinancial-62y1x8hwk-gilbatinis-projects.vercel.app/contact",
+          "finalUrl": "https://www.clarksfinancials.com/contact",
           "title": "Contact Clarks Financials | Kampala, Uganda",
           "description": "Contact Clarks Financials in Kampala by phone, email, or WhatsApp for help with loan enquiries and application guidance.",
           "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
           "ogUrl": "https://www.clarksfinancials.com/contact"
+        }
+      }
+    },
+    {
+      "path": "/faqs",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Loan Questions & Answers | Clarks Financials",
+          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/faqs"
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Loan Questions & Answers | Clarks Financials",
+          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/faqs"
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/faqs",
+          "title": "Loan Questions & Answers | Clarks Financials",
+          "description": "Find answers to common questions about Clarks Financials loan applications, documents, repayments, eligibility checks, and support.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/faqs"
+        }
+      }
+    },
+    {
+      "path": "/loans",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Loan Options in Uganda | Clarks Financials",
+          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/loans"
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Loan Options in Uganda | Clarks Financials",
+          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/loans"
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/loans",
+          "title": "Loan Options in Uganda | Clarks Financials",
+          "description": "Review the loan options presented by Clarks Financials, understand the application steps, and find the documents needed to get started.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/loans"
+        }
+      }
+    },
+    {
+      "path": "/news",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/news",
+          "title": "Financial News & Insights | Clarks Financials",
+          "description": "Read source-linked financial news on Uganda, African markets, digital credit, consumer protection, and responsible borrowing from Clarks Financials.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/news"
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/news",
+          "title": "Financial News & Insights | Clarks Financials",
+          "description": "Read source-linked financial news on Uganda, African markets, digital credit, consumer protection, and responsible borrowing from Clarks Financials.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/news"
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/news",
+          "title": "Financial News & Insights | Clarks Financials",
+          "description": "Read source-linked financial news on Uganda, African markets, digital credit, consumer protection, and responsible borrowing from Clarks Financials.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/news"
+        }
+      }
+    },
+    {
+      "path": "/regulatory",
+      "previews": {
+        "whatsapp": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Regulatory Information | Clarks Financials",
+          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/regulatory"
+        },
+        "facebook": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Regulatory Information | Clarks Financials",
+          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/regulatory"
+        },
+        "linkedin": {
+          "status": 200,
+          "finalUrl": "https://www.clarksfinancials.com/regulatory",
+          "title": "Regulatory Information | Clarks Financials",
+          "description": "Read Clarks Financials regulatory information, privacy commitments, complaints process, and guidance on responsible borrowing in Uganda.",
+          "image": "https://www.clarksfinancials.com/og/clarks-financials-og.png",
+          "ogUrl": "https://www.clarksfinancials.com/regulatory"
         }
       }
     }

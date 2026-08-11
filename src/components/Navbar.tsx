@@ -18,6 +18,7 @@ const navLinks = [
   },
   { name: "Apply", path: "/apply" },
   { name: "FAQs", path: "/faqs" },
+  { name: "News", path: "/news" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -38,7 +39,7 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav className={cn(
+    <nav data-site-nav className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300 border-b",
       scrolled ? "bg-white/90 backdrop-blur-md py-3 border-surface-200 shadow-sm" : "bg-transparent py-5 border-transparent"
     )}>
@@ -88,19 +89,22 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button 
+          data-mobile-menu-toggle
           className="lg:hidden text-slate-950 p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
           aria-label={isOpen ? "Close navigation" : "Open navigation"}
         >
-          {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+          <X data-menu-open className={cn("w-8 h-8", !isOpen && "hidden")} />
+          <Menu data-menu-closed className={cn("w-8 h-8", isOpen && "hidden")} />
         </button>
       </div>
 
       {/* Mobile Menu */}
           <div
             id="mobile-navigation"
+            data-mobile-navigation
             className={cn(
               "lg:hidden grid bg-white overflow-hidden transition-[grid-template-rows,opacity] duration-200",
               isOpen ? "grid-rows-[1fr] opacity-100 border-b border-surface-200" : "grid-rows-[0fr] opacity-0 pointer-events-none border-b border-transparent",

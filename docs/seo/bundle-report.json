@@ -1,26 +1,27 @@
 {
-  "generatedAt": "2026-08-11T00:10:29.543Z",
+  "generatedAt": "2026-08-11T01:15:54.508Z",
   "source": "Vite manifest and gzip-compressed production assets",
   "budget": {
     "metric": "initial route JavaScript transfer size",
     "maxGzipKiB": 145
   },
   "routeLevelCodeSplitting": true,
-  "dynamicPageEntries": 7,
+  "dynamicPageEntries": 8,
   "routes": [
     {
       "path": "/",
       "entry": "virtual:vike:page-entry:client:/pages/index",
       "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
         "assets/chunks/chunk-DanzurCH.js",
         "assets/chunks/chunk-B_bzuv0A.js",
         "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_index.0ivHdcbZ.js",
-        "assets/chunks/chunk-D5Hhrq-7.js"
+        "assets/entries/pages_index.OA-0aFSK.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js"
       ],
-      "gzipBytes": 115036,
-      "gzipKiB": 112.34,
+      "gzipBytes": 115526,
+      "gzipKiB": 112.82,
       "budgetKiB": 145,
       "passed": true
     },
@@ -28,31 +29,16 @@
       "path": "/about",
       "entry": "virtual:vike:page-entry:client:/pages/about",
       "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
         "assets/chunks/chunk-DanzurCH.js",
         "assets/chunks/chunk-B_bzuv0A.js",
         "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_about.DwT2fhdP.js",
-        "assets/chunks/chunk-D5Hhrq-7.js"
+        "assets/entries/pages_about.C6Lm2V8z.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js"
       ],
-      "gzipBytes": 114933,
-      "gzipKiB": 112.24,
-      "budgetKiB": 145,
-      "passed": true
-    },
-    {
-      "path": "/loans",
-      "entry": "virtual:vike:page-entry:client:/pages/loans",
-      "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
-        "assets/chunks/chunk-DanzurCH.js",
-        "assets/chunks/chunk-B_bzuv0A.js",
-        "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_loans.CEu4fBcF.js",
-        "assets/chunks/chunk-D5Hhrq-7.js"
-      ],
-      "gzipBytes": 115159,
-      "gzipKiB": 112.46,
+      "gzipBytes": 115419,
+      "gzipKiB": 112.71,
       "budgetKiB": 145,
       "passed": true
     },
@@ -60,48 +46,17 @@
       "path": "/apply",
       "entry": "virtual:vike:page-entry:client:/pages/apply",
       "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
         "assets/chunks/chunk-DanzurCH.js",
         "assets/chunks/chunk-B_bzuv0A.js",
         "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_apply.BfaZ0tHM.js",
-        "assets/chunks/chunk-D5Hhrq-7.js",
+        "assets/entries/pages_apply.99ccMNi3.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js",
         "assets/chunks/chunk-B4mVfBY0.js"
       ],
-      "gzipBytes": 115688,
-      "gzipKiB": 112.98,
-      "budgetKiB": 145,
-      "passed": true
-    },
-    {
-      "path": "/regulatory",
-      "entry": "virtual:vike:page-entry:client:/pages/regulatory",
-      "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
-        "assets/chunks/chunk-DanzurCH.js",
-        "assets/chunks/chunk-B_bzuv0A.js",
-        "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_regulatory.B_8MNqKy.js",
-        "assets/chunks/chunk-D5Hhrq-7.js"
-      ],
-      "gzipBytes": 114698,
-      "gzipKiB": 112.01,
-      "budgetKiB": 145,
-      "passed": true
-    },
-    {
-      "path": "/faqs",
-      "entry": "virtual:vike:page-entry:client:/pages/faqs",
-      "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
-        "assets/chunks/chunk-DanzurCH.js",
-        "assets/chunks/chunk-B_bzuv0A.js",
-        "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_faqs.BPV6f7Xp.js",
-        "assets/chunks/chunk-D5Hhrq-7.js"
-      ],
-      "gzipBytes": 114149,
-      "gzipKiB": 111.47,
+      "gzipBytes": 116178,
+      "gzipKiB": 113.46,
       "budgetKiB": 145,
       "passed": true
     },
@@ -109,16 +64,84 @@
       "path": "/contact",
       "entry": "virtual:vike:page-entry:client:/pages/contact",
       "chunks": [
-        "assets/entries/entry-server-routing.z8NKpL52.js",
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
         "assets/chunks/chunk-DanzurCH.js",
         "assets/chunks/chunk-B_bzuv0A.js",
         "assets/chunks/chunk-k8DILP2g.js",
-        "assets/entries/pages_contact.CbVwQobL.js",
-        "assets/chunks/chunk-D5Hhrq-7.js",
-        "assets/chunks/chunk-BSPEvGD7.js"
+        "assets/entries/pages_contact.C3x0mfuZ.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js",
+        "assets/chunks/chunk-DaUbV_Yr.js"
       ],
-      "gzipBytes": 116106,
-      "gzipKiB": 113.38,
+      "gzipBytes": 116590,
+      "gzipKiB": 113.86,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/faqs",
+      "entry": "virtual:vike:page-entry:client:/pages/faqs",
+      "chunks": [
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_faqs.fkoY6Kqa.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js"
+      ],
+      "gzipBytes": 114631,
+      "gzipKiB": 111.94,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/loans",
+      "entry": "virtual:vike:page-entry:client:/pages/loans",
+      "chunks": [
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_loans.D9KX9D8t.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js"
+      ],
+      "gzipBytes": 115651,
+      "gzipKiB": 112.94,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/news",
+      "entry": "virtual:vike:page-entry:client:/pages/news",
+      "chunks": [
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_news.SBmXnd-F.js",
+        "assets/chunks/chunk-DH2CAOVK.js"
+      ],
+      "gzipBytes": 99825,
+      "gzipKiB": 97.49,
+      "budgetKiB": 145,
+      "passed": true
+    },
+    {
+      "path": "/regulatory",
+      "entry": "virtual:vike:page-entry:client:/pages/regulatory",
+      "chunks": [
+        "assets/entries/entry-server-routing.Be8UfJGP.js",
+        "assets/chunks/chunk-DanzurCH.js",
+        "assets/chunks/chunk-B_bzuv0A.js",
+        "assets/chunks/chunk-k8DILP2g.js",
+        "assets/entries/pages_regulatory.CIm3-R_9.js",
+        "assets/chunks/chunk-DH2CAOVK.js",
+        "assets/chunks/chunk-DquHDqQj.js"
+      ],
+      "gzipBytes": 115185,
+      "gzipKiB": 112.49,
       "budgetKiB": 145,
       "passed": true
     }

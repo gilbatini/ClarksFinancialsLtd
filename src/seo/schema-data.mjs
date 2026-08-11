@@ -121,6 +121,7 @@ const breadcrumbRouteLabels = {
   "/regulatory": "Regulatory",
   "/faqs": "FAQs",
   "/contact": "Contact",
+  "/news": "News",
 };
 
 export const breadcrumbSchemas = Object.fromEntries(
@@ -156,6 +157,7 @@ const schemasByRoute = {
   "/regulatory": [breadcrumbSchemas["/regulatory"]],
   "/faqs": [faqPageSchema, breadcrumbSchemas["/faqs"]],
   "/contact": [financialServiceSchema, breadcrumbSchemas["/contact"]],
+  "/news": [breadcrumbSchemas["/news"]],
 };
 
 export function schemasForRoute(pathname) {

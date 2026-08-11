@@ -21,7 +21,8 @@
     "seo:verify-alt": "node scripts/seo/verify-alt.mjs",
     "seo:third-party-audit": "node scripts/seo/third-party-audit.mjs",
     "seo:verify-fonts": "node scripts/seo/verify-fonts.mjs",
-    "seo:cwv-gate": "node scripts/seo/cwv-sample.mjs --output docs/seo/cwv-current.json && node scripts/seo/cwv-gate.mjs"
+    "seo:cwv-gate": "node scripts/seo/cwv-sample.mjs --output docs/seo/cwv-current.json && node scripts/seo/cwv-gate.mjs",
+    "seo:verify-news": "node scripts/seo/verify-news.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

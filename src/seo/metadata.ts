@@ -41,4 +41,9 @@ export const routeMetadata: Record<string, RouteMetadata> = {
     description:
       "Contact Clarks Financials in Kampala by phone, email, or WhatsApp for help with loan enquiries and application guidance.",
   },
+  "/news": {
+    title: "Financial News & Insights | Clarks Financials",
+    description:
+      "Read source-linked financial news on Uganda, African markets, digital credit, consumer protection, and responsible borrowing from Clarks Financials.",
+  },
 };

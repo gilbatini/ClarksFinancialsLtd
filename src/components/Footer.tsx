@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link aria-label="Start a loan application" data-seo-cta className="hover:text-secondary transition-all" to="/apply">How to Apply</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/regulatory">Regulatory & Legal</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/faqs">FAQs</Link></li>
+            <li><Link className="hover:text-secondary transition-all" to="/news">News</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/contact">Contact Us</Link></li>
           </ul>
         </div>
