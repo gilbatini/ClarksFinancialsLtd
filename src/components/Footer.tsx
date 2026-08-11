@@ -25,12 +25,13 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
           <ul className="space-y-4 text-white/50 text-sm">
+            <li><Link className="hover:text-secondary transition-all" to="/about">About</Link></li>
+            <li><Link className="hover:text-secondary transition-all" to="/news">News</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/loans">Our Services</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/loans">Loan Products</Link></li>
             <li><Link aria-label="Start a loan application" data-seo-cta className="hover:text-secondary transition-all" to="/apply">How to Apply</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/regulatory">Regulatory & Legal</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/faqs">FAQs</Link></li>
-            <li><Link className="hover:text-secondary transition-all" to="/news">News</Link></li>
             <li><Link className="hover:text-secondary transition-all" to="/contact">Contact Us</Link></li>
           </ul>
         </div>
